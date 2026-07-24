@@ -89,7 +89,7 @@ export default function HomePage() {
           <Reveal>
             <SectionHeader title={t('home.servicesTitle')} text={t('home.servicesText')} />
           </Reveal>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {services.slice(0, 6).map((service, index) => (
               <Reveal key={service.id} delay={index * 0.03}>
                 <ServiceCard service={service} compact />

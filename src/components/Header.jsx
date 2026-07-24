@@ -53,7 +53,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-4 lg:flex xl:gap-6" aria-label="Primary">
           {navItems.map((item) => (
             <NavLink key={item.key} to={item.path} className={navLinkClass}>
               {t(`nav.${item.key}`)}

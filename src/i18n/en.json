@@ -38,8 +38,12 @@
       "description": "All workshop services by Bouz Autotechnik: inspection, diagnostics, tires, brakes, auto glass, accident repair, hybrid and electric mobility."
     },
     "about": {
-      "title": "Company | Bouz Autotechnik",
+      "title": "About us | Bouz Autotechnik",
       "description": "Get to know Bouz Autotechnik: an independent master workshop with quality standards, experience and transparent advice."
+    },
+    "faq": {
+      "title": "Frequently asked questions | Bouz Autotechnik",
+      "description": "Answers to common questions about inspections, tire changes, brakes, oil changes, climate service and appointments at Bouz Autotechnik."
     },
     "contact": {
       "title": "Contact | Bouz Autotechnik",
@@ -59,7 +63,8 @@
     "offers": "Offers",
     "appointment": "Appointment",
     "service": "Service",
-    "about": "Company",
+    "about": "About us",
+    "faq": "FAQ",
     "contact": "Contact",
     "imprint": "Legal Notice",
     "privacy": "Privacy",
@@ -303,8 +308,12 @@
     "title": "Everything a strong independent workshop must deliver",
     "intro": "We work in a structured, brand-independent way with a focus on safety, value retention and fair costs."
   },
+  "serviceDetail": {
+    "includes": "What we check",
+    "note": "Every recommendation is confirmed with you before repair. You decide only after a clear explanation of the finding, effort and cost."
+  },
   "aboutPage": {
-    "eyebrow": "Company",
+    "eyebrow": "About us",
     "title": "A workshop that speaks directly and works cleanly",
     "story": [
       "Bouz Autotechnik was built around a simple standard: support vehicles of all makes professionally and tell customers clearly what is going on.",
@@ -386,6 +395,10 @@
         "answer": "Yes. We discuss findings, scope and costs before additional work starts."
       }
     ]
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "intro": "Find the key answers about appointments, inspections, wear parts and common workshop questions."
   },
   "legal": {
     "imprintTitle": "Legal Notice",

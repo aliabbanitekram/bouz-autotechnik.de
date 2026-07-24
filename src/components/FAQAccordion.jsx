@@ -2,17 +2,19 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ServiceIcon } from '../data/icons'
 
-export default function FAQAccordion() {
+export default function FAQAccordion({ showTitle = true, className = 'bg-brand-charcoal' }) {
   const { t } = useTranslation()
   const items = t('faq.items', { returnObjects: true })
   const [open, setOpen] = useState(0)
 
   return (
-    <section className="bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
+    <section className={`${className} px-4 py-16 sm:px-6 lg:px-8`}>
       <div className="mx-auto max-w-4xl">
-        <h2 className="font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
-          {t('faq.title')}
-        </h2>
+        {showTitle && (
+          <h2 className="font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
+            {t('faq.title')}
+          </h2>
+        )}
         <div className="mt-8 divide-y divide-brand-steel/15 overflow-hidden rounded-lg border border-brand-steel/15">
           {items.map((item, index) => {
             const isOpen = open === index

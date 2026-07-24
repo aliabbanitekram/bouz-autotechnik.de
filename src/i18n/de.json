@@ -38,8 +38,12 @@
       "description": "Alle Werkstattleistungen von Bouz Autotechnik: Inspektion, Diagnose, Reifen, Bremsen, Autoglas, Unfallreparatur, Hybrid und E-Mobilität."
     },
     "about": {
-      "title": "Unternehmen | Bouz Autotechnik",
+      "title": "Über uns | Bouz Autotechnik",
       "description": "Lernen Sie Bouz Autotechnik kennen: freie Meisterwerkstatt mit Qualitätsanspruch, Erfahrung und transparenter Beratung."
+    },
+    "faq": {
+      "title": "Häufige Fragen | Bouz Autotechnik",
+      "description": "Antworten auf häufige Fragen zu HU/AU, Reifenwechsel, Bremsen, Ölwechsel, Klimaservice und Terminen bei Bouz Autotechnik."
     },
     "contact": {
       "title": "Kontakt | Bouz Autotechnik",
@@ -59,7 +63,8 @@
     "offers": "Angebote",
     "appointment": "Terminanfrage",
     "service": "Service",
-    "about": "Unternehmen",
+    "about": "ÜBER UNS",
+    "faq": "FAQ",
     "contact": "Kontakt",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
@@ -303,8 +308,12 @@
     "title": "Alles, was eine starke freie Werkstatt leisten muss",
     "intro": "Wir arbeiten strukturiert, markenunabhängig und mit Blick auf Sicherheit, Werterhalt und faire Kosten."
   },
+  "serviceDetail": {
+    "includes": "Das prüfen wir",
+    "note": "Jede Empfehlung wird vor der Reparatur mit Ihnen abgestimmt. Sie entscheiden erst nach einer klaren Erklärung von Befund, Aufwand und Kosten."
+  },
   "aboutPage": {
-    "eyebrow": "Unternehmen",
+    "eyebrow": "ÜBER UNS",
     "title": "Eine Werkstatt, die direkt spricht und sauber arbeitet",
     "story": [
       "Bouz Autotechnik wurde mit einem einfachen Anspruch aufgebaut: Fahrzeuge aller Marken fachgerecht betreuen und Kundinnen und Kunden klar sagen, was Sache ist.",
@@ -386,6 +395,10 @@
         "answer": "Ja. Wir sprechen Befund, Umfang und Kosten ab, bevor zusätzliche Arbeiten starten."
       }
     ]
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "intro": "Hier finden Sie die wichtigsten Antworten rund um Termine, Prüfungen, Verschleißteile und typische Werkstattfragen."
   },
   "legal": {
     "imprintTitle": "Impressum",

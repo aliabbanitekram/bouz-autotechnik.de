@@ -1,10 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
 import SectionHeader from '../components/SectionHeader'
 import ServiceCard from '../components/ServiceCard'
-
-const groupOrder = ['diagnose', 'reifen', 'karosserie', 'elektro']
+import Reveal from '../components/Reveal'
 
 export default function ServicePage() {
   const { t } = useTranslation()
@@ -23,24 +21,12 @@ export default function ServicePage() {
         </div>
       </section>
       <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-12">
-          {groupOrder.map((group) => {
-            const groupServices = services.filter((service) => service.group === group)
-            return (
-              <Reveal key={group} className="scroll-mt-28">
-                <h2 className="font-heading text-3xl font-bold uppercase text-brand-white">
-                  {t(`serviceGroups.${group}`)}
-                </h2>
-                <div className="mt-5 grid gap-4 md:grid-cols-2">
-                  {groupServices.map((service) => (
-                    <div key={service.id} id={service.id} className="scroll-mt-28">
-                      <ServiceCard service={service} />
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            )
-          })}
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {services.map((service, index) => (
+            <Reveal key={service.id} delay={index * 0.03}>
+              <ServiceCard service={service} />
+            </Reveal>
+          ))}
         </div>
       </section>
     </main>
