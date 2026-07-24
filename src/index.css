@@ -56,9 +56,9 @@ img {
 
 .industrial-panel {
   background:
-    linear-gradient(145deg, rgba(232, 234, 237, 0.06), rgba(95, 99, 104, 0.02)),
-    rgba(18, 21, 26, 0.88);
-  border: 1px solid rgba(154, 160, 166, 0.2);
+    linear-gradient(145deg, rgba(232, 234, 237, 0.09), rgba(154, 160, 166, 0.035)),
+    rgba(23, 27, 34, 0.92);
+  border: 1px solid rgba(154, 160, 166, 0.24);
 }
 
 .focus-ring {

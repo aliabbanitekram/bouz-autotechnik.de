@@ -8,6 +8,7 @@ const variants = {
   primary: 'bg-brand-red text-white shadow-red hover:bg-brand-redDark',
   secondary:
     'border border-brand-steel/35 bg-brand-steelLight/5 text-brand-white hover:border-brand-red hover:text-white',
+  dark: 'border border-brand-charcoal bg-brand-charcoal text-brand-white hover:border-brand-red hover:bg-brand-red',
   ghost: 'text-brand-steelLight hover:text-brand-red',
 }
 

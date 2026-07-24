@@ -144,20 +144,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-brand-white px-4 py-16 text-brand-black sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeader title={t('home.servicesTitle')} text={t('home.servicesText')} />
+            <SectionHeader title={t('home.servicesTitle')} text={t('home.servicesText')} tone="light" />
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {services.slice(0, 6).map((service, index) => (
               <Reveal key={service.id} delay={index * 0.03}>
-                <ServiceCard service={service} compact />
+                <ServiceCard service={service} compact tone="light" />
               </Reveal>
             ))}
           </div>
           <div className="mt-8">
-            <ButtonLink to="/service" variant="secondary" icon="ArrowRight">
+            <ButtonLink to="/service" variant="dark" icon="ArrowRight">
               {t('actions.viewServices')}
             </ButtonLink>
           </div>
@@ -205,7 +205,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FAQAccordion itemIndexes={homeFaqIndexes} showViewAllLink />
+      <FAQAccordion
+        itemIndexes={homeFaqIndexes}
+        showViewAllLink
+        tone="light"
+        className="bg-brand-white"
+      />
 
       <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-4xl text-center">

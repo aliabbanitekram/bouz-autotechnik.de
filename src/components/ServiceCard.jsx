@@ -3,12 +3,17 @@ import { useTranslation } from 'react-i18next'
 import { ServiceIcon } from '../data/icons'
 import { getServiceMedia } from '../data/serviceMedia'
 
-export default function ServiceCard({ service, compact = false }) {
+export default function ServiceCard({ service, compact = false, tone = 'dark' }) {
   const { t } = useTranslation()
   const media = getServiceMedia(service.id)
+  const isLight = tone === 'light'
 
   return (
-    <article className="group overflow-hidden rounded-lg bg-brand-panel shadow-steel ring-1 ring-brand-steel/12 transition hover:-translate-y-1 hover:ring-brand-red/55 hover:shadow-red">
+    <article
+      className={`group overflow-hidden rounded-lg shadow-steel ring-1 transition hover:-translate-y-1 hover:ring-brand-red/55 hover:shadow-red ${
+        isLight ? 'bg-white ring-brand-steelDark/15' : 'bg-brand-panel ring-brand-steel/12'
+      }`}
+    >
       <div className="relative">
         <img
           src={media.image}
@@ -23,14 +28,18 @@ export default function ServiceCard({ service, compact = false }) {
       </div>
       <div className="flex min-h-60 flex-col justify-between p-6">
         <div>
-          <h3 className="font-heading text-3xl font-bold uppercase text-brand-white">
+          <h3 className={`font-heading text-3xl font-bold uppercase ${isLight ? 'text-brand-black' : 'text-brand-white'}`}>
             {service.title}
           </h3>
-          {!compact && <p className="mt-4 text-sm leading-6 text-brand-text">{service.teaser}</p>}
+          {!compact && (
+            <p className={`mt-4 text-sm leading-6 ${isLight ? 'text-brand-steelDark' : 'text-brand-text'}`}>
+              {service.teaser}
+            </p>
+          )}
         </div>
         <Link
           to={`/service/${service.id}`}
-          className="focus-ring mt-8 inline-flex w-fit min-h-12 items-center gap-3 rounded-md bg-brand-black px-6 py-3 font-heading text-base font-bold uppercase tracking-wider text-brand-white transition hover:bg-brand-red"
+          className="focus-ring mt-8 inline-flex min-h-12 w-fit items-center gap-3 rounded-md bg-brand-black px-6 py-3 font-heading text-base font-bold uppercase tracking-wider text-brand-white transition hover:bg-brand-red"
         >
           <ServiceIcon name="ExternalLink" className="size-5" />
           <span>{t('common.learnMore')}</span>
