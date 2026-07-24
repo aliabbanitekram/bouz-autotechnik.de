@@ -106,7 +106,8 @@
     "sendRequest": "Anfrage senden",
     "sendMessage": "Nachricht senden",
     "openCookieSettings": "Cookie-Einstellungen öffnen",
-    "mapSettings": "Karte aktivieren"
+    "mapSettings": "Karte aktivieren",
+    "openInMaps": "In Maps öffnen"
   },
   "common": {
     "menuOpen": "Menü öffnen",
@@ -272,6 +273,37 @@
       "Diagnose nach Herstellervorgaben",
       "Transparente Freigabe vor Reparatur"
     ],
+    "aboutEyebrow": "Über uns",
+    "aboutTitle": "Zertifizierte Arbeit. Keine halben Sachen.",
+    "aboutLead": "Bouz Autotechnik ist ein Meisterbetrieb für Menschen, die bei Sicherheit, Diagnose und Reparatur keine Experimente wollen.",
+    "aboutImageAlt": "Mechaniker prüft ein Fahrzeug mit professioneller Werkstattdiagnose",
+    "aboutShortLine": "Bessere Pflege, zuverlässigere Fahrzeuge",
+    "aboutCardKicker": "Meisterbetrieb & Qualitätsversprechen",
+    "aboutCardTitle": "Wir arbeiten so, dass Fehler gar nicht erst entstehen.",
+    "aboutCardText": "Jeder Auftrag folgt einem klaren Ablauf: prüfen, messen, dokumentieren, erklären und erst nach Freigabe reparieren.",
+    "aboutParagraphs": [
+      "Unsere Werkstatt steht für zertifizierte Meisterarbeit, moderne Diagnose und Erfahrung mit Fahrzeugen aller Marken. Wir verlassen uns nicht auf Vermutungen, sondern auf Messwerte, Herstellervorgaben und saubere handwerkliche Kontrolle.",
+      "Perfektionismus bedeutet für uns nicht langsam zu arbeiten. Es bedeutet, jeden sicherheitsrelevanten Schritt bewusst zu prüfen, passende Teile in Erstausrüsterqualität einzusetzen und jedes Ergebnis nachvollziehbar zu erklären.",
+      "Unser Ziel ist null vermeidbare Fehler: klare Befunde, saubere Freigabe, dokumentierte Arbeit und ein Fahrzeug, das Sie mit gutem Gefühl wieder fahren."
+    ],
+    "aboutProofs": [
+      {
+        "title": "Zertifizierte Meisterqualität",
+        "text": "Fachgerechte Arbeit mit Verantwortung, Erfahrung und klaren Standards."
+      },
+      {
+        "title": "Präzise Diagnose",
+        "text": "Wir messen systematisch, bevor wir Teile tauschen oder Reparaturen empfehlen."
+      },
+      {
+        "title": "Dokumentierte Kontrolle",
+        "text": "Befunde, Empfehlungen und Freigaben bleiben transparent nachvollziehbar."
+      },
+      {
+        "title": "Perfektion im Detail",
+        "text": "Sicherheitsrelevante Arbeiten werden bewusst geprüft und sauber abgeschlossen."
+      }
+    ],
     "servicesTitle": "Werkstattservice ohne Umwege",
     "servicesText": "Vom Ölwechsel bis zur Elektronikdiagnose: Wir halten den Ablauf klar, die Kommunikation direkt und das Ergebnis belastbar.",
     "perksTitle": "Mehr Mobilität, weniger Aufwand",
@@ -289,8 +321,6 @@
         "description": "Wir unterstützen bei Dokumentation und Versicherungsabwicklung."
       }
     ],
-    "aboutTitle": "Meisterbetrieb mit direkter Haltung",
-    "aboutText": "Wir bauen Bouz Autotechnik als Werkstatt, in der Qualität, Tempo und Fairness zusammengehören. Keine langen Erklärschleifen, keine Reparaturen ohne Rücksprache, keine Kompromisse bei sicherheitsrelevanter Arbeit.",
     "highlightQuote": "Ein gutes Werkstatterlebnis beginnt nicht mit der Rechnung, sondern mit Vertrauen.",
     "highlightAuthor": "Bouz Autotechnik",
     "finalTitle": "Ihr Fahrzeug braucht Aufmerksamkeit?",

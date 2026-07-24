@@ -106,7 +106,8 @@
     "sendRequest": "Send request",
     "sendMessage": "Send message",
     "openCookieSettings": "Open cookie settings",
-    "mapSettings": "Enable map"
+    "mapSettings": "Enable map",
+    "openInMaps": "Open in Maps"
   },
   "common": {
     "menuOpen": "Open menu",
@@ -272,6 +273,37 @@
       "Manufacturer-standard diagnostics",
       "Transparent approval before repairs"
     ],
+    "aboutEyebrow": "About us",
+    "aboutTitle": "Certified work. No half measures.",
+    "aboutLead": "Bouz Autotechnik is a master workshop for drivers who do not want experiments when it comes to safety, diagnostics and repair.",
+    "aboutImageAlt": "Mechanic inspecting a vehicle with professional workshop diagnostics",
+    "aboutShortLine": "Better Care, More Reliable Cars",
+    "aboutCardKicker": "Master workshop & quality promise",
+    "aboutCardTitle": "We work so mistakes are prevented before they happen.",
+    "aboutCardText": "Every job follows a clear process: inspect, measure, document, explain and repair only after approval.",
+    "aboutParagraphs": [
+      "Our workshop stands for certified master craftsmanship, modern diagnostics and experience with vehicles of every make. We do not work from guesses; we work with measured data, manufacturer specifications and careful hands-on inspection.",
+      "Perfectionism does not mean working slowly. It means checking every safety-relevant step deliberately, using suitable original-equipment quality parts and explaining every result in a way you can understand.",
+      "Our goal is zero avoidable mistakes: clear findings, clean approval, documented work and a vehicle you can drive again with confidence."
+    ],
+    "aboutProofs": [
+      {
+        "title": "Certified master quality",
+        "text": "Professional work with responsibility, experience and clear standards."
+      },
+      {
+        "title": "Precise diagnostics",
+        "text": "We measure systematically before replacing parts or recommending repairs."
+      },
+      {
+        "title": "Documented control",
+        "text": "Findings, recommendations and approvals stay transparent and traceable."
+      },
+      {
+        "title": "Perfection in detail",
+        "text": "Safety-relevant work is checked deliberately and finished cleanly."
+      }
+    ],
     "servicesTitle": "Workshop service without detours",
     "servicesText": "From oil changes to electronic diagnostics: we keep the process clear, communication direct and results dependable.",
     "perksTitle": "More mobility, less effort",
@@ -289,8 +321,6 @@
         "description": "We support documentation and insurance handling."
       }
     ],
-    "aboutTitle": "A master workshop with a direct attitude",
-    "aboutText": "We are building Bouz Autotechnik as a workshop where quality, speed and fairness belong together. No long explanation loops, no repairs without approval, no compromises on safety-related work.",
     "highlightQuote": "A good workshop experience starts with trust, not the invoice.",
     "highlightAuthor": "Bouz Autotechnik",
     "finalTitle": "Does your vehicle need attention?",

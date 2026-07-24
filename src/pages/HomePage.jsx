@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import heroRoad from '../assets/home-hero-road.jpg'
+import aboutWorkshop from '../assets/services/diagnostic-service-03.jpg'
 import ButtonLink from '../components/ButtonLink'
 import FAQAccordion from '../components/FAQAccordion'
 import OfferCard from '../components/OfferCard'
@@ -10,12 +11,29 @@ import SectionHeader from '../components/SectionHeader'
 import ServiceCard from '../components/ServiceCard'
 import { ServiceIcon } from '../data/icons'
 
+function AccentEdgeWords({ text }) {
+  const words = text.split(' ')
+  const first = words.slice(0, 2).join(' ')
+  const middle = words.slice(2, -1).join(' ')
+  const last = words.at(-1)
+
+  return (
+    <>
+      <span className="text-brand-red">{first}</span>
+      {middle && <span> {middle}</span>}
+      {last && <span className="text-brand-red"> {last}</span>}
+    </>
+  )
+}
+
 export default function HomePage() {
   const { t } = useTranslation()
   const services = t('services', { returnObjects: true })
   const offers = t('offers', { returnObjects: true })
-  const badges = t('home.trustBadges', { returnObjects: true })
+  const aboutParagraphs = t('home.aboutParagraphs', { returnObjects: true })
   const perks = t('home.perks', { returnObjects: true })
+  const addressLine = `${t('site.address.line1')}, ${t('site.address.line2')}`
+  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressLine)}`
 
   return (
     <main>
@@ -57,14 +75,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-brand-steel/15 bg-brand-charcoal px-4 py-5 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {badges.map((badge) => (
-            <div key={badge} className="flex items-center gap-3 text-sm font-semibold text-brand-steelLight">
-              <ServiceIcon name="CheckCircle2" className="size-5 text-brand-red" />
-              <span>{badge}</span>
+      <section className="border-y border-brand-steel/15 bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
+              {t('home.aboutEyebrow')}
+            </p>
+            <h2 className="mt-4 font-heading text-4xl font-bold uppercase text-brand-white sm:text-6xl">
+              {t('home.aboutTitle')}
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-brand-text">{t('home.aboutLead')}</p>
+          </Reveal>
+
+          <Reveal className="industrial-panel mt-10 overflow-hidden rounded-lg p-5 sm:p-6 lg:p-8" delay={0.08}>
+            <div className="relative overflow-hidden rounded-md">
+              <img
+                src={aboutWorkshop}
+                alt={t('home.aboutImageAlt')}
+                className="h-[340px] w-full object-cover brightness-[0.68] sm:h-[420px]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/45 to-brand-black/20" />
+              <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
+                <div>
+                  <h3 className="max-w-xl font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
+                    <AccentEdgeWords text={t('home.aboutShortLine')} />
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold text-brand-white sm:text-base">{addressLine}</p>
+                </div>
+                <a
+                  className="focus-ring mx-auto inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-brand-red bg-brand-black/60 px-7 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-white backdrop-blur transition hover:bg-brand-red"
+                  href={mapUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <ServiceIcon name="MapPin" className="size-4" />
+                  <span>{t('actions.openInMaps')}</span>
+                </a>
+              </div>
             </div>
-          ))}
+
+            <div className="mt-8 max-w-4xl">
+              <p className="font-heading text-sm font-bold uppercase tracking-[0.22em] text-brand-red">
+                {t('home.aboutCardKicker')}
+              </p>
+              <h3 className="mt-3 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-5xl">
+                {t('home.aboutCardTitle')}
+              </h3>
+              <p className="mt-4 text-base leading-7 text-brand-text">{t('home.aboutCardText')}</p>
+            </div>
+
+            <div className="mt-7 max-w-4xl space-y-5 text-base leading-8 text-brand-text">
+              {aboutParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+                <ButtonLink to="/unternehmen" variant="secondary" icon="ArrowRight">
+                  {t('common.learnMore')}
+                </ButtonLink>
+                <ButtonLink to="/terminanfrage" icon="CalendarCheck">
+                  {t('actions.requestAppointment')}
+                </ButtonLink>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -113,15 +187,7 @@ export default function HomePage() {
       </section>
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal className="industrial-panel rounded-lg p-6 sm:p-8">
-            <SectionHeader title={t('home.aboutTitle')} text={t('home.aboutText')} />
-            <div className="mt-7">
-              <ButtonLink to="/unternehmen" variant="secondary" icon="ArrowRight">
-                {t('common.learnMore')}
-              </ButtonLink>
-            </div>
-          </Reveal>
+        <div className="mx-auto max-w-7xl">
           <Reveal className="industrial-panel rounded-lg p-6 sm:p-8" delay={0.08}>
             <ServiceIcon name="Star" className="size-8 text-brand-red" />
             <blockquote className="mt-5 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
