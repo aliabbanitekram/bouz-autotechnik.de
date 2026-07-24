@@ -15,9 +15,18 @@
     "phone": "+49 211 000000",
     "email": "info@bouz-autotechnik.de",
     "hours": [
-      { "days": "Montag - Freitag", "time": "08:00 - 18:00 Uhr" },
-      { "days": "Samstag", "time": "Nach Vereinbarung" },
-      { "days": "Sonntag", "time": "Geschlossen" }
+      {
+        "days": "Montag - Freitag",
+        "time": "08:00 - 18:00 Uhr"
+      },
+      {
+        "days": "Samstag",
+        "time": "Nach Vereinbarung"
+      },
+      {
+        "days": "Sonntag",
+        "time": "Geschlossen"
+      }
     ]
   },
   "seo": {
@@ -72,9 +81,21 @@
   },
   "footer": {
     "social": [
-      { "label": "Instagram", "url": "https://www.instagram.com/", "icon": "ExternalLink" },
-      { "label": "Facebook", "url": "https://www.facebook.com/", "icon": "ExternalLink" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/", "icon": "ExternalLink" }
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/",
+        "icon": "ExternalLink"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/",
+        "icon": "ExternalLink"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/",
+        "icon": "ExternalLink"
+      }
     ]
   },
   "actions": {
@@ -100,107 +121,93 @@
   },
   "services": [
     {
-      "id": "achsgeometrie",
-      "icon": "Gauge",
-      "group": "reifen",
-      "title": "Achsgeometrie",
-      "teaser": "Präzise Vermessung für sauberen Geradeauslauf und gleichmäßigen Reifenverschleiß.",
-      "description": "Eine korrekt eingestellte Achsgeometrie schützt Reifen, Fahrwerk und Kraftstoffverbrauch. Wir prüfen Spur, Sturz und Lenkverhalten mit moderner Messtechnik und stellen Ihr Fahrzeug sauber ein."
-    },
-    {
-      "id": "autoglas",
-      "icon": "ShieldCheck",
-      "group": "karosserie",
-      "title": "Autoglas",
-      "teaser": "Steinschlag, Riss oder Scheibentausch mit Blick auf Sicherheit und Assistenzsysteme.",
-      "description": "Kleine Steinschläge lassen sich oft reparieren, bevor die Scheibe reißt. Bei einem Austausch achten wir auf saubere Montage, Dichtigkeit und die nötige Kalibrierung relevanter Systeme."
-    },
-    {
-      "id": "elektrik",
-      "icon": "PlugZap",
-      "group": "diagnose",
-      "title": "Elektrik & Elektronik",
-      "teaser": "Systematische Fehlersuche statt Teiletausch auf Verdacht.",
-      "description": "Moderne Fahrzeuge melden Fehler oft lange, bevor ein Bauteil wirklich ausfällt. Wir lesen Steuergeräte aus, messen gezielt nach und erklären klar, welche Reparatur sinnvoll ist."
-    },
-    {
-      "id": "emobility",
-      "icon": "BatteryCharging",
-      "group": "elektro",
-      "title": "Elektromobilität & Hybrid",
-      "teaser": "Service für elektrifizierte Fahrzeuge mit Respekt vor Hochvolt-Technik.",
-      "description": "Auch Hybrid- und Elektrofahrzeuge brauchen Bremsen-, Reifen-, Klima- und Fahrwerksservice. Wir prüfen die relevanten Systeme sorgfältig und arbeiten nach den passenden Sicherheitsvorgaben."
-    },
-    {
-      "id": "raeder",
-      "icon": "CircleDot",
-      "group": "reifen",
-      "title": "Räder & Felgen",
-      "teaser": "Montage, Auswuchten und Blick auf Felgen, Ventile und Reifendrucksensoren.",
-      "description": "Wir montieren Räder sauber, prüfen Laufbild und Zustand und achten auf Drehmoment, RDKS und Auswuchtung. So fährt sich Ihr Fahrzeug ruhiger und sicherer."
-    },
-    {
-      "id": "reifenservice",
-      "icon": "Car",
-      "group": "reifen",
-      "title": "Reifenservice",
-      "teaser": "Saisonwechsel, Reifenprüfung und Beratung für Sommer-, Winter- und Ganzjahresreifen.",
-      "description": "Profil, Alter, Luftdruck und Tragfähigkeit entscheiden über Sicherheit und Fahrkomfort. Wir beraten markenunabhängig und empfehlen nur, was wirklich zu Ihrem Fahrzeug passt."
-    },
-    {
-      "id": "hu-au",
-      "icon": "ClipboardCheck",
-      "group": "diagnose",
-      "title": "HU/AU & Prüfungen",
-      "teaser": "Vorabcheck und Organisation der Haupt- und Abgasuntersuchung.",
-      "description": "Wir prüfen Ihr Fahrzeug vor der HU auf typische Mängel und sprechen notwendige Arbeiten transparent mit Ihnen ab. Die Prüfung organisieren wir bequem im Werkstattablauf."
-    },
-    {
-      "id": "unfallreparatur",
-      "icon": "Hammer",
-      "group": "karosserie",
-      "title": "Unfallreparatur",
-      "teaser": "Strukturierte Hilfe nach einem Schaden, inklusive Abstimmung mit Versicherungen.",
-      "description": "Nach einem Unfall zählt ein klarer Ablauf. Wir dokumentieren Schäden, koordinieren die Reparatur und unterstützen bei der Kommunikation mit Gutachtern oder Versicherungen."
-    },
-    {
-      "id": "wartung",
-      "icon": "Wrench",
-      "group": "diagnose",
-      "title": "Wartung & Inspektion",
-      "teaser": "Service nach Herstellervorgaben mit Teilen in Erstausrüsterqualität.",
-      "description": "Regelmäßige Wartung erhält Zuverlässigkeit, Garantieansprüche und Wiederverkaufswert. Wir arbeiten nach Plan, dokumentieren verständlich und halten Sie vor Zusatzarbeiten auf dem Laufenden."
-    },
-    {
-      "id": "klima",
+      "id": "ac-heating",
       "icon": "Fan",
-      "group": "diagnose",
-      "title": "Klimaservice",
-      "teaser": "Kühlleistung, Dichtheit und Hygiene für ein angenehmes Innenraumklima.",
-      "description": "Eine schwache Klimaanlage kostet Komfort und kann auf Kältemittelverlust hinweisen. Wir prüfen Leistung, Dichtheit und Filterzustand und empfehlen passende Maßnahmen."
+      "group": "climate",
+      "title": "Klimaanlage & Heizung",
+      "teaser": "Kühlung, Heizung und Luftstrom zuverlässig prüfen, bevor Komfort und Sicht leiden.",
+      "description": "Wenn die Klimaanlage schwach kühlt, die Heizung träge reagiert oder die Scheiben schnell beschlagen, prüfen wir das System gezielt. Wir kontrollieren Kühlleistung, Luftstrom, Filterzustand, sichtbare Leitungen und typische Undichtigkeiten und erklären klar, ob ein Service, eine Desinfektion oder eine Reparatur sinnvoll ist."
     },
     {
-      "id": "bremsen",
+      "id": "brake-services",
       "icon": "Disc3",
-      "group": "diagnose",
+      "group": "safety",
       "title": "Bremsenservice",
-      "teaser": "Beläge, Scheiben, Flüssigkeit und Leitungen sauber geprüft.",
-      "description": "Bremsen müssen jederzeit verlässlich reagieren. Wir prüfen Verschleiß, Bremsbild und Flüssigkeit und ersetzen Teile nach Bedarf in passender Qualität."
+      "teaser": "Beläge, Scheiben, Bremsflüssigkeit und Bremsgefühl sauber beurteilen.",
+      "description": "Bremsen müssen eindeutig und verlässlich reagieren. Wir prüfen Beläge, Scheiben, Bremsflüssigkeit, Leitungen und das Tragbild, ordnen Geräusche oder Vibrationen ein und empfehlen nur die Arbeiten, die für Sicherheit und Fahrverhalten wirklich nötig sind."
     },
     {
-      "id": "oelwechsel",
+      "id": "front-ends-alignment",
+      "icon": "Gauge",
+      "group": "chassis",
+      "title": "Vorderachse & Achsvermessung",
+      "teaser": "Lenkung, Vorderachse und Spur für ruhigen Geradeauslauf und sauberen Reifenverschleiß.",
+      "description": "Zieht das Fahrzeug zur Seite, steht das Lenkrad schief oder laufen Reifen ungleichmäßig ab, prüfen wir Vorderachse, Fahrwerkskomponenten und Achsgeometrie. Nach der Diagnose stellen wir die Werte nach Fahrzeugvorgabe ein und dokumentieren, was korrigiert wurde."
+    },
+    {
+      "id": "shock-suspension",
+      "icon": "Wrench",
+      "group": "chassis",
+      "title": "Stoßdämpfer & Fahrwerk",
+      "teaser": "Mehr Stabilität, besserer Kontakt zur Straße und weniger Poltern im Alltag.",
+      "description": "Ein müdes Fahrwerk zeigt sich durch Poltern, schwammiges Fahrgefühl, längere Bremswege oder ungleichmäßigen Reifenverschleiß. Wir prüfen Stoßdämpfer, Federn, Lager und relevante Fahrwerksteile und besprechen, welche Reparatur das Fahrzeug wieder kontrollierbar und ruhig macht."
+    },
+    {
+      "id": "battery-electrical",
+      "icon": "BatteryCharging",
+      "group": "electrical",
+      "title": "Batterie & Elektrik",
+      "teaser": "Startprobleme, Warnleuchten und elektrische Ausfälle systematisch eingrenzen.",
+      "description": "Moderne Fahrzeuge hängen stark von stabiler Bordspannung und sauberer Elektrik ab. Wir testen Batterie, Generator, Starter, Sicherungen und relevante Stromkreise, lesen Fehler aus und grenzen die Ursache ein, statt Teile auf Verdacht zu tauschen."
+    },
+    {
+      "id": "diagnostic-service",
+      "icon": "SearchCheck",
+      "group": "electrical",
+      "title": "Diagnose-Service",
+      "teaser": "Fehlercodes, Live-Daten und Symptome zu einem klaren Befund zusammenführen.",
+      "description": "Eine Warnleuchte sagt selten die ganze Wahrheit. Wir verbinden digitale Diagnose mit Sichtprüfung und Messwerten, damit aus einem Symptom ein nachvollziehbarer Befund wird. Danach wissen Sie, welche Reparatur Priorität hat und welche warten kann."
+    },
+    {
+      "id": "oil-filter-changes",
       "icon": "Droplets",
-      "group": "diagnose",
-      "title": "Ölwechsel",
-      "teaser": "Das richtige Öl, der passende Filter und eine saubere Dokumentation.",
-      "description": "Motoröl altert durch Laufleistung, Temperatur und Kurzstreckenbetrieb. Wir verwenden freigegebene Öle, wechseln Filter mit und prüfen nebenbei wichtige Flüssigkeiten."
+      "group": "maintenance",
+      "title": "Öl- und Filterwechsel",
+      "teaser": "Das richtige Öl, saubere Filter und ein kurzer Blick auf wichtige Flüssigkeiten.",
+      "description": "Motoröl schützt, kühlt und reinigt. Wir verwenden Öl mit passender Herstellerfreigabe, wechseln Filter und Dichtungen sauber und prüfen wichtige Flüssigkeiten mit. So bleibt der Service nachvollziehbar und der Motor langfristig besser geschützt."
+    },
+    {
+      "id": "belts-hoses",
+      "icon": "Settings",
+      "group": "maintenance",
+      "title": "Riemen & Schläuche",
+      "teaser": "Verschleiß früh erkennen, bevor Kühlung, Ladung oder Nebenaggregate ausfallen.",
+      "description": "Riemen und Schläuche arbeiten oft unauffällig, bis sie reißen, undicht werden oder Folgeschäden verursachen. Wir prüfen sichtbare Risse, Porosität, Spannung, Leckspuren und Alterungszeichen und empfehlen rechtzeitig den passenden Austausch."
+    },
+    {
+      "id": "fuel-system-repairs",
+      "icon": "Gauge",
+      "group": "powertrain",
+      "title": "Kraftstoffsystem-Reparaturen",
+      "teaser": "Ruckeln, Startprobleme, Mehrverbrauch oder unrunder Lauf gezielt prüfen.",
+      "description": "Ein gestörtes Kraftstoffsystem kann Leistung, Verbrauch und Abgasverhalten spürbar verschlechtern. Wir prüfen Symptome, relevante Bauteile und Diagnosewerte, damit Einspritzung, Kraftstoffversorgung und Motorlauf wieder sauber zusammenarbeiten."
+    },
+    {
+      "id": "transmission-repair",
+      "icon": "Settings",
+      "group": "powertrain",
+      "title": "Getriebereparatur",
+      "teaser": "Schaltprobleme, Geräusche und Verzögerungen nicht ignorieren, sondern sauber prüfen.",
+      "description": "Wenn ein Getriebe ruckt, verzögert schaltet, Geräusche macht oder Öl verliert, zählt eine frühe Diagnose. Wir prüfen Zustand, Fehlerspeicher, Dichtheit und Fahrverhalten und erklären, ob Service, Abdichtung oder Reparatur der richtige nächste Schritt ist."
     }
   ],
   "serviceGroups": {
-    "diagnose": "Wartung & Diagnose",
-    "reifen": "Reifen & Räder",
-    "karosserie": "Karosserie & Unfall",
-    "elektro": "Elektrik & Elektromobilität"
+    "climate": "Klima & Heizung",
+    "safety": "Sicherheit",
+    "chassis": "Fahrwerk & Achse",
+    "electrical": "Elektrik & Diagnose",
+    "maintenance": "Wartung",
+    "powertrain": "Antrieb"
   },
   "offers": [
     {
@@ -245,9 +252,18 @@
     "heroTitle": "Freie Werkstatt. Klare Diagnose. Saubere Arbeit.",
     "heroText": "Bouz Autotechnik steht für ehrlichen Service an Fahrzeugen aller Marken. Wir prüfen präzise, erklären verständlich und reparieren nach Herstellervorgaben.",
     "heroStats": [
-      { "value": "Alle Marken", "label": "Service ohne Markenbindung" },
-      { "value": "Meisterbetrieb", "label": "Qualität mit Verantwortung" },
-      { "value": "OE-Qualität", "label": "Teile in Erstausrüsterqualität" }
+      {
+        "value": "Alle Marken",
+        "label": "Service ohne Markenbindung"
+      },
+      {
+        "value": "Meisterbetrieb",
+        "label": "Qualität mit Verantwortung"
+      },
+      {
+        "value": "OE-Qualität",
+        "label": "Teile in Erstausrüsterqualität"
+      }
     ],
     "trustBadges": [
       "Alle Marken willkommen",
@@ -321,15 +337,33 @@
       "Wichtig ist uns ein Ablauf, der verständlich bleibt. Sie bekommen eine klare Einschätzung, faire Optionen und eine Rückmeldung, bevor zusätzliche Kosten entstehen."
     ],
     "values": [
-      { "title": "Qualität", "description": "Sicherheitsrelevante Arbeit bekommt Zeit, Sorgfalt und Kontrolle." },
-      { "title": "Fairness", "description": "Wir empfehlen, was technisch sinnvoll ist, nicht was die Rechnung größer macht." },
-      { "title": "Transparenz", "description": "Diagnosen, Kosten und nächste Schritte werden verständlich erklärt." }
+      {
+        "title": "Qualität",
+        "description": "Sicherheitsrelevante Arbeit bekommt Zeit, Sorgfalt und Kontrolle."
+      },
+      {
+        "title": "Fairness",
+        "description": "Wir empfehlen, was technisch sinnvoll ist, nicht was die Rechnung größer macht."
+      },
+      {
+        "title": "Transparenz",
+        "description": "Diagnosen, Kosten und nächste Schritte werden verständlich erklärt."
+      }
     ],
     "teamTitle": "Team",
     "team": [
-      { "name": "Werkstattleitung", "role": "Kfz-Meister / Diagnose" },
-      { "name": "Serviceannahme", "role": "Termine / Kundenbetreuung" },
-      { "name": "Werkstattteam", "role": "Wartung / Reparatur" }
+      {
+        "name": "Werkstattleitung",
+        "role": "Kfz-Meister / Diagnose"
+      },
+      {
+        "name": "Serviceannahme",
+        "role": "Termine / Kundenbetreuung"
+      },
+      {
+        "name": "Werkstattteam",
+        "role": "Wartung / Reparatur"
+      }
     ],
     "qualityTitle": "Unser Qualitätsversprechen",
     "quality": [

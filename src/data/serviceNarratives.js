@@ -1,179 +1,151 @@
 export const serviceNarratives = {
   de: {
-    achsgeometrie: {
+    'ac-heating': {
       lead:
-        'Wenn Ihr Fahrzeug zieht, das Lenkrad schief steht oder Reifen ungleichmäßig ablaufen, ist die Achsgeometrie oft der erste sinnvolle Prüfpunkt.',
+        'Klimaanlage und Heizung arbeiten das ganze Jahr: für Komfort, klare Scheiben und ein gesundes Innenraumklima.',
       body:
-        'Wir prüfen die Radstellung, das Fahrwerksbild und typische Verschleißhinweise, bevor wir etwas einstellen. So bekommt Ihr Auto wieder einen ruhigen Geradeauslauf, bessere Reifenlebensdauer und ein sichereres Fahrgefühl.',
-      bullets: ['Spur, Sturz und Fahrwerkszustand prüfen', 'Lenkverhalten und Reifenbild bewerten', 'Einstellung nach Fahrzeugvorgaben dokumentieren'],
+        'Wir prüfen Kühlleistung, Heizverhalten, Luftstrom, Filterzustand, sichtbare Leitungen und typische Undichtigkeiten. Wenn die Anlage schwach kühlt, muffig riecht oder die Scheiben beschlagen, bekommen Sie eine klare Empfehlung für Service, Desinfektion oder Reparatur.',
+      bullets: ['Kühlleistung und Heizverhalten prüfen', 'Filter, Luftstrom und sichtbare Leitungen kontrollieren', 'Service oder Reparatur klar empfehlen'],
     },
-    autoglas: {
+    'brake-services': {
       lead:
-        'Autoglas ist Sicherheitsteil, Sichtfeld und Sensorträger zugleich. Ein kleiner Steinschlag kann schnell zu einem größeren Problem werden.',
+        'Bremsen gehören zu den wichtigsten Sicherheitssystemen am Fahrzeug. Geräusche, Vibrationen oder längere Bremswege sollten nie ignoriert werden.',
       body:
-        'Wir beurteilen, ob eine Reparatur möglich ist oder ob die Scheibe ersetzt werden sollte. Bei modernen Fahrzeugen achten wir besonders auf Dichtigkeit, saubere Montage und die Systeme rund um Kamera oder Sensorik.',
-      bullets: ['Steinschlag und Rissbildung beurteilen', 'Reparatur oder Austausch transparent empfehlen', 'Assistenzsysteme und Dichtigkeit im Blick behalten'],
+        'Wir prüfen Beläge, Scheiben, Bremsflüssigkeit, Leitungen und Verschleißbild. Wenn eine Reparatur nötig ist, erklären wir, was sicherheitsrelevant ist und welche Teile in passender Qualität ersetzt werden sollten.',
+      bullets: ['Beläge, Scheiben und Bremsflüssigkeit beurteilen', 'Geräusche und Vibrationen nachvollziehen', 'Sicherheitsrelevante Arbeiten vorab abstimmen'],
     },
-    elektrik: {
+    'front-ends-alignment': {
       lead:
-        'Startprobleme, Warnleuchten, flackerndes Licht oder sporadische Ausfälle müssen nicht geraten werden. Elektrik braucht saubere Diagnose.',
+        'Lenkung, Vorderachse und Achsvermessung entscheiden darüber, ob Ihr Fahrzeug stabil geradeaus läuft und Reifen sauber abnutzen.',
       body:
-        'Wir lesen Fehler aus, prüfen Batterie, Ladeanlage, Sicherungen und relevante Stromkreise. Danach erklären wir klar, welcher Befund wirklich zur Störung passt und welche Reparatur sinnvoll ist.',
-      bullets: ['Batterie, Generator und Starter prüfen', 'Fehlerspeicher und Live-Daten auswerten', 'Ursache eingrenzen statt Teile auf Verdacht tauschen'],
+        'Wir prüfen Lenkung, Fahrwerkskomponenten, Reifenbild und Achswerte. Nach der Diagnose stellen wir die Geometrie nach Fahrzeugvorgaben ein und dokumentieren die Werte verständlich.',
+      bullets: ['Vorderachse und Lenkung prüfen', 'Reifenbild und Fahrwerkszustand bewerten', 'Achsgeometrie nach Vorgabe einstellen'],
     },
-    emobility: {
+    'shock-suspension': {
       lead:
-        'Hybrid- und Elektrofahrzeuge brauchen genauso professionelle Wartung wie Verbrenner, nur mit anderen Sicherheitsanforderungen.',
+        'Stoßdämpfer und Fahrwerk halten das Fahrzeug kontrollierbar. Ein schwammiges Fahrgefühl oder Poltern ist oft ein frühes Warnzeichen.',
       body:
-        'Wir übernehmen passende Servicearbeiten an Bremsen, Reifen, Fahrwerk, Klima und Diagnose. Dabei behandeln wir Hochvoltkomponenten mit der nötigen Sorgfalt und arbeiten nach den passenden Vorgaben.',
-      bullets: ['Bremsen, Reifen, Fahrwerk und Klima prüfen', 'Diagnose für elektrifizierte Systeme vorbereiten', 'Sicherheitsvorgaben für Hybrid und E-Fahrzeuge beachten'],
+        'Wir prüfen Dämpfer, Federn, Lager, Gelenke und sichtbare Schäden. So lässt sich klären, ob ein Komfortproblem, ein Sicherheitsrisiko oder normaler Verschleiß vorliegt.',
+      bullets: ['Dämpfer, Federn und Lager kontrollieren', 'Poltern und instabiles Fahrverhalten einordnen', 'Fahrwerksreparatur nachvollziehbar planen'],
     },
-    raeder: {
+    'battery-electrical': {
       lead:
-        'Räder und Felgen entscheiden über Laufkomfort, Sicherheit und das Gefühl auf der Straße. Kleine Unwuchten machen sich oft schnell bemerkbar.',
+        'Eine schwache Batterie oder ein elektrischer Fehler kann schnell zum Liegenbleiber werden. Moderne Fahrzeuge brauchen stabile Spannung.',
       body:
-        'Wir prüfen Felgen, Ventile, Sensoren und Reifenbild, montieren mit korrektem Drehmoment und wuchten sauber aus. Das Ergebnis ist ein ruhigerer Lauf und mehr Sicherheit bei jeder Geschwindigkeit.',
-      bullets: ['Felgen, Ventile und RDKS prüfen', 'Räder fachgerecht montieren und auswuchten', 'Reifenbild und Schäden sichtbar erklären'],
+        'Wir testen Batterie, Generator, Starter, Sicherungen und relevante Stromkreise. Zusammen mit Fehlerspeicher und Messwerten grenzen wir die Ursache sauber ein, statt Teile auf Verdacht zu tauschen.',
+      bullets: ['Batterie, Generator und Starter testen', 'Sicherungen und Stromkreise prüfen', 'Elektrische Fehler systematisch eingrenzen'],
     },
-    reifenservice: {
+    'diagnostic-service': {
       lead:
-        'Reifen sind der einzige Kontakt zur Straße. Profil, Alter, Luftdruck und Reifentyp müssen zu Fahrzeug und Jahreszeit passen.',
+        'Eine Warnleuchte ist nur der Anfang der Diagnose. Entscheidend ist, den Fehlercode mit dem tatsächlichen Symptom zu verbinden.',
       body:
-        'Wir prüfen Zustand und Verschleiß, beraten markenunabhängig und montieren sauber. Wenn ein Wechsel sinnvoll ist, bekommen Sie eine klare Empfehlung ohne unnötigen Druck.',
-      bullets: ['Profil, Alter und Luftdruck kontrollieren', 'Sommer-, Winter- oder Ganzjahresreifen beraten', 'Saisonwechsel sauber und termingerecht durchführen'],
+        'Wir lesen Fehlerspeicher aus, prüfen Live-Daten, führen Sichtkontrollen durch und messen gezielt nach. Danach erhalten Sie einen verständlichen Befund und eine klare Priorisierung der nächsten Schritte.',
+      bullets: ['Fehlerspeicher und Live-Daten auswerten', 'Symptome mit Messwerten abgleichen', 'Reparaturprioritäten klar erklären'],
     },
-    'hu-au': {
+    'oil-filter-changes': {
       lead:
-        'Die Hauptuntersuchung ist einfacher, wenn typische Mängel vorher gefunden werden. Genau dafür ist der Vorabcheck gedacht.',
+        'Öl und Filter schützen den Motor jeden Tag. Der richtige Wechsel erhält Laufkultur, Sauberkeit und langfristige Zuverlässigkeit.',
       body:
-        'Wir kontrollieren Beleuchtung, Bremsen, Reifen, Fahrwerk, Abgasrelevantes und sichtbare Sicherheitsmängel. Danach wissen Sie, ob das Fahrzeug prüfbereit ist oder welche Punkte zuerst erledigt werden sollten.',
-      bullets: ['HU-relevante Baugruppen vorab prüfen', 'Mängel klar priorisieren', 'Prüftermin bequem im Werkstattablauf koordinieren'],
+        'Wir verwenden Öl mit passender Freigabe, wechseln Filter und Dichtung sauber und prüfen wichtige Flüssigkeiten mit. So bleibt der Service nachvollziehbar dokumentiert und der Motor gut versorgt.',
+      bullets: ['Öl nach Herstellervorgabe verwenden', 'Filter und Dichtung sauber ersetzen', 'Wichtige Flüssigkeiten nebenbei prüfen'],
     },
-    unfallreparatur: {
+    'belts-hoses': {
       lead:
-        'Nach einem Schaden braucht es nicht nur Reparatur, sondern einen ruhigen Ablauf: prüfen, dokumentieren, abstimmen, instand setzen.',
+        'Riemen und Schläuche wirken unscheinbar, können bei Ausfall aber schnell große Folgeschäden verursachen.',
       body:
-        'Wir erfassen sichtbare Schäden, besprechen die nächsten Schritte und unterstützen bei der Kommunikation mit Gutachter oder Versicherung. Ziel ist eine saubere Reparatur ohne unnötige Unsicherheit.',
-      bullets: ['Schadenbild aufnehmen und dokumentieren', 'Reparaturumfang verständlich besprechen', 'Versicherungsabwicklung nach Absprache unterstützen'],
+        'Wir prüfen Risse, Porosität, Spannung, Leckspuren und Alterungszeichen. Wenn ein Teil grenzwertig ist, erklären wir das Risiko und empfehlen einen planbaren Austausch, bevor es unterwegs ausfällt.',
+      bullets: ['Risse, Porosität und Leckspuren prüfen', 'Spannung und Alterungszeichen bewerten', 'Austausch planbar statt im Notfall durchführen'],
     },
-    wartung: {
+    'fuel-system-repairs': {
       lead:
-        'Regelmäßige Wartung verhindert viele teure Überraschungen. Entscheidend ist, dass Serviceumfang und Fahrzeugvorgaben zusammenpassen.',
+        'Ruckeln, schlechter Start, Leistungsverlust oder erhöhter Verbrauch können auf Probleme im Kraftstoffsystem hinweisen.',
       body:
-        'Wir prüfen Flüssigkeiten, Filter, Bremsen, Reifen, Fahrwerk und Diagnosepunkte nach Plan. Zusatzarbeiten starten erst nach Rücksprache, damit Sie Kosten und Nutzen klar verstehen.',
-      bullets: ['Service nach Herstellervorgaben durchführen', 'Verschleiß früh erkennen', 'Dokumentation und Freigaben sauber festhalten'],
+        'Wir prüfen Diagnosewerte, Kraftstoffversorgung, relevante Sensorik und typische Ursachen für unrunden Motorlauf. Ziel ist eine saubere Versorgung, bessere Laufkultur und ein verlässlicher Befund.',
+      bullets: ['Startverhalten, Ruckeln und Verbrauch einordnen', 'Kraftstoffversorgung und Diagnosewerte prüfen', 'Ursache vor Teiletausch sauber eingrenzen'],
     },
-    klima: {
+    'transmission-repair': {
       lead:
-        'Schwache Kühlung, unangenehme Gerüche oder beschlagene Scheiben sind typische Zeichen, dass die Klimaanlage geprüft werden sollte.',
+        'Getriebeprobleme zeigen sich oft durch Rucken, Verzögerungen, Geräusche oder Undichtigkeiten. Frühe Prüfung schützt vor größeren Schäden.',
       body:
-        'Wir messen die Kühlleistung, prüfen Filter, sichtbare Leitungen und mögliche Undichtigkeiten. Danach wissen Sie, ob ein Service, eine Desinfektion oder eine gezielte Reparatur sinnvoll ist.',
-      bullets: ['Kühlleistung und Luftstrom prüfen', 'Filter und sichtbare Bauteile kontrollieren', 'Service oder Reparatur verständlich empfehlen'],
-    },
-    bremsen: {
-      lead:
-        'Bremsen dürfen nicht vage sein. Geräusche, Vibrationen, Warnleuchten oder längere Bremswege sollten immer ernst genommen werden.',
-      body:
-        'Wir prüfen Beläge, Scheiben, Bremsflüssigkeit, Leitungen und das Tragbild. Wenn Teile ersetzt werden müssen, erklären wir den Grund und verbauen passende Qualität.',
-      bullets: ['Beläge, Scheiben und Bremsflüssigkeit prüfen', 'Geräusche und Vibrationen nachvollziehen', 'Sicherheitsrelevante Befunde klar erklären'],
-    },
-    oelwechsel: {
-      lead:
-        'Motoröl schützt, kühlt und reinigt. Wenn es altert oder die falsche Freigabe hat, leidet der Motor langfristig.',
-      body:
-        'Wir verwenden das passende Öl nach Herstellervorgabe, wechseln den Filter und prüfen wichtige Flüssigkeiten mit. So bleibt der Motor sauber versorgt und der Service nachvollziehbar dokumentiert.',
-      bullets: ['Öl nach Freigabe verwenden', 'Filter und Dichtungen sauber wechseln', 'Nebencheck wichtiger Flüssigkeiten durchführen'],
+        'Wir beurteilen Fahrverhalten, Dichtheit, Fehlerspeicher und sichtbare Hinweise. Danach besprechen wir, ob Service, Abdichtung oder Reparatur sinnvoll ist.',
+      bullets: ['Schaltverhalten und Geräusche prüfen', 'Dichtheit und Fehlerspeicher kontrollieren', 'Service oder Reparatur verständlich abgrenzen'],
     },
   },
   en: {
-    achsgeometrie: {
+    'ac-heating': {
       lead:
-        'If the car pulls to one side, the steering wheel sits off-center or the tires wear unevenly, alignment is often the right place to start.',
+        'A/C and heating work all year: comfort, clear windows and a healthier cabin all depend on them.',
       body:
-        'We inspect wheel angles, suspension condition and wear patterns before making adjustments. The result is steadier tracking, longer tire life and a more confident drive.',
-      bullets: ['Check toe, camber and suspension condition', 'Review steering feel and tire wear pattern', 'Document alignment to vehicle specifications'],
+        'We check cooling performance, heater response, airflow, filter condition, visible lines and common leak points. If the system cools weakly, smells unpleasant or fogs the glass, you get a clear recommendation for service, disinfection or repair.',
+      bullets: ['Check cooling and heating performance', 'Inspect filters, airflow and visible lines', 'Recommend service or repair clearly'],
     },
-    autoglas: {
+    'brake-services': {
       lead:
-        'Auto glass is part visibility, part safety system and often part sensor mount. A small chip can become a larger problem quickly.',
+        'Brakes are one of the most important safety systems on the vehicle. Noise, vibration or longer stopping distance should never be ignored.',
       body:
-        'We assess whether repair is possible or whether replacement is the better route. On modern vehicles, clean sealing, correct fit and camera or sensor surroundings matter.',
-      bullets: ['Assess chips, cracks and field of vision', 'Recommend repair or replacement clearly', 'Keep sealing and driver-assistance systems in mind'],
+        'We inspect pads, rotors, brake fluid, lines and wear patterns. If repair is needed, we explain what is safety-critical and which parts should be replaced in the right quality.',
+      bullets: ['Assess pads, rotors and brake fluid', 'Trace noises and vibration', 'Confirm safety-related work before repair'],
     },
-    elektrik: {
+    'front-ends-alignment': {
       lead:
-        'Hard starting, warning lights, flickering lamps or intermittent failures should not be guessed at. Electrical work needs proper diagnosis.',
+        'Steering, front-end components and alignment determine whether the vehicle tracks straight and tires wear evenly.',
       body:
-        'We read faults, test the battery, charging system, fuses and relevant circuits. Then we explain which finding actually matches the problem and what repair makes sense.',
-      bullets: ['Test battery, alternator and starter', 'Read fault memory and live data', 'Trace the cause instead of replacing parts blindly'],
+        'We inspect steering, chassis components, tire wear and alignment values. After diagnosis, we set the geometry to vehicle specifications and document the results clearly.',
+      bullets: ['Inspect front end and steering', 'Review tire wear and suspension condition', 'Set alignment to vehicle specifications'],
     },
-    emobility: {
+    'shock-suspension': {
       lead:
-        'Hybrid and electric vehicles need professional maintenance too, just with different safety requirements.',
+        'Shocks and suspension keep the vehicle controlled. Floating, clunking or rough handling is often an early warning sign.',
       body:
-        'We handle suitable service work on brakes, tires, suspension, climate systems and diagnostics. High-voltage areas are treated with the right care and procedures.',
-      bullets: ['Inspect brakes, tires, chassis and climate systems', 'Prepare diagnostics for electrified systems', 'Respect hybrid and EV safety procedures'],
+        'We check shocks, struts, springs, mounts, joints and visible damage. That lets us separate comfort issues, safety concerns and normal wear.',
+      bullets: ['Check shocks, springs and mounts', 'Assess clunks and unstable handling', 'Plan suspension repair clearly'],
     },
-    raeder: {
+    'battery-electrical': {
       lead:
-        'Wheels and rims shape comfort, safety and the feel of the road. Small imbalances can become noticeable very quickly.',
+        'A weak battery or electrical fault can quickly leave you stranded. Modern vehicles need stable voltage.',
       body:
-        'We inspect rims, valves, sensors and tire wear, mount with correct torque and balance properly. That gives the vehicle smoother running and better stability at speed.',
-      bullets: ['Check rims, valves and TPMS', 'Mount and balance wheels correctly', 'Explain tire wear and visible damage'],
+        'We test the battery, alternator, starter, fuses and relevant circuits. With fault memory and measurements, we narrow down the cause instead of replacing parts blindly.',
+      bullets: ['Test battery, alternator and starter', 'Check fuses and circuits', 'Trace electrical faults systematically'],
     },
-    reifenservice: {
+    'diagnostic-service': {
       lead:
-        'Tires are the only contact with the road. Tread, age, pressure and tire type must match the vehicle and the season.',
+        'A warning light is only the start of diagnosis. The key is connecting the fault code with the real symptom.',
       body:
-        'We inspect condition and wear, advise independently and mount cleanly. If replacement is sensible, you get a clear recommendation without pressure.',
-      bullets: ['Check tread, age and pressure', 'Advise on summer, winter or all-season tires', 'Handle seasonal changes cleanly and on schedule'],
+        'We read fault memory, inspect live data, perform visual checks and measure where needed. You receive a clear finding and a practical priority list for next steps.',
+      bullets: ['Read fault memory and live data', 'Match symptoms with measurements', 'Explain repair priorities clearly'],
     },
-    'hu-au': {
+    'oil-filter-changes': {
       lead:
-        'The technical inspection is easier when common issues are found beforehand. That is what the pre-check is for.',
+        'Oil and filters protect the engine every day. The right service supports smooth running, cleanliness and long-term reliability.',
       body:
-        'We check lights, brakes, tires, suspension, emissions-relevant items and visible safety defects. After that you know whether the vehicle is ready or what should be handled first.',
-      bullets: ['Pre-check inspection-relevant systems', 'Prioritize defects clearly', 'Coordinate inspection within the workshop process'],
+        'We use oil with the correct approval, replace the filter and seal cleanly and check important fluids along the way. The service stays documented and the engine stays properly protected.',
+      bullets: ['Use oil to manufacturer specification', 'Replace filter and seal cleanly', 'Check key fluids at the same time'],
     },
-    unfallreparatur: {
+    'belts-hoses': {
       lead:
-        'After a damage event, you need more than repair. You need a calm process: inspect, document, coordinate and restore.',
+        'Belts and hoses may look simple, but failure can quickly create much larger damage.',
       body:
-        'We record visible damage, discuss next steps and support communication with assessors or insurers. The goal is a clean repair without unnecessary uncertainty.',
-      bullets: ['Record and document the damage', 'Explain the repair scope clearly', 'Support insurance handling by arrangement'],
+        'We inspect cracks, soft spots, tension, leak marks and age-related wear. If a part is near its limit, we explain the risk and recommend replacement before it fails on the road.',
+      bullets: ['Check cracks, aging and leak marks', 'Assess tension and wear signs', 'Replace preventively instead of during a breakdown'],
     },
-    wartung: {
+    'fuel-system-repairs': {
       lead:
-        'Regular maintenance prevents many expensive surprises. The key is matching the service scope to the vehicle requirements.',
+        'Hesitation, hard starting, loss of power or increased fuel use can point to fuel system problems.',
       body:
-        'We inspect fluids, filters, brakes, tires, suspension and diagnostic points according to the plan. Added work starts only after approval, so costs and value stay clear.',
-      bullets: ['Service according to manufacturer standards', 'Spot wear early', 'Keep documentation and approvals clear'],
+        'We check diagnostic values, fuel delivery, relevant sensors and common causes of rough running. The goal is clean delivery, smoother operation and a reliable finding.',
+      bullets: ['Assess starting, hesitation and fuel use', 'Check fuel delivery and diagnostic values', 'Find the cause before replacing parts'],
     },
-    klima: {
+    'transmission-repair': {
       lead:
-        'Weak cooling, unpleasant smells or fogged windows are common signs that the A/C system should be checked.',
+        'Transmission problems often show up as slipping, delayed shifts, noise or leaks. Early inspection can prevent larger damage.',
       body:
-        'We measure cooling performance, check filters, visible lines and possible leaks. Then you know whether service, disinfection or targeted repair is the right next step.',
-      bullets: ['Check cooling performance and airflow', 'Inspect filters and visible components', 'Recommend service or repair in plain language'],
-    },
-    bremsen: {
-      lead:
-        'Brakes should never feel uncertain. Noises, vibration, warning lights or longer stopping distance should always be taken seriously.',
-      body:
-        'We check pads, rotors, brake fluid, lines and wear patterns. If parts need replacement, we explain why and fit the right quality.',
-      bullets: ['Inspect pads, rotors and brake fluid', 'Trace noises and vibration', 'Explain safety-related findings clearly'],
-    },
-    oelwechsel: {
-      lead:
-        'Engine oil protects, cools and cleans. When it ages or has the wrong approval, the engine suffers over time.',
-      body:
-        'We use the correct oil to manufacturer specification, replace the filter and check important fluids along the way. The service stays clean, documented and understandable.',
-      bullets: ['Use oil with the correct approval', 'Replace filter and seals cleanly', 'Perform a quick check of key fluids'],
+        'We assess road behavior, sealing, fault memory and visible signs. Then we explain whether service, sealing or repair is the sensible next step.',
+      bullets: ['Check shifting behavior and noise', 'Inspect sealing and fault memory', 'Separate service from repair clearly'],
     },
   },
 }
 
 export function getServiceNarrative(language, id) {
   const normalizedLanguage = language?.startsWith('en') ? 'en' : 'de'
-  return serviceNarratives[normalizedLanguage][id] || serviceNarratives[normalizedLanguage].wartung
+  return serviceNarratives[normalizedLanguage][id] || serviceNarratives[normalizedLanguage]['diagnostic-service']
 }

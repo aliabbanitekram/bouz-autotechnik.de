@@ -15,9 +15,18 @@
     "phone": "+49 211 000000",
     "email": "info@bouz-autotechnik.de",
     "hours": [
-      { "days": "Monday - Friday", "time": "8:00 am - 6:00 pm" },
-      { "days": "Saturday", "time": "By appointment" },
-      { "days": "Sunday", "time": "Closed" }
+      {
+        "days": "Monday - Friday",
+        "time": "8:00 am - 6:00 pm"
+      },
+      {
+        "days": "Saturday",
+        "time": "By appointment"
+      },
+      {
+        "days": "Sunday",
+        "time": "Closed"
+      }
     ]
   },
   "seo": {
@@ -72,9 +81,21 @@
   },
   "footer": {
     "social": [
-      { "label": "Instagram", "url": "https://www.instagram.com/", "icon": "ExternalLink" },
-      { "label": "Facebook", "url": "https://www.facebook.com/", "icon": "ExternalLink" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/", "icon": "ExternalLink" }
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/",
+        "icon": "ExternalLink"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/",
+        "icon": "ExternalLink"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/",
+        "icon": "ExternalLink"
+      }
     ]
   },
   "actions": {
@@ -100,107 +121,93 @@
   },
   "services": [
     {
-      "id": "achsgeometrie",
-      "icon": "Gauge",
-      "group": "reifen",
-      "title": "Wheel alignment",
-      "teaser": "Precise alignment for stable straight-line tracking and even tire wear.",
-      "description": "Correct wheel alignment protects tires, suspension and fuel economy. We check toe, camber and steering behavior with modern measuring equipment and adjust your vehicle properly."
-    },
-    {
-      "id": "autoglas",
-      "icon": "ShieldCheck",
-      "group": "karosserie",
-      "title": "Auto glass",
-      "teaser": "Stone chip, crack or windshield replacement with safety systems in mind.",
-      "description": "Small stone chips can often be repaired before the glass cracks. When replacement is needed, we focus on clean installation, sealing and any required system calibration."
-    },
-    {
-      "id": "elektrik",
-      "icon": "PlugZap",
-      "group": "diagnose",
-      "title": "Electrical & electronics",
-      "teaser": "Systematic fault finding instead of replacing parts on suspicion.",
-      "description": "Modern vehicles often report faults long before a component fails completely. We read control units, measure deliberately and clearly explain which repair makes sense."
-    },
-    {
-      "id": "emobility",
-      "icon": "BatteryCharging",
-      "group": "elektro",
-      "title": "Electric mobility & hybrid",
-      "teaser": "Service for electrified vehicles with respect for high-voltage technology.",
-      "description": "Hybrid and electric vehicles still need brake, tire, climate and chassis service. We inspect the relevant systems carefully and follow the appropriate safety requirements."
-    },
-    {
-      "id": "raeder",
-      "icon": "CircleDot",
-      "group": "reifen",
-      "title": "Wheels & rims",
-      "teaser": "Mounting, balancing and checks for rims, valves and tire pressure sensors.",
-      "description": "We mount wheels cleanly, check wear pattern and condition, and pay attention to torque, TPMS and balancing. That keeps your vehicle smoother and safer."
-    },
-    {
-      "id": "reifenservice",
-      "icon": "Car",
-      "group": "reifen",
-      "title": "Tire service",
-      "teaser": "Seasonal changes, tire checks and advice for summer, winter and all-season tires.",
-      "description": "Tread depth, age, pressure and load rating determine safety and comfort. We advise independently and recommend only what truly fits your vehicle."
-    },
-    {
-      "id": "hu-au",
-      "icon": "ClipboardCheck",
-      "group": "diagnose",
-      "title": "Technical inspection & emissions",
-      "teaser": "Pre-check and coordination of German inspection and emissions testing.",
-      "description": "We check your vehicle for common inspection issues and discuss required work transparently. The official inspection is then coordinated conveniently within the workshop process."
-    },
-    {
-      "id": "unfallreparatur",
-      "icon": "Hammer",
-      "group": "karosserie",
-      "title": "Accident repair",
-      "teaser": "Structured help after damage, including coordination with insurers.",
-      "description": "After an accident, a clear process matters. We document damage, coordinate repair and support communication with assessors or insurance companies."
-    },
-    {
-      "id": "wartung",
-      "icon": "Wrench",
-      "group": "diagnose",
-      "title": "Maintenance & inspection",
-      "teaser": "Manufacturer-standard service with original-equipment quality parts.",
-      "description": "Regular maintenance protects reliability, warranty claims and resale value. We work by the service plan, document clearly and keep you informed before any added work."
-    },
-    {
-      "id": "klima",
+      "id": "ac-heating",
       "icon": "Fan",
-      "group": "diagnose",
-      "title": "Climate service",
-      "teaser": "Cooling performance, leak checks and hygiene for a pleasant cabin climate.",
-      "description": "Weak air conditioning costs comfort and may indicate refrigerant loss. We check performance, sealing and filter condition and recommend the right next steps."
+      "group": "climate",
+      "title": "A/C and Heating",
+      "teaser": "Cooling, heating and airflow checked before comfort and visibility suffer.",
+      "description": "If the A/C cools weakly, the heater reacts slowly or the windows fog quickly, we inspect the system with purpose. We check cooling performance, airflow, filter condition, visible lines and common leak points, then explain whether service, disinfection or repair makes sense."
     },
     {
-      "id": "bremsen",
+      "id": "brake-services",
       "icon": "Disc3",
-      "group": "diagnose",
-      "title": "Brake service",
-      "teaser": "Pads, discs, fluid and lines checked properly.",
-      "description": "Brakes must respond reliably at all times. We inspect wear, braking pattern and fluid and replace parts as needed in suitable quality."
+      "group": "safety",
+      "title": "Brake Services",
+      "teaser": "Pads, rotors, brake fluid and braking feel assessed clearly.",
+      "description": "Brakes must respond confidently every time. We inspect pads, rotors, brake fluid, lines and wear patterns, trace noises or vibration and recommend only the work needed for safety and proper driving feel."
     },
     {
-      "id": "oelwechsel",
+      "id": "front-ends-alignment",
+      "icon": "Gauge",
+      "group": "chassis",
+      "title": "Front Ends & Alignment",
+      "teaser": "Steering, front-end components and alignment for stable tracking and even tire wear.",
+      "description": "If the vehicle pulls, the steering wheel sits off-center or the tires wear unevenly, we inspect the front end, suspension components and alignment. After diagnosis, we adjust to vehicle specifications and document what was corrected."
+    },
+    {
+      "id": "shock-suspension",
+      "icon": "Wrench",
+      "group": "chassis",
+      "title": "Shock & Suspension",
+      "teaser": "Better stability, stronger road contact and less noise over rough roads.",
+      "description": "A tired suspension can show up as clunks, floaty handling, longer stopping distance or uneven tire wear. We inspect shocks, struts, springs, mounts and related chassis parts, then explain what will make the vehicle controlled and comfortable again."
+    },
+    {
+      "id": "battery-electrical",
+      "icon": "BatteryCharging",
+      "group": "electrical",
+      "title": "Battery & Electrical Systems",
+      "teaser": "Starting trouble, warning lights and electrical failures traced systematically.",
+      "description": "Modern vehicles depend on stable voltage and healthy electrical systems. We test the battery, alternator, starter, fuses and relevant circuits, read fault data and narrow down the cause instead of replacing parts blindly."
+    },
+    {
+      "id": "diagnostic-service",
+      "icon": "SearchCheck",
+      "group": "electrical",
+      "title": "Diagnostic Service",
+      "teaser": "Fault codes, live data and symptoms turned into a clear finding.",
+      "description": "A warning light rarely tells the whole story. We combine scan-tool diagnostics with visual checks and measurements so a symptom becomes a clear, explainable finding. You then know what repair matters first and what can wait."
+    },
+    {
+      "id": "oil-filter-changes",
       "icon": "Droplets",
-      "group": "diagnose",
-      "title": "Oil change",
-      "teaser": "The right oil, the right filter and clean documentation.",
-      "description": "Engine oil ages through mileage, heat and short-trip use. We use approved oils, replace the filter and check key fluids along the way."
+      "group": "maintenance",
+      "title": "Oil and Filter Changes",
+      "teaser": "The right oil, clean filters and a quick look at key fluids.",
+      "description": "Engine oil protects, cools and cleans. We use oil with the correct manufacturer approval, replace filters and seals cleanly and check important fluids along the way. The service stays documented and the engine stays better protected."
+    },
+    {
+      "id": "belts-hoses",
+      "icon": "Settings",
+      "group": "maintenance",
+      "title": "Belts and Hoses Replacement",
+      "teaser": "Wear spotted early before cooling, charging or accessories fail.",
+      "description": "Belts and hoses often work quietly until they crack, leak or cause secondary damage. We inspect visible cracks, soft spots, tension, leak marks and age-related wear, then recommend replacement before a small part becomes a bigger problem."
+    },
+    {
+      "id": "fuel-system-repairs",
+      "icon": "Gauge",
+      "group": "powertrain",
+      "title": "Fuel System Repairs",
+      "teaser": "Rough running, hesitation, starting problems or higher fuel use checked properly.",
+      "description": "A fuel system issue can affect power, economy and emissions. We review symptoms, relevant components and diagnostic values so fuel delivery, injection and engine operation work smoothly together again."
+    },
+    {
+      "id": "transmission-repair",
+      "icon": "Settings",
+      "group": "powertrain",
+      "title": "Transmission Repair",
+      "teaser": "Shifting problems, noises and delays inspected before they grow expensive.",
+      "description": "If a transmission slips, shifts harshly, makes noise or leaks fluid, early diagnosis matters. We inspect condition, fault data, sealing and road behavior, then explain whether service, sealing or repair is the right next step."
     }
   ],
   "serviceGroups": {
-    "diagnose": "Maintenance & diagnostics",
-    "reifen": "Tires & wheels",
-    "karosserie": "Bodywork & accident",
-    "elektro": "Electronics & e-mobility"
+    "climate": "A/C & heating",
+    "safety": "Safety",
+    "chassis": "Chassis & alignment",
+    "electrical": "Electrical & diagnostics",
+    "maintenance": "Maintenance",
+    "powertrain": "Powertrain"
   },
   "offers": [
     {
@@ -245,9 +252,18 @@
     "heroTitle": "Independent workshop. Clear diagnostics. Proper work.",
     "heroText": "Bouz Autotechnik stands for honest service on vehicles of all makes. We inspect precisely, explain clearly and repair according to manufacturer standards.",
     "heroStats": [
-      { "value": "All makes", "label": "Service without brand restrictions" },
-      { "value": "Master workshop", "label": "Quality with responsibility" },
-      { "value": "OE quality", "label": "Original-equipment quality parts" }
+      {
+        "value": "All makes",
+        "label": "Service without brand restrictions"
+      },
+      {
+        "value": "Master workshop",
+        "label": "Quality with responsibility"
+      },
+      {
+        "value": "OE quality",
+        "label": "Original-equipment quality parts"
+      }
     ],
     "trustBadges": [
       "All makes welcome",
@@ -321,15 +337,33 @@
       "A clear process matters to us. You receive a clear assessment, fair options and feedback before additional costs arise."
     ],
     "values": [
-      { "title": "Quality", "description": "Safety-related work receives time, care and control." },
-      { "title": "Fairness", "description": "We recommend what is technically sensible, not what makes the invoice larger." },
-      { "title": "Transparency", "description": "Diagnostics, costs and next steps are explained clearly." }
+      {
+        "title": "Quality",
+        "description": "Safety-related work receives time, care and control."
+      },
+      {
+        "title": "Fairness",
+        "description": "We recommend what is technically sensible, not what makes the invoice larger."
+      },
+      {
+        "title": "Transparency",
+        "description": "Diagnostics, costs and next steps are explained clearly."
+      }
     ],
     "teamTitle": "Team",
     "team": [
-      { "name": "Workshop management", "role": "Master technician / diagnostics" },
-      { "name": "Service reception", "role": "Appointments / customer care" },
-      { "name": "Workshop team", "role": "Maintenance / repair" }
+      {
+        "name": "Workshop management",
+        "role": "Master technician / diagnostics"
+      },
+      {
+        "name": "Service reception",
+        "role": "Appointments / customer care"
+      },
+      {
+        "name": "Workshop team",
+        "role": "Maintenance / repair"
+      }
     ],
     "qualityTitle": "Our quality promise",
     "quality": [
