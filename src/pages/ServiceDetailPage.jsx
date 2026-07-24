@@ -23,7 +23,7 @@ export default function ServiceDetailPage() {
   return (
     <main>
       <SEO page="service" />
-      <section className="bg-hero-vignette px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+      <section className="bg-hero-vignette px-4 pt-6 pb-4 sm:px-6 sm:pb-6 lg:px-8 lg:py-10">
         <div className="mx-auto max-w-7xl">
           <Link
             to="/service"
@@ -84,29 +84,34 @@ export default function ServiceDetailPage() {
               <img
                 src={media.image}
                 alt={service.title}
-                className="aspect-[16/11] w-full object-cover"
+                className="aspect-16/11 w-full object-cover"
                 loading="eager"
               />
             </div>
           </div>
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {trust.map((item, index) => (
-              <div key={item.title} className="industrial-panel rounded-lg p-4">
+              <div
+                key={item.title}
+                className="industrial-panel grid grid-cols-[20%_1fr] items-start rounded-lg p-4 lg:block"
+              >
                 <ServiceIcon
-                  name={['SearchCheck', 'CheckCircle2', 'Settings', 'FileCheck2'][index]}
-                  className="size-6 text-brand-red"
+                  name={['Gauge', 'ShieldCheck', 'Wrench', 'Camera'][index]}
+                  className="mt-1 h-auto w-[82%] max-w-14 text-brand-red lg:mt-0 lg:size-6 lg:w-6 lg:max-w-none"
                 />
-                <h2 className="mt-3 font-heading text-lg font-bold uppercase text-brand-white">
-                  {item.title}
-                </h2>
-                <p className="mt-2 text-sm leading-6 text-brand-text">{item.description}</p>
+                <div className="min-w-0 pl-3 sm:pl-2 lg:pl-0">
+                  <h2 className="font-heading text-lg font-bold uppercase text-brand-white lg:mt-3">
+                    {item.title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-brand-text">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="px-4 pt-8 pb-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.85fr]">
           <article className="industrial-panel rounded-lg p-6 sm:p-8">
             <h2 className="font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
