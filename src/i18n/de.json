@@ -326,7 +326,19 @@
   },
   "serviceDetail": {
     "includes": "Das prüfen wir",
-    "note": "Jede Empfehlung wird vor der Reparatur mit Ihnen abgestimmt. Sie entscheiden erst nach einer klaren Erklärung von Befund, Aufwand und Kosten."
+    "note": "Jede Empfehlung wird vor der Reparatur mit Ihnen abgestimmt. Sie entscheiden erst nach einer klaren Erklärung von Befund, Aufwand und Kosten.",
+    "trust": [
+      { "title": "Präzise Diagnose", "description": "Wir prüfen Symptome, Messwerte und Bauteile zusammen." },
+      { "title": "Transparente Freigabe", "description": "Keine Zusatzarbeit ohne klare Rücksprache." },
+      { "title": "OE-Qualität", "description": "Passende Teile und Flüssigkeiten nach Fahrzeugvorgabe." },
+      { "title": "Dokumentierte Arbeit", "description": "Befund und Empfehlung bleiben nachvollziehbar." }
+    ],
+    "signsTitle": "Anzeichen, dass Sie Service brauchen",
+    "signsIntro": "Diese Warnzeichen sollten Sie früh prüfen lassen, bevor aus einem kleinen Problem eine größere Reparatur wird.",
+    "serviceScope": "Leistungsumfang",
+    "andMore": "und mehr",
+    "whyBouz": "Warum Bouz",
+    "readyButton": "Termin anfragen"
   },
   "aboutPage": {
     "eyebrow": "ÜBER UNS",

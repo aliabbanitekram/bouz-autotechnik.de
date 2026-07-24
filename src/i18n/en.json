@@ -326,7 +326,19 @@
   },
   "serviceDetail": {
     "includes": "What we check",
-    "note": "Every recommendation is confirmed with you before repair. You decide only after a clear explanation of the finding, effort and cost."
+    "note": "Every recommendation is confirmed with you before repair. You decide only after a clear explanation of the finding, effort and cost.",
+    "trust": [
+      { "title": "Accurate diagnostics", "description": "We connect symptoms, data and parts before repair." },
+      { "title": "Transparent approval", "description": "No added work starts without clear confirmation." },
+      { "title": "OE quality", "description": "Suitable parts and fluids matched to the vehicle." },
+      { "title": "Documented work", "description": "Findings and recommendations stay understandable." }
+    ],
+    "signsTitle": "Signs you need service",
+    "signsIntro": "Watch for these warning signs and fix them early before a small issue becomes a bigger repair.",
+    "serviceScope": "Service scope",
+    "andMore": "and more",
+    "whyBouz": "Why Bouz",
+    "readyButton": "Request appointment"
   },
   "aboutPage": {
     "eyebrow": "About us",
