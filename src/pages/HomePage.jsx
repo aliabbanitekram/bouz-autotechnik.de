@@ -4,7 +4,6 @@ import heroRoad from '../assets/home-hero-road.jpg'
 import aboutWorkshop from '../assets/services/diagnostic-service-03.jpg'
 import ButtonLink from '../components/ButtonLink'
 import FAQAccordion from '../components/FAQAccordion'
-import OfferCard from '../components/OfferCard'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
 import SectionHeader from '../components/SectionHeader'
@@ -31,7 +30,6 @@ function AccentEdgeWords({ text }) {
 export default function HomePage() {
   const { t } = useTranslation()
   const services = t('services', { returnObjects: true })
-  const offers = t('offers', { returnObjects: true })
   const aboutParagraphs = t('home.aboutParagraphs', { returnObjects: true })
   const perks = t('home.perks', { returnObjects: true })
   const addressLine = `${t('site.address.line1')}, ${t('site.address.line2')}`
@@ -185,23 +183,6 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <Reveal className="industrial-panel rounded-lg p-6 sm:p-8" delay={0.08}>
-            <ServiceIcon name="Star" className="size-8 text-brand-red" />
-            <blockquote className="mt-5 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
-              {t('home.highlightQuote')}
-            </blockquote>
-            <p className="mt-4 text-sm uppercase tracking-[0.2em] text-brand-steel">{t('home.highlightAuthor')}</p>
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              {offers.slice(0, 2).map((offer) => (
-                <OfferCard key={offer.title} offer={offer} />
-              ))}
-            </div>
-          </Reveal>
         </div>
       </section>
 
