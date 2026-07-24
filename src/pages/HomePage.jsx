@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next'
 import heroRoad from '../assets/home-hero-road.jpg'
 import aboutWorkshop from '../assets/services/diagnostic-service-03.jpg'
 import ButtonLink from '../components/ButtonLink'
-import FAQAccordion from '../components/FAQAccordion'
+import HomeFAQTeaser from '../components/HomeFAQTeaser'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
 import SectionHeader from '../components/SectionHeader'
 import ServiceCard from '../components/ServiceCard'
 import { ServiceIcon } from '../data/icons'
 
-const homeFaqIndexes = [0, 3, 4, 5, 11, 12, 13, 17, 22, 27]
+const homeFaqIndexes = [17, 4, 8, 21]
 
 function AccentEdgeWords({ text }) {
   const words = text.split(' ')
@@ -186,12 +186,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FAQAccordion
-        itemIndexes={homeFaqIndexes}
-        showViewAllLink
-        tone="light"
-        className="bg-brand-white"
-      />
+      <HomeFAQTeaser itemIndexes={homeFaqIndexes} />
 
       <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-4xl text-center">

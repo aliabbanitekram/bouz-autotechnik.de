@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../assets/bouz-autotechnik-logo.jpeg'
+import logo from '../assets/bouz-autotechnik-logo-clean.png'
 import { ServiceIcon } from '../data/icons'
 import { navItems } from '../data/navigation'
 import ButtonLink from './ButtonLink'
@@ -40,7 +40,7 @@ export default function Header() {
           <img
             src={logo}
             alt={t('site.name')}
-            className="h-14 w-14 rounded-md object-cover ring-1 ring-brand-steel/25"
+            className="h-14 w-14 object-contain"
             loading="eager"
           />
           <span className="hidden min-w-0 sm:block">

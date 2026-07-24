@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import logo from '../assets/bouz-autotechnik-logo.jpeg'
+import logo from '../assets/bouz-autotechnik-logo-clean.png'
 import { ServiceIcon } from '../data/icons'
 import { legalNavItems, navItems } from '../data/navigation'
 import { useConsent } from './CookieConsent/useConsent'
@@ -18,7 +18,7 @@ export default function Footer() {
           <img
             src={logo}
             alt={t('site.name')}
-            className="h-20 w-20 rounded-md object-cover ring-1 ring-brand-steel/25"
+            className="h-20 w-20 object-contain"
             loading="lazy"
           />
           <p className="mt-5 max-w-sm text-sm leading-6 text-brand-text">{t('home.heroText')}</p>

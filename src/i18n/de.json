@@ -277,6 +277,11 @@
         "description": "Wir unterstützen bei Dokumentation und Versicherungsabwicklung."
       }
     ],
+    "faqEyebrow": "Kontakt aufnehmen",
+    "faqTitle": "Haben Sie eine Frage?",
+    "faqText": "Besuchen Sie unsere FAQ-Seite oder kontaktieren Sie unser Serviceteam. Hier finden Sie schnell die nächsten Schritte.",
+    "faqPrimary": "FAQs",
+    "faqSecondary": "Kundenservice",
     "finalTitle": "Ihr Fahrzeug braucht Aufmerksamkeit?",
     "finalText": "Schildern Sie kurz Ihr Anliegen. Wir melden uns mit einem passenden Terminvorschlag."
   },
