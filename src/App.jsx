@@ -4,10 +4,12 @@ import ScrollToTop from './components/ScrollToTop'
 import AboutPage from './pages/AboutPage'
 import AppointmentPage from './pages/AppointmentPage'
 import ContactPage from './pages/ContactPage'
+import FAQPage from './pages/FAQPage'
 import HomePage from './pages/HomePage'
 import ImprintPage from './pages/ImprintPage'
 import OffersPage from './pages/OffersPage'
 import PrivacyPage from './pages/PrivacyPage'
+import ServiceDetailPage from './pages/ServiceDetailPage'
 import ServicePage from './pages/ServicePage'
 
 export default function App() {
@@ -20,7 +22,9 @@ export default function App() {
           <Route path="angebote" element={<OffersPage />} />
           <Route path="terminanfrage" element={<AppointmentPage />} />
           <Route path="service" element={<ServicePage />} />
+          <Route path="service/:serviceId" element={<ServiceDetailPage />} />
           <Route path="unternehmen" element={<AboutPage />} />
+          <Route path="faq" element={<FAQPage />} />
           <Route path="kontakt" element={<ContactPage />} />
           <Route path="impressum" element={<ImprintPage />} />
           <Route path="datenschutz" element={<PrivacyPage />} />

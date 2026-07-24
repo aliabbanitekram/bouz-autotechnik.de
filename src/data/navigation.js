@@ -4,6 +4,7 @@ export const navItems = [
   { key: 'appointment', path: '/terminanfrage' },
   { key: 'service', path: '/service' },
   { key: 'about', path: '/unternehmen' },
+  { key: 'faq', path: '/faq' },
   { key: 'contact', path: '/kontakt' },
 ]
 

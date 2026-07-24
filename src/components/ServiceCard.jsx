@@ -1,25 +1,41 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { ServiceIcon } from '../data/icons'
+import { getServiceMedia } from '../data/serviceMedia'
 
 export default function ServiceCard({ service, compact = false }) {
+  const { t } = useTranslation()
+  const media = getServiceMedia(service.id)
+
   return (
-    <Link
-      to={`/service#${service.id}`}
-      className="group industrial-panel focus-ring block rounded-lg p-5 transition hover:-translate-y-1 hover:border-brand-red/70 hover:shadow-red"
-    >
-      <div className="flex items-start gap-4">
-        <span className="flex size-12 shrink-0 items-center justify-center rounded-md bg-brand-red/12 text-brand-red ring-1 ring-brand-red/20">
-          <ServiceIcon name={service.icon} className="size-6" />
+    <article className="group overflow-hidden rounded-lg bg-brand-panel shadow-steel ring-1 ring-brand-steel/12 transition hover:-translate-y-1 hover:ring-brand-red/55 hover:shadow-red">
+      <div className="relative">
+        <img
+          src={media.image}
+          alt={service.title}
+          className="aspect-[16/10] w-full object-cover opacity-90 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+          loading={compact ? 'lazy' : 'eager'}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-transparent to-transparent" />
+        <span className="absolute right-5 top-5 flex size-20 items-center justify-center rounded-lg bg-brand-charcoal/95 text-brand-red shadow-xl ring-1 ring-brand-steel/15 sm:size-24">
+          <ServiceIcon name={service.icon} className="size-9 sm:size-11" />
         </span>
+      </div>
+      <div className="flex min-h-60 flex-col justify-between p-6">
         <div>
-          <h3 className="font-heading text-xl font-bold uppercase text-brand-white">
+          <h3 className="font-heading text-3xl font-bold uppercase text-brand-white">
             {service.title}
           </h3>
-          <p className="mt-2 text-sm leading-6 text-brand-text">
-            {compact ? service.teaser : service.description}
-          </p>
+          {!compact && <p className="mt-4 text-sm leading-6 text-brand-text">{service.teaser}</p>}
         </div>
+        <Link
+          to={`/service/${service.id}`}
+          className="focus-ring mt-8 inline-flex w-fit min-h-12 items-center gap-3 rounded-md bg-brand-black px-6 py-3 font-heading text-base font-bold uppercase tracking-wider text-brand-white transition hover:bg-brand-red"
+        >
+          <ServiceIcon name="ExternalLink" className="size-5" />
+          <span>{t('common.learnMore')}</span>
+        </Link>
       </div>
-    </Link>
+    </article>
   )
 }
