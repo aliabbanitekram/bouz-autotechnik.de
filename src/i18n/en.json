@@ -1,0 +1,457 @@
+{
+  "language": {
+    "de": "DE",
+    "en": "EN",
+    "switch": "Switch language"
+  },
+  "site": {
+    "name": "Bouz Autotechnik",
+    "tagline": "Master workshop",
+    "address": {
+      "line1": "Musterstrasse 12",
+      "line2": "40210 Dusseldorf",
+      "note": "Address placeholder until final approval"
+    },
+    "phone": "+49 211 000000",
+    "email": "info@bouz-autotechnik.de",
+    "hours": [
+      { "days": "Monday - Friday", "time": "8:00 am - 6:00 pm" },
+      { "days": "Saturday", "time": "By appointment" },
+      { "days": "Sunday", "time": "Closed" }
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "Bouz Autotechnik | Independent master workshop in Dusseldorf",
+      "description": "Bouz Autotechnik is the independent master workshop for all makes: maintenance, diagnostics, tires, inspections, body repair and honest advice."
+    },
+    "offers": {
+      "title": "Offers | Bouz Autotechnik",
+      "description": "Current workshop offers for tires, inspections, oil changes, climate service and safety checks at Bouz Autotechnik."
+    },
+    "appointment": {
+      "title": "Appointment Request | Bouz Autotechnik",
+      "description": "Request your workshop appointment online with Bouz Autotechnik. Fast, direct and without waiting on hold."
+    },
+    "service": {
+      "title": "Service | Bouz Autotechnik",
+      "description": "All workshop services by Bouz Autotechnik: inspection, diagnostics, tires, brakes, auto glass, accident repair, hybrid and electric mobility."
+    },
+    "about": {
+      "title": "Company | Bouz Autotechnik",
+      "description": "Get to know Bouz Autotechnik: an independent master workshop with quality standards, experience and transparent advice."
+    },
+    "contact": {
+      "title": "Contact | Bouz Autotechnik",
+      "description": "Contact Bouz Autotechnik for appointments, questions and directions to the independent master workshop in Dusseldorf."
+    },
+    "imprint": {
+      "title": "Legal Notice | Bouz Autotechnik",
+      "description": "Legal notice and provider information for Bouz Autotechnik."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Bouz Autotechnik",
+      "description": "Privacy information from Bouz Autotechnik about contact forms, cookies and external map services."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "offers": "Offers",
+    "appointment": "Appointment",
+    "service": "Service",
+    "about": "Company",
+    "contact": "Contact",
+    "imprint": "Legal Notice",
+    "privacy": "Privacy",
+    "cookieSettings": "Cookie Settings"
+  },
+  "footer": {
+    "social": [
+      { "label": "Instagram", "url": "https://www.instagram.com/", "icon": "ExternalLink" },
+      { "label": "Facebook", "url": "https://www.facebook.com/", "icon": "ExternalLink" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/", "icon": "ExternalLink" }
+    ]
+  },
+  "actions": {
+    "requestAppointment": "Request appointment",
+    "callNow": "Call now",
+    "viewServices": "View services",
+    "viewOffers": "View offers",
+    "sendRequest": "Send request",
+    "sendMessage": "Send message",
+    "openCookieSettings": "Open cookie settings",
+    "mapSettings": "Enable map"
+  },
+  "common": {
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "learnMore": "Learn more",
+    "from": "from",
+    "euro": "EUR",
+    "selectedService": "Requested service",
+    "required": "Required",
+    "badge": "Independent workshop for all makes",
+    "placeholderImage": "Workshop photo coming soon"
+  },
+  "services": [
+    {
+      "id": "achsgeometrie",
+      "icon": "Gauge",
+      "group": "reifen",
+      "title": "Wheel alignment",
+      "teaser": "Precise alignment for stable straight-line tracking and even tire wear.",
+      "description": "Correct wheel alignment protects tires, suspension and fuel economy. We check toe, camber and steering behavior with modern measuring equipment and adjust your vehicle properly."
+    },
+    {
+      "id": "autoglas",
+      "icon": "ShieldCheck",
+      "group": "karosserie",
+      "title": "Auto glass",
+      "teaser": "Stone chip, crack or windshield replacement with safety systems in mind.",
+      "description": "Small stone chips can often be repaired before the glass cracks. When replacement is needed, we focus on clean installation, sealing and any required system calibration."
+    },
+    {
+      "id": "elektrik",
+      "icon": "PlugZap",
+      "group": "diagnose",
+      "title": "Electrical & electronics",
+      "teaser": "Systematic fault finding instead of replacing parts on suspicion.",
+      "description": "Modern vehicles often report faults long before a component fails completely. We read control units, measure deliberately and clearly explain which repair makes sense."
+    },
+    {
+      "id": "emobility",
+      "icon": "BatteryCharging",
+      "group": "elektro",
+      "title": "Electric mobility & hybrid",
+      "teaser": "Service for electrified vehicles with respect for high-voltage technology.",
+      "description": "Hybrid and electric vehicles still need brake, tire, climate and chassis service. We inspect the relevant systems carefully and follow the appropriate safety requirements."
+    },
+    {
+      "id": "raeder",
+      "icon": "CircleDot",
+      "group": "reifen",
+      "title": "Wheels & rims",
+      "teaser": "Mounting, balancing and checks for rims, valves and tire pressure sensors.",
+      "description": "We mount wheels cleanly, check wear pattern and condition, and pay attention to torque, TPMS and balancing. That keeps your vehicle smoother and safer."
+    },
+    {
+      "id": "reifenservice",
+      "icon": "Car",
+      "group": "reifen",
+      "title": "Tire service",
+      "teaser": "Seasonal changes, tire checks and advice for summer, winter and all-season tires.",
+      "description": "Tread depth, age, pressure and load rating determine safety and comfort. We advise independently and recommend only what truly fits your vehicle."
+    },
+    {
+      "id": "hu-au",
+      "icon": "ClipboardCheck",
+      "group": "diagnose",
+      "title": "Technical inspection & emissions",
+      "teaser": "Pre-check and coordination of German inspection and emissions testing.",
+      "description": "We check your vehicle for common inspection issues and discuss required work transparently. The official inspection is then coordinated conveniently within the workshop process."
+    },
+    {
+      "id": "unfallreparatur",
+      "icon": "Hammer",
+      "group": "karosserie",
+      "title": "Accident repair",
+      "teaser": "Structured help after damage, including coordination with insurers.",
+      "description": "After an accident, a clear process matters. We document damage, coordinate repair and support communication with assessors or insurance companies."
+    },
+    {
+      "id": "wartung",
+      "icon": "Wrench",
+      "group": "diagnose",
+      "title": "Maintenance & inspection",
+      "teaser": "Manufacturer-standard service with original-equipment quality parts.",
+      "description": "Regular maintenance protects reliability, warranty claims and resale value. We work by the service plan, document clearly and keep you informed before any added work."
+    },
+    {
+      "id": "klima",
+      "icon": "Fan",
+      "group": "diagnose",
+      "title": "Climate service",
+      "teaser": "Cooling performance, leak checks and hygiene for a pleasant cabin climate.",
+      "description": "Weak air conditioning costs comfort and may indicate refrigerant loss. We check performance, sealing and filter condition and recommend the right next steps."
+    },
+    {
+      "id": "bremsen",
+      "icon": "Disc3",
+      "group": "diagnose",
+      "title": "Brake service",
+      "teaser": "Pads, discs, fluid and lines checked properly.",
+      "description": "Brakes must respond reliably at all times. We inspect wear, braking pattern and fluid and replace parts as needed in suitable quality."
+    },
+    {
+      "id": "oelwechsel",
+      "icon": "Droplets",
+      "group": "diagnose",
+      "title": "Oil change",
+      "teaser": "The right oil, the right filter and clean documentation.",
+      "description": "Engine oil ages through mileage, heat and short-trip use. We use approved oils, replace the filter and check key fluids along the way."
+    }
+  ],
+  "serviceGroups": {
+    "diagnose": "Maintenance & diagnostics",
+    "reifen": "Tires & wheels",
+    "karosserie": "Bodywork & accident",
+    "elektro": "Electronics & e-mobility"
+  },
+  "offers": [
+    {
+      "title": "Seasonal tire check",
+      "price": "29",
+      "label": "Ready for the season",
+      "description": "Tread, pressure, age, visual inspection and a recommendation for the next tire change."
+    },
+    {
+      "title": "Inspection pre-check",
+      "price": "49",
+      "label": "Stress-free testing",
+      "description": "We check typical inspection issues and discuss required work transparently."
+    },
+    {
+      "title": "Oil change package",
+      "price": "89",
+      "label": "For many common models",
+      "description": "Approved engine oil, filter change and a short visual check of key fluids."
+    },
+    {
+      "title": "Climate service check",
+      "price": "59",
+      "label": "Check cooling performance",
+      "description": "Temperature measurement, visual inspection and recommendation for service or disinfection."
+    },
+    {
+      "title": "Brake safety check",
+      "price": "39",
+      "label": "Clear diagnosis",
+      "description": "Pads, discs, lines and brake fluid in a quick workshop check."
+    },
+    {
+      "title": "Holiday check",
+      "price": "45",
+      "label": "Before the long drive",
+      "description": "Tires, lights, fluids, battery and brakes checked compactly."
+    }
+  ],
+  "home": {
+    "heroEyebrow": "Bouz Autotechnik master workshop",
+    "heroTitle": "Independent workshop. Clear diagnostics. Proper work.",
+    "heroText": "Bouz Autotechnik stands for honest service on vehicles of all makes. We inspect precisely, explain clearly and repair according to manufacturer standards.",
+    "heroStats": [
+      { "value": "All makes", "label": "Service without brand restrictions" },
+      { "value": "Master workshop", "label": "Quality with responsibility" },
+      { "value": "OE quality", "label": "Original-equipment quality parts" }
+    ],
+    "trustBadges": [
+      "All makes welcome",
+      "Original-equipment quality parts",
+      "Manufacturer-standard diagnostics",
+      "Transparent approval before repairs"
+    ],
+    "servicesTitle": "Workshop service without detours",
+    "servicesText": "From oil changes to electronic diagnostics: we keep the process clear, communication direct and results dependable.",
+    "perksTitle": "More mobility, less effort",
+    "perks": [
+      {
+        "title": "Pick-up & delivery",
+        "description": "By arrangement, we collect your vehicle and bring it back."
+      },
+      {
+        "title": "Replacement mobility",
+        "description": "Stay mobile while your car is in the workshop."
+      },
+      {
+        "title": "Damage service",
+        "description": "We support documentation and insurance handling."
+      }
+    ],
+    "aboutTitle": "A master workshop with a direct attitude",
+    "aboutText": "We are building Bouz Autotechnik as a workshop where quality, speed and fairness belong together. No long explanation loops, no repairs without approval, no compromises on safety-related work.",
+    "highlightQuote": "A good workshop experience starts with trust, not the invoice.",
+    "highlightAuthor": "Bouz Autotechnik",
+    "finalTitle": "Does your vehicle need attention?",
+    "finalText": "Briefly describe the issue. We will get back to you with a suitable appointment suggestion."
+  },
+  "offersPage": {
+    "eyebrow": "Current offers",
+    "title": "Useful packages instead of bait prices",
+    "intro": "Our offers are deliberately clear. The exact scope depends on the vehicle, so you always receive transparent approval before any added work."
+  },
+  "appointmentPage": {
+    "eyebrow": "Appointment request",
+    "title": "Quick request. Clear reply.",
+    "intro": "Send us the most important vehicle and service details. We check workshop availability and get back with a suitable appointment.",
+    "success": "Thank you, your appointment request has been prepared. Your email app will open with all details.",
+    "fields": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "vehicle": "Vehicle (make/model)",
+      "service": "Requested service",
+      "date": "Preferred date",
+      "message": "Message",
+      "messagePlaceholder": "What should we inspect or repair?"
+    },
+    "hoursTitle": "Opening hours",
+    "noteTitle": "What happens next",
+    "noteText": "We confirm the appointment personally. For urgent issues, please call us directly."
+  },
+  "servicePage": {
+    "eyebrow": "Service",
+    "title": "Everything a strong independent workshop must deliver",
+    "intro": "We work in a structured, brand-independent way with a focus on safety, value retention and fair costs."
+  },
+  "aboutPage": {
+    "eyebrow": "Company",
+    "title": "A workshop that speaks directly and works cleanly",
+    "story": [
+      "Bouz Autotechnik was built around a simple standard: support vehicles of all makes professionally and tell customers clearly what is going on.",
+      "As a master workshop, we combine hands-on experience with modern diagnostic technology. Whether maintenance, repair or damage handling, we work to manufacturer standards and use original-equipment quality parts.",
+      "A clear process matters to us. You receive a clear assessment, fair options and feedback before additional costs arise."
+    ],
+    "values": [
+      { "title": "Quality", "description": "Safety-related work receives time, care and control." },
+      { "title": "Fairness", "description": "We recommend what is technically sensible, not what makes the invoice larger." },
+      { "title": "Transparency", "description": "Diagnostics, costs and next steps are explained clearly." }
+    ],
+    "teamTitle": "Team",
+    "team": [
+      { "name": "Workshop management", "role": "Master technician / diagnostics" },
+      { "name": "Service reception", "role": "Appointments / customer care" },
+      { "name": "Workshop team", "role": "Maintenance / repair" }
+    ],
+    "qualityTitle": "Our quality promise",
+    "quality": [
+      "Work according to manufacturer standards",
+      "Original-equipment quality replacement parts",
+      "Clear approval before added work",
+      "Documentation of relevant inspections"
+    ],
+    "galleryTitle": "Workshop impressions"
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "We are reachable when your vehicle needs help",
+    "intro": "Call, send a message or request an appointment directly. The map currently uses Dusseldorf as a placeholder location.",
+    "formTitle": "Short message",
+    "mapTitle": "Directions",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "messagePlaceholder": "How can we help?"
+    },
+    "success": "Thank you, your message has been prepared. Your email app will open shortly."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Can Bouz Autotechnik organize the German inspection for me?",
+        "answer": "Yes. We check your vehicle for typical issues beforehand and coordinate the inspection within the workshop schedule."
+      },
+      {
+        "question": "When should I change tires?",
+        "answer": "As a rule of thumb: summer tires in consistently mild weather, winter tires in cold, wet or icy conditions. Tread, age and condition matter as well."
+      },
+      {
+        "question": "How often does the timing belt need replacement?",
+        "answer": "The interval depends strongly on manufacturer, engine and model year. We check the specification for your vehicle and recommend replacement in time."
+      },
+      {
+        "question": "How do I know my brakes should be checked?",
+        "answer": "Squealing, vibration, a longer pedal travel, warning lights or one-sided braking are clear signs. Regular visual checks are useful even without symptoms."
+      },
+      {
+        "question": "How often is climate service useful?",
+        "answer": "Many vehicles benefit from a check every two years. Weak cooling, odors or fogged windows point to a timely inspection."
+      },
+      {
+        "question": "Does Bouz service EVs and hybrids?",
+        "answer": "Yes, for suitable service work on tires, brakes, climate, chassis and diagnostics. High-voltage work is carried out only with the required safety procedures."
+      },
+      {
+        "question": "When is an oil change due?",
+        "answer": "That depends on approval, mileage, driving profile and manufacturer interval. Short trips and heavy use can make an earlier change sensible."
+      },
+      {
+        "question": "Do I always need an appointment?",
+        "answer": "For planned work, yes, so we can prepare time and parts properly. For urgent issues, please call directly."
+      },
+      {
+        "question": "Will I receive a cost estimate before repair?",
+        "answer": "Yes. We discuss findings, scope and costs before additional work starts."
+      }
+    ]
+  },
+  "legal": {
+    "imprintTitle": "Legal Notice",
+    "privacyTitle": "Privacy Policy",
+    "placeholder": "Placeholder text until final legal approval.",
+    "imprintSections": [
+      "Bouz Autotechnik, Musterstrasse 12, 40210 Dusseldorf",
+      "Represented by: owner to be added",
+      "Phone: +49 211 000000, Email: info@bouz-autotechnik.de",
+      "VAT ID and chamber of crafts details to be added."
+    ],
+    "privacySections": [
+      "We process personal data only where required to provide this website, handle enquiries or meet legal obligations.",
+      "When forms are used, the entered data is used to process your enquiry. Without backend submission, the site currently prepares an email draft in your local email app.",
+      "Google Maps is loaded only after functional cookies or external content have been accepted. Consent can be changed through the cookie settings."
+    ]
+  },
+  "cookie": {
+    "title": "Privacy Settings",
+    "summary": "This website uses necessary technologies for secure operation. Optional services such as Google Maps are loaded only with your consent.",
+    "detailsIntro": "You can manage your consent here. Details are available in our privacy policy.",
+    "moreInfo": "More information",
+    "reject": "Reject",
+    "acceptAll": "Accept all",
+    "save": "Save",
+    "categoriesTab": "Categories",
+    "servicesTab": "Services",
+    "purpose": "Purpose",
+    "provider": "Provider",
+    "storageDuration": "Storage duration",
+    "required": "Required",
+    "close": "Close cookie notice",
+    "disabledMapTitle": "Google Maps is disabled",
+    "disabledMapText": "Please accept functional services to load the interactive map.",
+    "categories": {
+      "essential": {
+        "title": "Essential",
+        "description": "These technologies are required for operation, security and storing your selection."
+      },
+      "functional": {
+        "title": "Functional",
+        "description": "These services enable additional content, for example an interactive map."
+      }
+    },
+    "services": {
+      "consent-storage": {
+        "name": "Cookie consent storage",
+        "provider": "Bouz Autotechnik",
+        "purpose": "Stores your cookie selection for future visits.",
+        "storageDuration": "Until you change your consent or for a maximum of 12 months.",
+        "description": "Only your settings are stored so the notice does not appear on every visit."
+      },
+      "session-security": {
+        "name": "Session and security functions",
+        "provider": "Bouz Autotechnik / hosting provider",
+        "purpose": "Supports secure and stable delivery of the website.",
+        "storageDuration": "Session-based or as technically required.",
+        "description": "This includes technically necessary functions for security, stability and basic site usage."
+      },
+      "google-maps": {
+        "name": "Google Maps",
+        "provider": "Google Ireland Limited",
+        "purpose": "Displays an interactive map for directions and location.",
+        "storageDuration": "Depending on the Google service, up to 2 years.",
+        "description": "When the map loads, data such as IP address, device information and usage data may be transmitted to Google."
+      }
+    }
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "language": {
+    "de": "DE",
+    "en": "EN",
+    "switch": "Sprache wechseln"
+  },
+  "site": {
+    "name": "Bouz Autotechnik",
+    "tagline": "Meisterbetrieb",
+    "address": {
+      "line1": "Musterstraße 12",
+      "line2": "40210 Düsseldorf",
+      "note": "Adresse als Platzhalter bis zur finalen Freigabe"
+    },
+    "phone": "+49 211 000000",
+    "email": "info@bouz-autotechnik.de",
+    "hours": [
+      { "days": "Montag - Freitag", "time": "08:00 - 18:00 Uhr" },
+      { "days": "Samstag", "time": "Nach Vereinbarung" },
+      { "days": "Sonntag", "time": "Geschlossen" }
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "Bouz Autotechnik | Freie Meisterwerkstatt in Düsseldorf",
+      "description": "Bouz Autotechnik ist die freie Meisterwerkstatt für alle Marken: Wartung, Diagnose, Reifen, HU/AU, Unfallreparatur und faire Beratung."
+    },
+    "offers": {
+      "title": "Angebote | Bouz Autotechnik",
+      "description": "Aktuelle Werkstattangebote für Reifen, HU/AU, Ölwechsel, Klimaservice und Sicherheitschecks bei Bouz Autotechnik."
+    },
+    "appointment": {
+      "title": "Terminanfrage | Bouz Autotechnik",
+      "description": "Fragen Sie Ihren Werkstatttermin bei Bouz Autotechnik online an. Schnell, unkompliziert und ohne Warteschleife."
+    },
+    "service": {
+      "title": "Service | Bouz Autotechnik",
+      "description": "Alle Werkstattleistungen von Bouz Autotechnik: Inspektion, Diagnose, Reifen, Bremsen, Autoglas, Unfallreparatur, Hybrid und E-Mobilität."
+    },
+    "about": {
+      "title": "Unternehmen | Bouz Autotechnik",
+      "description": "Lernen Sie Bouz Autotechnik kennen: freie Meisterwerkstatt mit Qualitätsanspruch, Erfahrung und transparenter Beratung."
+    },
+    "contact": {
+      "title": "Kontakt | Bouz Autotechnik",
+      "description": "Kontaktieren Sie Bouz Autotechnik für Termine, Fragen und Anfahrt zur freien Meisterwerkstatt in Düsseldorf."
+    },
+    "imprint": {
+      "title": "Impressum | Bouz Autotechnik",
+      "description": "Impressum und Anbieterkennzeichnung von Bouz Autotechnik."
+    },
+    "privacy": {
+      "title": "Datenschutz | Bouz Autotechnik",
+      "description": "Datenschutzhinweise von Bouz Autotechnik zu Kontaktformular, Cookies und externen Kartendiensten."
+    }
+  },
+  "nav": {
+    "home": "Startseite",
+    "offers": "Angebote",
+    "appointment": "Terminanfrage",
+    "service": "Service",
+    "about": "Unternehmen",
+    "contact": "Kontakt",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "cookieSettings": "Cookie-Einstellungen"
+  },
+  "footer": {
+    "social": [
+      { "label": "Instagram", "url": "https://www.instagram.com/", "icon": "ExternalLink" },
+      { "label": "Facebook", "url": "https://www.facebook.com/", "icon": "ExternalLink" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/", "icon": "ExternalLink" }
+    ]
+  },
+  "actions": {
+    "requestAppointment": "Termin anfragen",
+    "callNow": "Jetzt anrufen",
+    "viewServices": "Service ansehen",
+    "viewOffers": "Angebote ansehen",
+    "sendRequest": "Anfrage senden",
+    "sendMessage": "Nachricht senden",
+    "openCookieSettings": "Cookie-Einstellungen öffnen",
+    "mapSettings": "Karte aktivieren"
+  },
+  "common": {
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen",
+    "learnMore": "Mehr erfahren",
+    "from": "ab",
+    "euro": "€",
+    "selectedService": "Gewünschte Leistung",
+    "required": "Pflichtfeld",
+    "badge": "Freie Werkstatt für alle Marken",
+    "placeholderImage": "Werkstattfoto folgt"
+  },
+  "services": [
+    {
+      "id": "achsgeometrie",
+      "icon": "Gauge",
+      "group": "reifen",
+      "title": "Achsgeometrie",
+      "teaser": "Präzise Vermessung für sauberen Geradeauslauf und gleichmäßigen Reifenverschleiß.",
+      "description": "Eine korrekt eingestellte Achsgeometrie schützt Reifen, Fahrwerk und Kraftstoffverbrauch. Wir prüfen Spur, Sturz und Lenkverhalten mit moderner Messtechnik und stellen Ihr Fahrzeug sauber ein."
+    },
+    {
+      "id": "autoglas",
+      "icon": "ShieldCheck",
+      "group": "karosserie",
+      "title": "Autoglas",
+      "teaser": "Steinschlag, Riss oder Scheibentausch mit Blick auf Sicherheit und Assistenzsysteme.",
+      "description": "Kleine Steinschläge lassen sich oft reparieren, bevor die Scheibe reißt. Bei einem Austausch achten wir auf saubere Montage, Dichtigkeit und die nötige Kalibrierung relevanter Systeme."
+    },
+    {
+      "id": "elektrik",
+      "icon": "PlugZap",
+      "group": "diagnose",
+      "title": "Elektrik & Elektronik",
+      "teaser": "Systematische Fehlersuche statt Teiletausch auf Verdacht.",
+      "description": "Moderne Fahrzeuge melden Fehler oft lange, bevor ein Bauteil wirklich ausfällt. Wir lesen Steuergeräte aus, messen gezielt nach und erklären klar, welche Reparatur sinnvoll ist."
+    },
+    {
+      "id": "emobility",
+      "icon": "BatteryCharging",
+      "group": "elektro",
+      "title": "Elektromobilität & Hybrid",
+      "teaser": "Service für elektrifizierte Fahrzeuge mit Respekt vor Hochvolt-Technik.",
+      "description": "Auch Hybrid- und Elektrofahrzeuge brauchen Bremsen-, Reifen-, Klima- und Fahrwerksservice. Wir prüfen die relevanten Systeme sorgfältig und arbeiten nach den passenden Sicherheitsvorgaben."
+    },
+    {
+      "id": "raeder",
+      "icon": "CircleDot",
+      "group": "reifen",
+      "title": "Räder & Felgen",
+      "teaser": "Montage, Auswuchten und Blick auf Felgen, Ventile und Reifendrucksensoren.",
+      "description": "Wir montieren Räder sauber, prüfen Laufbild und Zustand und achten auf Drehmoment, RDKS und Auswuchtung. So fährt sich Ihr Fahrzeug ruhiger und sicherer."
+    },
+    {
+      "id": "reifenservice",
+      "icon": "Car",
+      "group": "reifen",
+      "title": "Reifenservice",
+      "teaser": "Saisonwechsel, Reifenprüfung und Beratung für Sommer-, Winter- und Ganzjahresreifen.",
+      "description": "Profil, Alter, Luftdruck und Tragfähigkeit entscheiden über Sicherheit und Fahrkomfort. Wir beraten markenunabhängig und empfehlen nur, was wirklich zu Ihrem Fahrzeug passt."
+    },
+    {
+      "id": "hu-au",
+      "icon": "ClipboardCheck",
+      "group": "diagnose",
+      "title": "HU/AU & Prüfungen",
+      "teaser": "Vorabcheck und Organisation der Haupt- und Abgasuntersuchung.",
+      "description": "Wir prüfen Ihr Fahrzeug vor der HU auf typische Mängel und sprechen notwendige Arbeiten transparent mit Ihnen ab. Die Prüfung organisieren wir bequem im Werkstattablauf."
+    },
+    {
+      "id": "unfallreparatur",
+      "icon": "Hammer",
+      "group": "karosserie",
+      "title": "Unfallreparatur",
+      "teaser": "Strukturierte Hilfe nach einem Schaden, inklusive Abstimmung mit Versicherungen.",
+      "description": "Nach einem Unfall zählt ein klarer Ablauf. Wir dokumentieren Schäden, koordinieren die Reparatur und unterstützen bei der Kommunikation mit Gutachtern oder Versicherungen."
+    },
+    {
+      "id": "wartung",
+      "icon": "Wrench",
+      "group": "diagnose",
+      "title": "Wartung & Inspektion",
+      "teaser": "Service nach Herstellervorgaben mit Teilen in Erstausrüsterqualität.",
+      "description": "Regelmäßige Wartung erhält Zuverlässigkeit, Garantieansprüche und Wiederverkaufswert. Wir arbeiten nach Plan, dokumentieren verständlich und halten Sie vor Zusatzarbeiten auf dem Laufenden."
+    },
+    {
+      "id": "klima",
+      "icon": "Fan",
+      "group": "diagnose",
+      "title": "Klimaservice",
+      "teaser": "Kühlleistung, Dichtheit und Hygiene für ein angenehmes Innenraumklima.",
+      "description": "Eine schwache Klimaanlage kostet Komfort und kann auf Kältemittelverlust hinweisen. Wir prüfen Leistung, Dichtheit und Filterzustand und empfehlen passende Maßnahmen."
+    },
+    {
+      "id": "bremsen",
+      "icon": "Disc3",
+      "group": "diagnose",
+      "title": "Bremsenservice",
+      "teaser": "Beläge, Scheiben, Flüssigkeit und Leitungen sauber geprüft.",
+      "description": "Bremsen müssen jederzeit verlässlich reagieren. Wir prüfen Verschleiß, Bremsbild und Flüssigkeit und ersetzen Teile nach Bedarf in passender Qualität."
+    },
+    {
+      "id": "oelwechsel",
+      "icon": "Droplets",
+      "group": "diagnose",
+      "title": "Ölwechsel",
+      "teaser": "Das richtige Öl, der passende Filter und eine saubere Dokumentation.",
+      "description": "Motoröl altert durch Laufleistung, Temperatur und Kurzstreckenbetrieb. Wir verwenden freigegebene Öle, wechseln Filter mit und prüfen nebenbei wichtige Flüssigkeiten."
+    }
+  ],
+  "serviceGroups": {
+    "diagnose": "Wartung & Diagnose",
+    "reifen": "Reifen & Räder",
+    "karosserie": "Karosserie & Unfall",
+    "elektro": "Elektrik & Elektromobilität"
+  },
+  "offers": [
+    {
+      "title": "Saisonaler Reifencheck",
+      "price": "29",
+      "label": "Sicher durch die Saison",
+      "description": "Profil, Luftdruck, Alter, Sichtprüfung und Empfehlung für den nächsten Wechsel."
+    },
+    {
+      "title": "HU/AU Vorabcheck",
+      "price": "49",
+      "label": "Stressfrei zur Prüfung",
+      "description": "Wir prüfen typische Mängel vor der Hauptuntersuchung und besprechen nötige Arbeiten transparent."
+    },
+    {
+      "title": "Ölwechsel-Paket",
+      "price": "89",
+      "label": "Für viele gängige Modelle",
+      "description": "Motoröl nach Freigabe, Filterwechsel und kurzer Sichtcheck wichtiger Flüssigkeiten."
+    },
+    {
+      "title": "Klimaservice-Check",
+      "price": "59",
+      "label": "Kühle Leistung prüfen",
+      "description": "Temperaturmessung, Sichtprüfung und Empfehlung für Wartung oder Desinfektion."
+    },
+    {
+      "title": "Bremsen-Sicherheitscheck",
+      "price": "39",
+      "label": "Klare Diagnose",
+      "description": "Beläge, Scheiben, Leitungen und Bremsflüssigkeit im schnellen Werkstattcheck."
+    },
+    {
+      "title": "Urlaubscheck",
+      "price": "45",
+      "label": "Vor der langen Fahrt",
+      "description": "Reifen, Licht, Flüssigkeiten, Batterie und Bremsen kompakt geprüft."
+    }
+  ],
+  "home": {
+    "heroEyebrow": "Bouz Autotechnik Meisterbetrieb",
+    "heroTitle": "Freie Werkstatt. Klare Diagnose. Saubere Arbeit.",
+    "heroText": "Bouz Autotechnik steht für ehrlichen Service an Fahrzeugen aller Marken. Wir prüfen präzise, erklären verständlich und reparieren nach Herstellervorgaben.",
+    "heroStats": [
+      { "value": "Alle Marken", "label": "Service ohne Markenbindung" },
+      { "value": "Meisterbetrieb", "label": "Qualität mit Verantwortung" },
+      { "value": "OE-Qualität", "label": "Teile in Erstausrüsterqualität" }
+    ],
+    "trustBadges": [
+      "Alle Marken willkommen",
+      "Ersatzteile in Erstausrüsterqualität",
+      "Diagnose nach Herstellervorgaben",
+      "Transparente Freigabe vor Reparatur"
+    ],
+    "servicesTitle": "Werkstattservice ohne Umwege",
+    "servicesText": "Vom Ölwechsel bis zur Elektronikdiagnose: Wir halten den Ablauf klar, die Kommunikation direkt und das Ergebnis belastbar.",
+    "perksTitle": "Mehr Mobilität, weniger Aufwand",
+    "perks": [
+      {
+        "title": "Hol- & Bring-Service",
+        "description": "Nach Absprache holen wir Ihr Fahrzeug ab und bringen es wieder zurück."
+      },
+      {
+        "title": "Mobilitätsersatzfahrzeug",
+        "description": "Bleiben Sie beweglich, wenn Ihr Auto in der Werkstatt ist."
+      },
+      {
+        "title": "Schadenservice",
+        "description": "Wir unterstützen bei Dokumentation und Versicherungsabwicklung."
+      }
+    ],
+    "aboutTitle": "Meisterbetrieb mit direkter Haltung",
+    "aboutText": "Wir bauen Bouz Autotechnik als Werkstatt, in der Qualität, Tempo und Fairness zusammengehören. Keine langen Erklärschleifen, keine Reparaturen ohne Rücksprache, keine Kompromisse bei sicherheitsrelevanter Arbeit.",
+    "highlightQuote": "Ein gutes Werkstatterlebnis beginnt nicht mit der Rechnung, sondern mit Vertrauen.",
+    "highlightAuthor": "Bouz Autotechnik",
+    "finalTitle": "Ihr Fahrzeug braucht Aufmerksamkeit?",
+    "finalText": "Schildern Sie kurz Ihr Anliegen. Wir melden uns mit einem passenden Terminvorschlag."
+  },
+  "offersPage": {
+    "eyebrow": "Aktuelle Angebote",
+    "title": "Sinnvolle Pakete statt Lockpreise",
+    "intro": "Unsere Angebote sind bewusst klar formuliert. Der genaue Umfang hängt vom Fahrzeug ab, deshalb erhalten Sie vor Zusatzarbeiten immer eine transparente Rücksprache."
+  },
+  "appointmentPage": {
+    "eyebrow": "Terminanfrage",
+    "title": "Schnell anfragen. Klar zurückgemeldet.",
+    "intro": "Senden Sie uns die wichtigsten Daten zu Fahrzeug und gewünschter Leistung. Wir prüfen die Werkstattauslastung und melden uns mit einem passenden Termin.",
+    "success": "Danke, Ihre Terminanfrage wurde vorbereitet. Ihr E-Mail-Programm öffnet sich mit allen Angaben.",
+    "fields": {
+      "name": "Name",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "vehicle": "Fahrzeug (Marke/Modell)",
+      "service": "Gewünschte Leistung",
+      "date": "Wunschtermin",
+      "message": "Nachricht",
+      "messagePlaceholder": "Was sollen wir prüfen oder reparieren?"
+    },
+    "hoursTitle": "Öffnungszeiten",
+    "noteTitle": "Was danach passiert",
+    "noteText": "Wir bestätigen den Termin persönlich. Bei dringenden Fällen rufen Sie uns bitte direkt an."
+  },
+  "servicePage": {
+    "eyebrow": "Service",
+    "title": "Alles, was eine starke freie Werkstatt leisten muss",
+    "intro": "Wir arbeiten strukturiert, markenunabhängig und mit Blick auf Sicherheit, Werterhalt und faire Kosten."
+  },
+  "aboutPage": {
+    "eyebrow": "Unternehmen",
+    "title": "Eine Werkstatt, die direkt spricht und sauber arbeitet",
+    "story": [
+      "Bouz Autotechnik wurde mit einem einfachen Anspruch aufgebaut: Fahrzeuge aller Marken fachgerecht betreuen und Kundinnen und Kunden klar sagen, was Sache ist.",
+      "Als Meisterbetrieb verbinden wir handwerkliche Erfahrung mit moderner Diagnosetechnik. Ob Wartung, Reparatur oder Schadenfall: Wir arbeiten nach Herstellervorgaben und setzen auf Teile in Erstausrüsterqualität.",
+      "Wichtig ist uns ein Ablauf, der verständlich bleibt. Sie bekommen eine klare Einschätzung, faire Optionen und eine Rückmeldung, bevor zusätzliche Kosten entstehen."
+    ],
+    "values": [
+      { "title": "Qualität", "description": "Sicherheitsrelevante Arbeit bekommt Zeit, Sorgfalt und Kontrolle." },
+      { "title": "Fairness", "description": "Wir empfehlen, was technisch sinnvoll ist, nicht was die Rechnung größer macht." },
+      { "title": "Transparenz", "description": "Diagnosen, Kosten und nächste Schritte werden verständlich erklärt." }
+    ],
+    "teamTitle": "Team",
+    "team": [
+      { "name": "Werkstattleitung", "role": "Kfz-Meister / Diagnose" },
+      { "name": "Serviceannahme", "role": "Termine / Kundenbetreuung" },
+      { "name": "Werkstattteam", "role": "Wartung / Reparatur" }
+    ],
+    "qualityTitle": "Unser Qualitätsversprechen",
+    "quality": [
+      "Arbeit nach Herstellervorgaben",
+      "Ersatzteile in Erstausrüsterqualität",
+      "Klare Freigabe vor Zusatzarbeiten",
+      "Dokumentation relevanter Prüfungen"
+    ],
+    "galleryTitle": "Werkstatt-Einblicke"
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "title": "Wir sind erreichbar, wenn Ihr Fahrzeug Hilfe braucht",
+    "intro": "Rufen Sie an, schreiben Sie eine Nachricht oder senden Sie direkt eine Terminanfrage. Die Karte nutzt vorerst Düsseldorf als Platzhalterstandort.",
+    "formTitle": "Kurze Nachricht",
+    "mapTitle": "Anfahrt",
+    "fields": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "message": "Nachricht",
+      "messagePlaceholder": "Wie können wir helfen?"
+    },
+    "success": "Danke, Ihre Nachricht wurde vorbereitet. Ihr E-Mail-Programm öffnet sich gleich."
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Kann Bouz Autotechnik die HU/AU für mich organisieren?",
+        "answer": "Ja. Wir prüfen Ihr Fahrzeug vorher auf typische Mängel und koordinieren die Prüfung im Werkstattablauf."
+      },
+      {
+        "question": "Wann sollte ich Reifen wechseln?",
+        "answer": "Als Faustregel gilt: Sommerreifen bei dauerhaft milden Temperaturen, Winterreifen bei Kälte, Nässe und Glätte. Entscheidend sind zusätzlich Profil, Alter und Zustand."
+      },
+      {
+        "question": "Wie oft muss der Zahnriemen gewechselt werden?",
+        "answer": "Das Intervall hängt stark von Hersteller, Motor und Baujahr ab. Wir prüfen die Vorgabe für Ihr Fahrzeug und empfehlen den Wechsel rechtzeitig."
+      },
+      {
+        "question": "Woran erkenne ich, dass meine Bremsen geprüft werden sollten?",
+        "answer": "Quietschen, Vibrationen, längerer Pedalweg, Warnleuchten oder ein einseitiges Bremsgefühl sind klare Hinweise. Auch ohne Symptome ist eine regelmäßige Sichtprüfung sinnvoll."
+      },
+      {
+        "question": "Wie oft ist ein Klimaservice sinnvoll?",
+        "answer": "Viele Fahrzeuge profitieren alle zwei Jahre von einer Prüfung. Sinkende Kühlleistung, Geruch oder beschlagene Scheiben sprechen für einen zeitnahen Check."
+      },
+      {
+        "question": "Betreut Bouz auch E-Autos und Hybridfahrzeuge?",
+        "answer": "Ja, für passende Servicearbeiten an Reifen, Bremsen, Klima, Fahrwerk und Diagnose. Hochvoltarbeiten werden nur mit den nötigen Sicherheitsvorgaben durchgeführt."
+      },
+      {
+        "question": "Wann ist ein Ölwechsel fällig?",
+        "answer": "Das hängt von Freigabe, Laufleistung, Fahrprofil und Herstellerintervall ab. Kurzstrecken und hohe Belastung können einen früheren Wechsel sinnvoll machen."
+      },
+      {
+        "question": "Brauche ich immer einen Termin?",
+        "answer": "Für planbare Arbeiten ja, damit wir Zeit und Teile sauber vorbereiten können. Bei akuten Problemen rufen Sie bitte direkt an."
+      },
+      {
+        "question": "Bekomme ich vor der Reparatur eine Kosteneinschätzung?",
+        "answer": "Ja. Wir sprechen Befund, Umfang und Kosten ab, bevor zusätzliche Arbeiten starten."
+      }
+    ]
+  },
+  "legal": {
+    "imprintTitle": "Impressum",
+    "privacyTitle": "Datenschutz",
+    "placeholder": "Platzhaltertext bis zur finalen juristischen Freigabe.",
+    "imprintSections": [
+      "Bouz Autotechnik, Musterstraße 12, 40210 Düsseldorf",
+      "Vertreten durch: Inhaber wird ergänzt",
+      "Telefon: +49 211 000000, E-Mail: info@bouz-autotechnik.de",
+      "Umsatzsteuer-ID und Handwerkskammerangaben werden ergänzt."
+    ],
+    "privacySections": [
+      "Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung dieser Website, zur Bearbeitung von Anfragen oder zur Erfüllung gesetzlicher Pflichten erforderlich ist.",
+      "Bei Nutzung von Formularen werden die eingegebenen Daten zur Bearbeitung Ihrer Anfrage verwendet. Ohne backendseitigen Versand wird derzeit ein E-Mail-Entwurf über Ihr lokales E-Mail-Programm vorbereitet.",
+      "Google Maps wird erst geladen, wenn funktionelle Cookies bzw. externe Inhalte akzeptiert wurden. Die Einwilligung kann über die Cookie-Einstellungen geändert werden."
+    ]
+  },
+  "cookie": {
+    "title": "Privatsphäre-Einstellungen",
+    "summary": "Diese Website verwendet notwendige Technologien für einen sicheren Betrieb. Optionale Dienste wie Google Maps laden wir nur mit Ihrer Einwilligung.",
+    "detailsIntro": "Hier können Sie Ihre Zustimmung verwalten. Details finden Sie in unserer Datenschutzerklärung.",
+    "moreInfo": "Mehr Informationen",
+    "reject": "Ablehnen",
+    "acceptAll": "Alles akzeptieren",
+    "save": "Speichern",
+    "categoriesTab": "Kategorien",
+    "servicesTab": "Dienste",
+    "purpose": "Zweck",
+    "provider": "Anbieter",
+    "storageDuration": "Speicherdauer",
+    "required": "Erforderlich",
+    "close": "Cookie-Hinweis schließen",
+    "disabledMapTitle": "Google Maps ist deaktiviert",
+    "disabledMapText": "Bitte akzeptieren Sie funktionelle Dienste, um die interaktive Karte zu laden.",
+    "categories": {
+      "essential": {
+        "title": "Essenziell",
+        "description": "Diese Technologien sind für Betrieb, Sicherheit und Speicherung Ihrer Auswahl notwendig."
+      },
+      "functional": {
+        "title": "Funktionell",
+        "description": "Diese Dienste ermöglichen zusätzliche Inhalte, zum Beispiel eine interaktive Karte."
+      }
+    },
+    "services": {
+      "consent-storage": {
+        "name": "Cookie-Consent-Speicherung",
+        "provider": "Bouz Autotechnik",
+        "purpose": "Speichert Ihre Cookie-Auswahl für spätere Besuche.",
+        "storageDuration": "Bis zur Änderung Ihrer Einwilligung oder maximal 12 Monate.",
+        "description": "Es werden nur Ihre Einstellungen gespeichert, damit der Hinweis nicht bei jedem Besuch erneut erscheint."
+      },
+      "session-security": {
+        "name": "Session- und Sicherheitsfunktionen",
+        "provider": "Bouz Autotechnik / Hosting-Anbieter",
+        "purpose": "Unterstützt die sichere und stabile Auslieferung der Website.",
+        "storageDuration": "Sitzungsbasiert oder nach technischer Notwendigkeit.",
+        "description": "Dazu gehören technisch notwendige Funktionen für Sicherheit, Stabilität und grundlegende Seitennutzung."
+      },
+      "google-maps": {
+        "name": "Google Maps",
+        "provider": "Google Ireland Limited",
+        "purpose": "Zeigt eine interaktive Karte für Anfahrt und Standort.",
+        "storageDuration": "Je nach Google-Dienst bis zu 2 Jahre.",
+        "description": "Beim Laden der Karte können Daten wie IP-Adresse, Geräteinformationen und Nutzungsdaten an Google übermittelt werden."
+      }
+    }
+  }
+}
