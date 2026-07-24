@@ -249,8 +249,9 @@
   ],
   "home": {
     "heroEyebrow": "Bouz Autotechnik master workshop",
-    "heroTitle": "Independent workshop. Clear diagnostics. Proper work.",
-    "heroText": "Bouz Autotechnik stands for honest service on vehicles of all makes. We inspect precisely, explain clearly and repair according to manufacturer standards.",
+    "heroTitle": "Drive safely. Feel confident.",
+    "heroText": "Honest workshop service for every make: we keep your car dependable, explain everything clearly and get you calmly back on the road.",
+    "heroImageAlt": "Car driving on an open road at sunset",
     "heroStats": [
       {
         "value": "All makes",

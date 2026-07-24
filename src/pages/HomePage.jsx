@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import logo from '../assets/bouz-autotechnik-logo.jpeg'
+import heroRoad from '../assets/home-hero-road.jpg'
 import ButtonLink from '../components/ButtonLink'
 import FAQAccordion from '../components/FAQAccordion'
 import OfferCard from '../components/OfferCard'
@@ -15,16 +15,25 @@ export default function HomePage() {
   const services = t('services', { returnObjects: true })
   const offers = t('offers', { returnObjects: true })
   const badges = t('home.trustBadges', { returnObjects: true })
-  const stats = t('home.heroStats', { returnObjects: true })
   const perks = t('home.perks', { returnObjects: true })
 
   return (
     <main>
       <SEO page="home" />
-      <section className="relative overflow-hidden bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
+      <section className="relative flex min-h-[72svh] items-end overflow-hidden px-4 py-12 sm:min-h-[78svh] sm:px-6 lg:min-h-[82svh] lg:px-8">
+        <img
+          src={heroRoad}
+          alt={t('home.heroImageAlt')}
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/55 to-brand-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-black/70 via-brand-black/20 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-brand-black to-transparent" />
         <div className="absolute inset-x-0 top-0 h-px bg-steel-gradient opacity-50" />
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="relative z-10 mx-auto w-full max-w-7xl">
           <motion.div
+            className="max-w-4xl pb-4 sm:pb-8"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -32,10 +41,10 @@ export default function HomePage() {
             <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
               {t('home.heroEyebrow')}
             </p>
-            <h1 className="mt-5 max-w-4xl font-heading text-5xl font-bold uppercase leading-[0.94] text-brand-white sm:text-7xl lg:text-8xl">
-              <span className="steel-text block">{t('home.heroTitle')}</span>
+            <h1 className="mt-5 font-heading text-5xl font-bold uppercase leading-[0.92] text-brand-white drop-shadow-2xl sm:text-7xl lg:text-8xl">
+              <span className="block">{t('home.heroTitle')}</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-brand-text">{t('home.heroText')}</p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-brand-white/90 drop-shadow-lg">{t('home.heroText')}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink to="/terminanfrage" icon="CalendarCheck">
                 {t('actions.requestAppointment')}
@@ -43,31 +52,6 @@ export default function HomePage() {
               <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
                 {t('actions.callNow')}
               </ButtonLink>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="relative mx-auto w-full max-w-xl"
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
-            <div className="absolute inset-0 bg-red-glow blur-2xl" />
-            <div className="industrial-panel relative overflow-hidden rounded-lg p-5 shadow-steel">
-              <img
-                src={logo}
-                alt={t('site.name')}
-                className="aspect-square w-full rounded-md object-cover"
-                loading="eager"
-              />
-              <div className="mt-5 grid grid-cols-3 gap-2">
-                {stats.map((stat) => (
-                  <div key={stat.value} className="rounded-md bg-brand-black/80 p-3">
-                    <p className="font-heading text-lg font-bold uppercase text-brand-white">{stat.value}</p>
-                    <p className="mt-1 text-xs leading-5 text-brand-steel">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </motion.div>
         </div>

@@ -249,8 +249,9 @@
   ],
   "home": {
     "heroEyebrow": "Bouz Autotechnik Meisterbetrieb",
-    "heroTitle": "Freie Werkstatt. Klare Diagnose. Saubere Arbeit.",
-    "heroText": "Bouz Autotechnik steht für ehrlichen Service an Fahrzeugen aller Marken. Wir prüfen präzise, erklären verständlich und reparieren nach Herstellervorgaben.",
+    "heroTitle": "Sicher unterwegs. Mit gutem Gefühl.",
+    "heroText": "Ehrlicher Werkstattservice für alle Marken: Wir halten Ihr Auto zuverlässig, erklären alles verständlich und bringen Sie entspannt zurück auf die Straße.",
+    "heroImageAlt": "Auto fährt bei Sonnenuntergang auf einer offenen Straße",
     "heroStats": [
       {
         "value": "Alle Marken",
