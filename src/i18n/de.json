@@ -434,42 +434,123 @@
   },
   "faq": {
     "title": "Häufige Fragen",
+    "viewAll": "Alle Fragen ansehen",
     "items": [
       {
         "question": "Kann Bouz Autotechnik die HU/AU für mich organisieren?",
-        "answer": "Ja. Wir prüfen Ihr Fahrzeug vorher auf typische Mängel und koordinieren die Prüfung im Werkstattablauf."
+        "answer": "Ja. Die Hauptuntersuchung wird von einer amtlich anerkannten Prüforganisation durchgeführt; wir bereiten Ihr Fahrzeug vor, prüfen typische Mängel und koordinieren den Termin im Werkstattablauf."
+      },
+      {
+        "question": "Wann ist die nächste HU fällig?",
+        "answer": "Bei privat genutzten Pkw ist die erste HU in der Regel 36 Monate nach Erstzulassung fällig, danach alle 24 Monate. Den genauen Monat sehen Sie auf der Plakette, im Fahrzeugschein oder im letzten HU-Bericht."
+      },
+      {
+        "question": "Was passiert, wenn mein Auto die HU nicht besteht?",
+        "answer": "Bei erheblichen Mängeln erhalten Sie keine Plakette und müssen die Mängel beheben lassen. Wir erklären den Prüfbericht, besprechen die Reparatur und kümmern uns auf Wunsch um die Nachprüfung."
+      },
+      {
+        "question": "Bleibt die Herstellergarantie bei einer freien Werkstatt erhalten?",
+        "answer": "Für Wartungen und viele Reparaturen ja, wenn nach Herstellervorgaben gearbeitet, geeignete Teile verwendet und alles nachvollziehbar dokumentiert wird. Garantiearbeiten selbst und Kulanzfälle können je nach Herstellerbedingungen eine Vertragswerkstatt betreffen."
+      },
+      {
+        "question": "Führen Sie Inspektionen nach Herstellervorgaben durch?",
+        "answer": "Ja. Wir prüfen den Wartungsplan zum Fahrzeug, verwenden passende Öle, Filter und Ersatzteile und dokumentieren die Arbeit. Wenn ein digitales Serviceheft verfügbar ist, prüfen wir die Eintragung je nach Herstellersystem."
       },
       {
         "question": "Wann sollte ich Reifen wechseln?",
-        "answer": "Als Faustregel gilt: Sommerreifen bei dauerhaft milden Temperaturen, Winterreifen bei Kälte, Nässe und Glätte. Entscheidend sind zusätzlich Profil, Alter und Zustand."
+        "answer": "Die Faustregel lautet O bis O, also Oktober bis Ostern. Rechtlich gibt es in Deutschland aber eine situative Winterreifenpflicht: Bei Glatteis, Schnee, Schneematsch, Eis- oder Reifglätte brauchen Sie geeignete Winter- oder Ganzjahresreifen."
+      },
+      {
+        "question": "Woran erkenne ich zulässige Winter- oder Ganzjahresreifen?",
+        "answer": "Seit Oktober 2024 reicht eine reine M+S-Kennung bei winterlichen Straßenverhältnissen nicht mehr aus. Reifen müssen das Alpine-Symbol mit Berg und Schneeflocke tragen, damit sie als wintertauglich gelten."
+      },
+      {
+        "question": "Wie erkenne ich, dass meine Reifen abgefahren sind?",
+        "answer": "Gesetzlich vorgeschrieben sind mindestens 1,6 mm Profiltiefe. Für sichere Reserven empfehlen sich bei Sommerreifen etwa 3 mm und bei Winterreifen etwa 4 mm. Risse, Beulen, ungleichmäßiger Abrieb oder hohes Alter sind ebenfalls Warnzeichen."
+      },
+      {
+        "question": "Was gehört zu Ihrem Reifenservice?",
+        "answer": "Wir wechseln Räder, montieren Reifen, wuchten aus, prüfen Profil, Alter, Luftdruck und sichtbare Schäden. Auf Wunsch besprechen wir passende neue Reifen und saisonale Einlagerung."
+      },
+      {
+        "question": "Wann ist eine Achsvermessung sinnvoll?",
+        "answer": "Wenn das Auto zur Seite zieht, das Lenkrad schief steht, Reifen einseitig ablaufen oder Sie gegen Bordstein oder Schlagloch gefahren sind. Eine korrekt eingestellte Achsgeometrie schützt Reifen, Fahrwerk und Fahrverhalten."
       },
       {
         "question": "Wie oft muss der Zahnriemen gewechselt werden?",
-        "answer": "Das Intervall hängt stark von Hersteller, Motor und Baujahr ab. Wir prüfen die Vorgabe für Ihr Fahrzeug und empfehlen den Wechsel rechtzeitig."
+        "answer": "Das Intervall hängt von Hersteller, Motor, Baujahr, Kilometerstand und Zeitvorgabe ab. Typische Spannen liegen grob zwischen 60.000 und 180.000 km. Wir prüfen die exakte Vorgabe für Ihr Fahrzeug."
       },
       {
         "question": "Woran erkenne ich, dass meine Bremsen geprüft werden sollten?",
-        "answer": "Quietschen, Vibrationen, längerer Pedalweg, Warnleuchten oder ein einseitiges Bremsgefühl sind klare Hinweise. Auch ohne Symptome ist eine regelmäßige Sichtprüfung sinnvoll."
+        "answer": "Quietschen, Rubbeln, Vibrationen, längerer Pedalweg, Warnleuchten, Bremsgeruch oder einseitiges Ziehen sind klare Hinweise. Bei Bremsen bitte nicht abwarten, sondern zeitnah prüfen lassen."
       },
       {
         "question": "Wie oft ist ein Klimaservice sinnvoll?",
-        "answer": "Viele Fahrzeuge profitieren alle zwei Jahre von einer Prüfung. Sinkende Kühlleistung, Geruch oder beschlagene Scheiben sprechen für einen zeitnahen Check."
+        "answer": "Viele Fahrzeuge profitieren etwa alle zwei Jahre von einer Prüfung. Sinkende Kühlleistung, Geruch, laute Lüftergeräusche oder beschlagene Scheiben sprechen für einen zeitnahen Check."
       },
       {
         "question": "Betreut Bouz auch E-Autos und Hybridfahrzeuge?",
-        "answer": "Ja, für passende Servicearbeiten an Reifen, Bremsen, Klima, Fahrwerk und Diagnose. Hochvoltarbeiten werden nur mit den nötigen Sicherheitsvorgaben durchgeführt."
+        "answer": "Ja, für passende Servicearbeiten an Reifen, Bremsen, Klima, Fahrwerk, Wartung und Diagnose. Arbeiten am Hochvolt-System erfolgen nur mit der dafür nötigen Qualifikation und Sicherheitsroutine."
       },
       {
         "question": "Wann ist ein Ölwechsel fällig?",
         "answer": "Das hängt von Freigabe, Laufleistung, Fahrprofil und Herstellerintervall ab. Kurzstrecken und hohe Belastung können einen früheren Wechsel sinnvoll machen."
       },
       {
+        "question": "Warum ist die richtige Öl-Freigabe wichtig?",
+        "answer": "Moderne Motoren benötigen Öl mit exakt passender Herstellerfreigabe. Viskosität allein reicht nicht. Falsches Öl kann Verschleiß, Probleme mit Abgasnachbehandlung oder Garantiefragen verursachen."
+      },
+      {
+        "question": "Bieten Sie Getriebeölwechsel oder Automatikgetriebe-Spülung an?",
+        "answer": "Ja, je nach Fahrzeug und Getriebe. Ruckeln, verzögerte Schaltvorgänge oder hohe Laufleistung können Hinweise sein. Wir prüfen die Herstellervorgabe und sagen klar, welche Maßnahme sinnvoll ist."
+      },
+      {
+        "question": "Können Sie Warnleuchten und Fehlermeldungen auslesen?",
+        "answer": "Ja. Wir lesen Steuergeräte aus, prüfen Messwerte und suchen die Ursache statt nur Fehlercodes zu löschen. Danach erklären wir, ob sofortiger Handlungsbedarf besteht."
+      },
+      {
+        "question": "Prüfen oder reinigen Sie Partikelfilter (DPF)?",
+        "answer": "Wir prüfen Beladung, Differenzdruck, Sensorik und Fahrprofil. Ob Reinigung, Regeneration, Reparatur oder Austausch sinnvoll ist, hängt vom Befund ab."
+      },
+      {
+        "question": "Was kostet Steinschlagreparatur oder Scheibentausch?",
+        "answer": "Bei Teilkasko ist eine Steinschlagreparatur oft ohne eigene Kosten möglich; beim Scheibentausch zahlen Sie meist nur die vereinbarte Selbstbeteiligung. Wir prüfen Schadenbild und Versicherungssituation."
+      },
+      {
+        "question": "Muss nach einem Scheibentausch die Kamera kalibriert werden?",
+        "answer": "Bei Fahrzeugen mit Fahrerassistenzsystemen häufig ja. Kameras für Spurhalteassistent, Notbremsassistent oder Verkehrszeichenerkennung müssen nach Herstellervorgaben korrekt kalibriert werden."
+      },
+      {
+        "question": "Unterstützen Sie bei Unfallschäden und Versicherung?",
+        "answer": "Ja. Wir dokumentieren den Schaden, erklären die nächsten Schritte und unterstützen bei Abstimmung und Abwicklung. Bei sicherheitsrelevanten Schäden prüfen wir zuerst, ob das Fahrzeug noch fahrbereit ist."
+      },
+      {
         "question": "Brauche ich immer einen Termin?",
         "answer": "Für planbare Arbeiten ja, damit wir Zeit und Teile sauber vorbereiten können. Bei akuten Problemen rufen Sie bitte direkt an."
       },
       {
+        "question": "Was sollte ich zum Termin mitbringen?",
+        "answer": "Hilfreich sind Fahrzeugschein, Serviceheft oder digitale Serviceinformationen, HU-Bericht, vorhandene Rechnungen und eine kurze Beschreibung der Symptome. Bei Rädern bitte Radschrauben, Felgenschlösser und Reifendrucksensor-Hinweise mitbringen."
+      },
+      {
+        "question": "Kann ich mit meinem Auto weiterfahren, wenn eine Warnleuchte leuchtet?",
+        "answer": "Das hängt von der Warnleuchte ab. Rot bedeutet meistens: sicher anhalten und nicht weiterfahren. Gelbe Leuchten sollten zeitnah geprüft werden. Wenn Sie unsicher sind, rufen Sie uns an."
+      },
+      {
+        "question": "Bieten Sie Hol- und Bring-Service oder Ersatzmobilität an?",
+        "answer": "Nach Absprache ja. Je nach Auftrag, Verfügbarkeit und Entfernung organisieren wir Abholung, Rückgabe oder eine Ersatzmobilität."
+      },
+      {
+        "question": "Verwenden Sie Originalteile oder Ersatzteile in Erstausrüsterqualität?",
+        "answer": "Wir verwenden passende Teile in Original- oder Erstausrüsterqualität und besprechen Alternativen transparent. Bei sicherheitsrelevanten Bauteilen machen wir keine Kompromisse."
+      },
+      {
         "question": "Bekomme ich vor der Reparatur eine Kosteneinschätzung?",
         "answer": "Ja. Wir sprechen Befund, Umfang und Kosten ab, bevor zusätzliche Arbeiten starten."
+      },
+      {
+        "question": "Warum kann eine Diagnose Geld kosten?",
+        "answer": "Eine saubere Diagnose bedeutet Zeit, Messung, Sichtprüfung und technische Auswertung. Sie verhindert unnötigen Teiletausch und ist die Grundlage für eine seriöse Reparaturempfehlung."
       }
     ]
   },

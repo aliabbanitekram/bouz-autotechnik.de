@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import ButtonLink from './ButtonLink'
 import { ServiceIcon } from '../data/icons'
 
-export default function FAQAccordion({ showTitle = true, className = 'bg-brand-charcoal' }) {
+export default function FAQAccordion({
+  showTitle = true,
+  className = 'bg-brand-charcoal',
+  itemIndexes,
+  showViewAllLink = false,
+}) {
   const { t } = useTranslation()
-  const items = t('faq.items', { returnObjects: true })
+  const allItems = t('faq.items', { returnObjects: true })
+  const items = itemIndexes ? itemIndexes.map((index) => allItems[index]).filter(Boolean) : allItems
   const [open, setOpen] = useState(0)
 
   return (
@@ -38,6 +45,13 @@ export default function FAQAccordion({ showTitle = true, className = 'bg-brand-c
             )
           })}
         </div>
+        {showViewAllLink && (
+          <div className="mt-8">
+            <ButtonLink to="/faq" variant="secondary" icon="ArrowRight">
+              {t('faq.viewAll')}
+            </ButtonLink>
+          </div>
+        )}
       </div>
     </section>
   )

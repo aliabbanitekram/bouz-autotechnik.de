@@ -434,42 +434,123 @@
   },
   "faq": {
     "title": "Frequently asked questions",
+    "viewAll": "View all questions",
     "items": [
       {
         "question": "Can Bouz Autotechnik organize the German inspection for me?",
-        "answer": "Yes. We check your vehicle for typical issues beforehand and coordinate the inspection within the workshop schedule."
+        "answer": "Yes. The official inspection is carried out by an approved inspection organization; we prepare your vehicle, check typical issues and coordinate the appointment within the workshop schedule."
+      },
+      {
+        "question": "When is the next German inspection due?",
+        "answer": "For privately used passenger cars, the first inspection is usually due 36 months after first registration, then every 24 months. You can find the exact month on the rear plate sticker, registration document or last inspection report."
+      },
+      {
+        "question": "What happens if my car fails the inspection?",
+        "answer": "If significant defects are found, no sticker is issued and the defects must be repaired. We explain the report, discuss the repair and can coordinate the reinspection if needed."
+      },
+      {
+        "question": "Does manufacturer warranty remain valid at an independent workshop?",
+        "answer": "For maintenance and many repairs, yes, if work follows manufacturer specifications, suitable parts are used and everything is documented. Warranty repairs themselves and goodwill cases may depend on manufacturer conditions."
+      },
+      {
+        "question": "Do you perform inspections according to manufacturer specifications?",
+        "answer": "Yes. We check the service plan for your vehicle, use suitable oils, filters and parts, and document the work. If a digital service record is available, we check the entry process depending on the manufacturer system."
       },
       {
         "question": "When should I change tires?",
-        "answer": "As a rule of thumb: summer tires in consistently mild weather, winter tires in cold, wet or icy conditions. Tread, age and condition matter as well."
+        "answer": "The German rule of thumb is October to Easter. Legally, Germany has a situational winter tire requirement: in black ice, snow, slush, ice or frost, you need suitable winter or all-season tires."
+      },
+      {
+        "question": "How do I recognize legal winter or all-season tires?",
+        "answer": "Since October 2024, a simple M+S marking is no longer enough in winter road conditions. Tires must carry the Alpine symbol with mountain and snowflake to count as winter-suitable."
+      },
+      {
+        "question": "How do I know my tires are worn?",
+        "answer": "The legal minimum tread depth is 1.6 mm. For better safety reserves, about 3 mm for summer tires and 4 mm for winter tires are sensible. Cracks, bulges, uneven wear or old age are also warning signs."
+      },
+      {
+        "question": "What is included in tire service?",
+        "answer": "We change wheels, fit tires, balance them and check tread, age, pressure and visible damage. If needed, we discuss suitable new tires and seasonal storage."
+      },
+      {
+        "question": "When is wheel alignment useful?",
+        "answer": "If the car pulls to one side, the steering wheel sits crooked, tires wear unevenly or you hit a curb or pothole. Correct alignment protects tires, suspension and handling."
       },
       {
         "question": "How often does the timing belt need replacement?",
-        "answer": "The interval depends strongly on manufacturer, engine and model year. We check the specification for your vehicle and recommend replacement in time."
+        "answer": "The interval depends on manufacturer, engine, model year, mileage and time limit. Typical ranges are roughly 60,000 to 180,000 km. We check the exact specification for your vehicle."
       },
       {
         "question": "How do I know my brakes should be checked?",
-        "answer": "Squealing, vibration, a longer pedal travel, warning lights or one-sided braking are clear signs. Regular visual checks are useful even without symptoms."
+        "answer": "Squealing, juddering, vibration, longer pedal travel, warning lights, brake smell or pulling to one side are clear signs. With brakes, do not wait; have them checked promptly."
       },
       {
         "question": "How often is climate service useful?",
-        "answer": "Many vehicles benefit from a check every two years. Weak cooling, odors or fogged windows point to a timely inspection."
+        "answer": "Many vehicles benefit from a check about every two years. Weak cooling, odors, loud fan noise or fogged windows point to a timely inspection."
       },
       {
         "question": "Does Bouz service EVs and hybrids?",
-        "answer": "Yes, for suitable service work on tires, brakes, climate, chassis and diagnostics. High-voltage work is carried out only with the required safety procedures."
+        "answer": "Yes, for suitable work on tires, brakes, climate, suspension, maintenance and diagnostics. Work on high-voltage systems is carried out only with the required qualification and safety procedure."
       },
       {
         "question": "When is an oil change due?",
         "answer": "That depends on approval, mileage, driving profile and manufacturer interval. Short trips and heavy use can make an earlier change sensible."
       },
       {
+        "question": "Why is the correct oil approval important?",
+        "answer": "Modern engines need oil with the exact manufacturer approval. Viscosity alone is not enough. Incorrect oil can cause wear, emission-system issues or warranty questions."
+      },
+      {
+        "question": "Do you offer transmission oil changes or automatic transmission flushing?",
+        "answer": "Yes, depending on vehicle and gearbox. Jerky shifts, delayed gear changes or high mileage can be signs. We check the manufacturer specification and explain which measure makes sense."
+      },
+      {
+        "question": "Can you read warning lights and fault messages?",
+        "answer": "Yes. We read control units, check measured values and look for the cause instead of simply deleting fault codes. Then we explain whether action is urgent."
+      },
+      {
+        "question": "Can you inspect or clean diesel particulate filters?",
+        "answer": "We check soot load, differential pressure, sensors and driving profile. Whether cleaning, regeneration, repair or replacement makes sense depends on the finding."
+      },
+      {
+        "question": "What does stone-chip repair or glass replacement cost?",
+        "answer": "With partial comprehensive insurance, stone-chip repair is often possible without your own cost; for glass replacement you usually pay only the agreed deductible. We check the damage and insurance situation."
+      },
+      {
+        "question": "Does the camera need calibration after windshield replacement?",
+        "answer": "Often yes, if the vehicle has driver assistance systems. Cameras for lane assist, emergency braking or traffic-sign recognition must be calibrated correctly according to manufacturer specifications."
+      },
+      {
+        "question": "Do you support accident damage and insurance handling?",
+        "answer": "Yes. We document the damage, explain the next steps and support coordination and handling. With safety-relevant damage, we first check whether the vehicle is still roadworthy."
+      },
+      {
         "question": "Do I always need an appointment?",
         "answer": "For planned work, yes, so we can prepare time and parts properly. For urgent issues, please call directly."
       },
       {
+        "question": "What should I bring to the appointment?",
+        "answer": "Helpful items are the registration document, service booklet or digital service information, inspection report, existing invoices and a short symptom description. For wheels, please bring wheel bolts, locking-wheel-nut key and tire-pressure sensor notes."
+      },
+      {
+        "question": "Can I keep driving if a warning light is on?",
+        "answer": "That depends on the warning light. Red usually means stop safely and do not continue driving. Yellow lights should be checked soon. If you are unsure, call us."
+      },
+      {
+        "question": "Do you offer pick-up service or replacement mobility?",
+        "answer": "By arrangement, yes. Depending on the job, availability and distance, we organize collection, return or replacement mobility."
+      },
+      {
+        "question": "Do you use original parts or original-equipment quality parts?",
+        "answer": "We use suitable original or original-equipment quality parts and discuss alternatives transparently. We do not compromise on safety-relevant components."
+      },
+      {
         "question": "Will I receive a cost estimate before repair?",
         "answer": "Yes. We discuss findings, scope and costs before additional work starts."
+      },
+      {
+        "question": "Why can diagnostics cost money?",
+        "answer": "Proper diagnostics means time, measurement, visual inspection and technical evaluation. It prevents unnecessary parts replacement and is the basis for a serious repair recommendation."
       }
     ]
   },

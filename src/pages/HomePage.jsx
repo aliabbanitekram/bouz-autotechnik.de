@@ -11,6 +11,8 @@ import SectionHeader from '../components/SectionHeader'
 import ServiceCard from '../components/ServiceCard'
 import { ServiceIcon } from '../data/icons'
 
+const homeFaqIndexes = [0, 3, 4, 5, 11, 12, 13, 17, 22, 27]
+
 function AccentEdgeWords({ text }) {
   const words = text.split(' ')
   const first = words.slice(0, 2).join(' ')
@@ -203,7 +205,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FAQAccordion />
+      <FAQAccordion itemIndexes={homeFaqIndexes} showViewAllLink />
 
       <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-4xl text-center">
