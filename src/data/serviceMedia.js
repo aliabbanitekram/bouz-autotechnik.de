@@ -1,53 +1,114 @@
+const images = {
+  acHeatingUser: new URL('../assets/services/ac-heating-user-01-optimized.jpg', import.meta.url).href,
+  acHeatingFreepik: new URL('../assets/services/ac-heating-01.jpg', import.meta.url).href,
+  acHeatingPexels: new URL('../assets/services/ac-heating-03.jpg', import.meta.url).href,
+  brakeServicesUser: new URL('../assets/services/brake-services-user-01-optimized.jpg', import.meta.url).href,
+  brakeServicesWheel: new URL('../assets/services/brake-services-user-02-optimized.jpg', import.meta.url).href,
+  brakeServicesFreepik: new URL('../assets/services/brake-services-01.jpg', import.meta.url).href,
+  brakeServicesFallback: new URL('../assets/services/brake-services-fallback-01.jpg', import.meta.url).href,
+  frontEndsAlignmentUser: new URL('../assets/services/front-ends-alignment-user-01-optimized.jpg', import.meta.url).href,
+  frontEndsAlignmentFallback: new URL('../assets/services/front-ends-alignment-fallback-01.jpg', import.meta.url).href,
+  shockSuspensionUser: new URL('../assets/services/shock-suspension-user-01.jpg', import.meta.url).href,
+  shockSuspensionFallback: new URL('../assets/services/shock-suspension-fallback-01.jpg', import.meta.url).href,
+  batteryElectricalUser: new URL('../assets/services/battery-electrical-user-01.jpg', import.meta.url).href,
+  batteryElectricalFallback: new URL('../assets/services/battery-electrical-03.jpg', import.meta.url).href,
+  diagnosticServiceUser: new URL('../assets/services/diagnostic-service-user-01.jpg', import.meta.url).href,
+  diagnosticServiceTool: new URL('../assets/services/diagnostic-service-01.jpg', import.meta.url).href,
+  diagnosticServiceEngine: new URL('../assets/services/diagnostic-service-03.jpg', import.meta.url).href,
+  oilFilterChangesUser: new URL('../assets/services/oil-filter-changes-user-01-optimized.jpg', import.meta.url).href,
+  oilFilterChangesFallback: new URL('../assets/services/oil-filter-changes-fallback-01.jpg', import.meta.url).href,
+  beltsHosesUser: new URL('../assets/services/belts-hoses-user-01.jpg', import.meta.url).href,
+  beltsHosesFallback: new URL('../assets/services/belts-hoses-fallback-01.jpg', import.meta.url).href,
+  fuelSystemRepairsUser: new URL('../assets/services/fuel-system-repairs-user-01-optimized.jpg', import.meta.url).href,
+  fuelSystemRepairsFallback: new URL('../assets/services/fuel-system-repairs-02.jpg', import.meta.url).href,
+  transmissionRepairUser: new URL('../assets/services/transmission-repair-user-01-optimized.jpg', import.meta.url).href,
+  transmissionRepairFallback: new URL('../assets/services/transmission-repair-01.jpg', import.meta.url).href,
+}
+
 export const serviceMedia = {
   'ac-heating': {
-    image:
-      'https://images.pexels.com/photos/3807329/pexels-photo-3807329.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.acHeatingUser,
+    source: 'User provided',
+    asset: 'ac-heating-user-01-optimized.jpg',
+    alternates: [
+      { image: images.acHeatingFreepik, source: 'Freepik', asset: 'ac-heating-01.jpg' },
+      { image: images.acHeatingPexels, source: 'Pexels', asset: 'ac-heating-03.jpg' },
+    ],
   },
   'brake-services': {
-    image:
-      'https://images.pexels.com/photos/4756887/pexels-photo-4756887.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.brakeServicesUser,
+    source: 'User provided',
+    asset: 'brake-services-user-01-optimized.jpg',
+    alternates: [
+      { image: images.brakeServicesWheel, source: 'User provided', asset: 'brake-services-user-02-optimized.jpg' },
+      { image: images.brakeServicesFreepik, source: 'Freepik', asset: 'brake-services-01.jpg' },
+      { image: images.brakeServicesFallback, source: 'Pexels fallback', asset: 'brake-services-fallback-01.jpg' },
+    ],
   },
   'front-ends-alignment': {
-    image:
-      'https://images.pexels.com/photos/31097241/pexels-photo-31097241.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.frontEndsAlignmentUser,
+    source: 'User provided',
+    asset: 'front-ends-alignment-user-01-optimized.jpg',
+    alternates: [
+      { image: images.frontEndsAlignmentFallback, source: 'Pexels fallback', asset: 'front-ends-alignment-fallback-01.jpg' },
+    ],
   },
   'shock-suspension': {
-    image:
-      'https://images.pexels.com/photos/6872174/pexels-photo-6872174.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.shockSuspensionUser,
+    source: 'User provided',
+    asset: 'shock-suspension-user-01.jpg',
+    alternates: [
+      { image: images.shockSuspensionFallback, source: 'Pexels fallback', asset: 'shock-suspension-fallback-01.jpg' },
+    ],
   },
   'battery-electrical': {
-    image:
-      'https://images.pexels.com/photos/4489734/pexels-photo-4489734.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.batteryElectricalUser,
+    source: 'User provided',
+    asset: 'battery-electrical-user-01.jpg',
+    alternates: [
+      { image: images.batteryElectricalFallback, source: 'Pexels', asset: 'battery-electrical-03.jpg' },
+    ],
   },
   'diagnostic-service': {
-    image:
-      'https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.diagnosticServiceUser,
+    source: 'User provided',
+    asset: 'diagnostic-service-user-01.jpg',
+    alternates: [
+      { image: images.diagnosticServiceTool, source: 'Pexels', asset: 'diagnostic-service-01.jpg' },
+      { image: images.diagnosticServiceEngine, source: 'Pexels', asset: 'diagnostic-service-03.jpg' },
+    ],
   },
   'oil-filter-changes': {
-    image:
-      'https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.oilFilterChangesUser,
+    source: 'User provided',
+    asset: 'oil-filter-changes-user-01-optimized.jpg',
+    alternates: [
+      { image: images.oilFilterChangesFallback, source: 'Pexels fallback', asset: 'oil-filter-changes-fallback-01.jpg' },
+    ],
   },
   'belts-hoses': {
-    image:
-      'https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.beltsHosesUser,
+    source: 'User provided',
+    asset: 'belts-hoses-user-01.jpg',
+    alternates: [
+      { image: images.beltsHosesFallback, source: 'Pexels fallback', asset: 'belts-hoses-fallback-01.jpg' },
+    ],
   },
   'fuel-system-repairs': {
-    image:
-      'https://images.pexels.com/photos/4489719/pexels-photo-4489719.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.fuelSystemRepairsUser,
+    source: 'User provided',
+    asset: 'fuel-system-repairs-user-01-optimized.jpg',
+    alternates: [
+      { image: images.fuelSystemRepairsFallback, source: 'Pexels', asset: 'fuel-system-repairs-02.jpg' },
+    ],
   },
   'transmission-repair': {
-    image:
-      'https://images.pexels.com/photos/4489737/pexels-photo-4489737.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    source: 'Pexels',
+    image: images.transmissionRepairUser,
+    source: 'User provided',
+    asset: 'transmission-repair-user-01-optimized.jpg',
+    alternates: [
+      { image: images.transmissionRepairFallback, source: 'Pexels', asset: 'transmission-repair-01.jpg' },
+    ],
   },
 }
 

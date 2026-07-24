@@ -23,7 +23,7 @@ export default function ServiceDetailPage() {
   return (
     <main>
       <SEO page="service" />
-      <section className="bg-hero-vignette px-4 py-10 sm:px-6 lg:px-8">
+      <section className="bg-hero-vignette px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
         <div className="mx-auto max-w-7xl">
           <Link
             to="/service"
@@ -32,7 +32,34 @@ export default function ServiceDetailPage() {
             <ServiceIcon name="ArrowRight" className="size-4 rotate-180" />
             {t('nav.service')}
           </Link>
-          <div className="mt-8 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+
+          <div className="mt-5 lg:hidden">
+            <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-brand-steel/15 bg-brand-panel shadow-steel">
+              <img
+                src={media.image}
+                alt={service.title}
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/55 to-brand-black/10" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <h1 className="font-heading text-4xl font-bold uppercase leading-none text-brand-white">
+                  {service.title}
+                </h1>
+                <p className="mt-5 text-lg leading-7 text-brand-white">{narrative.lead}</p>
+              </div>
+            </div>
+            <div className="mt-5 flex flex-col gap-3">
+              <ButtonLink to="/terminanfrage" icon="CalendarCheck">
+                {t('actions.requestAppointment')}
+              </ButtonLink>
+              <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
+                {t('actions.callNow')}
+              </ButtonLink>
+            </div>
+          </div>
+
+          <div className="mt-8 hidden items-center gap-10 lg:grid lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <div className="flex size-16 items-center justify-center rounded-lg bg-brand-red/12 text-brand-red ring-1 ring-brand-red/25">
                 <ServiceIcon name={service.icon} className="size-8" />
