@@ -16,7 +16,7 @@ export default function SectionHeader({ eyebrow, title, text, align = 'left', to
         {title}
       </h2>
       {text && (
-        <p className={`mt-4 text-base leading-7 sm:text-lg ${isLight ? 'text-brand-steelDark' : 'text-brand-text'}`}>
+        <p className={`mt-4 text-sm leading-6 sm:text-base sm:leading-7 ${isLight ? 'text-brand-steelDark' : 'text-brand-text'}`}>
           {text}
         </p>
       )}

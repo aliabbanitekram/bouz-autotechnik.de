@@ -46,7 +46,7 @@ export default function ServiceDetailPage() {
                 <h1 className="steel-text font-heading text-3xl font-bold uppercase leading-tight">
                   {service.title}
                 </h1>
-                <p className="mt-5 text-lg leading-7 text-brand-white">{narrative.lead}</p>
+                <p className="mt-5 text-sm leading-6 text-brand-white sm:text-base sm:leading-7">{narrative.lead}</p>
               </div>
             </div>
             <div className="mt-5 flex flex-col gap-3">
@@ -70,7 +70,7 @@ export default function ServiceDetailPage() {
               <h1 className="steel-text mt-4 font-heading text-4xl font-bold uppercase leading-tight lg:text-6xl xl:text-7xl">
                 {service.title}
               </h1>
-              <p className="mt-6 text-lg leading-8 text-brand-text">{narrative.lead}</p>
+              <p className="mt-6 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{narrative.lead}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink to="/terminanfrage" icon="CalendarCheck">
                   {t('actions.requestAppointment')}
@@ -117,8 +117,8 @@ export default function ServiceDetailPage() {
             <h2 className="font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {detail.problemTitle}
             </h2>
-            <p className="mt-5 text-base leading-8 text-brand-text">{detail.problemIntro}</p>
-            <p className="mt-5 text-base leading-8 text-brand-text">{service.description}</p>
+            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.problemIntro}</p>
+            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{service.description}</p>
             <div className="mt-8">
               <h3 className="font-heading text-xl font-bold uppercase text-brand-white">
                 {t('serviceDetail.serviceScope')}
@@ -150,7 +150,7 @@ export default function ServiceDetailPage() {
               {narrative.bullets.map((item) => (
                 <li key={item} className="flex gap-3 text-brand-text">
                   <ServiceIcon name="CheckCircle2" className="mt-0.5 size-5 shrink-0 text-brand-red" />
-                  <span>{item}</span>
+                  <span className="text-sm leading-6 sm:text-base">{item}</span>
                 </li>
               ))}
             </ul>
@@ -167,7 +167,7 @@ export default function ServiceDetailPage() {
             <h2 className="font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {t('serviceDetail.signsTitle')}
             </h2>
-            <p className="mt-4 text-base leading-7 text-brand-text">{t('serviceDetail.signsIntro')}</p>
+            <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('serviceDetail.signsIntro')}</p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {detail.signs.map((sign, index) => (
@@ -192,7 +192,7 @@ export default function ServiceDetailPage() {
             <h2 className="mt-4 font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {detail.localTitle}
             </h2>
-            <p className="mt-5 text-base leading-8 text-brand-text">{detail.localText}</p>
+            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.localText}</p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {trust.map((item) => (
                 <div key={item.title} className="rounded-md bg-brand-black p-4">
@@ -207,7 +207,7 @@ export default function ServiceDetailPage() {
             <h2 className="mt-5 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {detail.readyTitle}
             </h2>
-            <p className="mt-4 text-base leading-7 text-brand-text">{detail.readyText}</p>
+            <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.readyText}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink to="/terminanfrage" icon="CalendarCheck">
                 {t('serviceDetail.readyButton')}

@@ -27,7 +27,7 @@ export default function ContactPage() {
           <Reveal className="space-y-5">
             <div className="industrial-panel rounded-lg p-6">
               <ServiceIcon name="MapPin" className="size-8 text-brand-red" />
-              <address className="mt-5 not-italic text-base leading-8 text-brand-text">
+              <address className="mt-5 not-italic text-sm leading-6 text-brand-text sm:text-base sm:leading-7">
                 <span className="block font-semibold text-brand-white">{t('site.address.line1')}</span>
                 <span className="block">{t('site.address.line2')}</span>
                 <span className="mt-2 block text-sm text-brand-steel">{t('site.address.note')}</span>
@@ -35,7 +35,7 @@ export default function ContactPage() {
             </div>
             <div className="industrial-panel rounded-lg p-6">
               <ServiceIcon name="Phone" className="size-8 text-brand-red" />
-              <div className="mt-5 grid gap-2 text-brand-text">
+              <div className="mt-5 grid gap-2 text-sm leading-6 text-brand-text sm:text-base">
                 <a className="hover:text-white" href={`tel:${t('site.phone').replaceAll(' ', '')}`}>
                   {t('site.phone')}
                 </a>

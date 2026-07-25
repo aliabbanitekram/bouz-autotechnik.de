@@ -82,7 +82,7 @@ export default function HomePage() {
             <h1 className="steel-text mt-5 font-heading text-4xl font-bold uppercase leading-[1.08] drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-brand-white/90 drop-shadow-lg sm:text-lg">{t('home.heroText')}</p>
+            <p className="mt-6 max-w-2xl text-sm leading-6 text-brand-white/90 drop-shadow-lg sm:text-base sm:leading-7">{t('home.heroText')}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone" fullWidth>
                 {t('actions.callNow')}
@@ -129,7 +129,7 @@ export default function HomePage() {
             <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-5xl">
               {t('home.aboutTitle')}
             </h2>
-            <p className="mt-5 text-lg leading-8 text-brand-text">{t('home.aboutLead')}</p>
+            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.aboutLead')}</p>
           </Reveal>
 
           <Reveal className="industrial-panel mt-10 overflow-hidden rounded-lg p-5 sm:p-6 lg:p-8" delay={0.08}>
@@ -167,10 +167,10 @@ export default function HomePage() {
               <h3 className="mt-3 font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
                 {t('home.aboutCardTitle')}
               </h3>
-              <p className="mt-4 text-base leading-7 text-brand-text">{t('home.aboutCardText')}</p>
+              <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.aboutCardText')}</p>
             </div>
 
-            <div className="mt-7 max-w-4xl space-y-5 text-base leading-8 text-brand-text">
+            <div className="mt-7 max-w-4xl space-y-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">
               {aboutParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -238,7 +238,7 @@ export default function HomePage() {
           <h2 className="steel-text font-heading text-3xl font-bold uppercase leading-tight sm:text-5xl">
             {t('home.finalTitle')}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-brand-text">{t('home.finalText')}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.finalText')}</p>
           <div className="mt-8 flex justify-center">
             <ButtonLink to="/terminanfrage" icon="CalendarCheck">
               {t('actions.requestAppointment')}

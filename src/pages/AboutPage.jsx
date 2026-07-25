@@ -26,7 +26,7 @@ export default function AboutPage() {
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.9fr]">
           <Reveal className="industrial-panel rounded-lg p-6 sm:p-8">
-            <div className="space-y-5 text-base leading-8 text-brand-text">
+            <div className="space-y-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">
               {story.slice(1).map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -47,7 +47,7 @@ export default function AboutPage() {
             </h2>
             <ul className="mt-5 grid gap-3">
               {quality.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-brand-text">
+                <li key={item} className="flex items-center gap-3 text-sm leading-6 text-brand-text sm:text-base">
                   <ServiceIcon name="CheckCircle2" className="size-5 text-brand-red" />
                   <span>{item}</span>
                 </li>

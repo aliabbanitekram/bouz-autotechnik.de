@@ -19,7 +19,7 @@ export default function HomeFAQTeaser({ itemIndexes }) {
           <h2 className="mt-5 text-3xl font-bold leading-tight text-brand-black sm:text-4xl">
             {t('home.faqTitle')}
           </h2>
-          <p className="mt-4 max-w-xl text-lg leading-8 text-brand-steelDark">
+          <p className="mt-4 max-w-xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
             {t('home.faqText')}
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function HomeFAQTeaser({ itemIndexes }) {
                   />
                 </button>
                 {isOpen && (
-                  <p className="px-5 pb-5 text-sm leading-7 text-brand-steelDark sm:text-base">
+                  <p className="px-5 pb-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
                     {item.answer}
                   </p>
                 )}
