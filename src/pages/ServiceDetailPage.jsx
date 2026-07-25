@@ -43,7 +43,7 @@ export default function ServiceDetailPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/55 to-brand-black/10" />
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <h1 className="font-heading text-3xl font-bold uppercase leading-tight text-brand-white">
+                <h1 className="steel-text font-heading text-3xl font-bold uppercase leading-tight">
                   {service.title}
                 </h1>
                 <p className="mt-5 text-lg leading-7 text-brand-white">{narrative.lead}</p>
@@ -67,7 +67,7 @@ export default function ServiceDetailPage() {
               <p className="mt-6 font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
                 {t('servicePage.eyebrow')}
               </p>
-              <h1 className="mt-4 font-heading text-4xl font-bold uppercase leading-tight text-brand-white lg:text-6xl xl:text-7xl">
+              <h1 className="steel-text mt-4 font-heading text-4xl font-bold uppercase leading-tight lg:text-6xl xl:text-7xl">
                 {service.title}
               </h1>
               <p className="mt-6 text-lg leading-8 text-brand-text">{narrative.lead}</p>

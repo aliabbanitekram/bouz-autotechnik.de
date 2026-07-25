@@ -352,12 +352,12 @@ export default function PrivacyPage() {
     <main className="bg-brand-steelLight text-brand-black">
       <SEO page="privacy" />
       {/* Page hero */}
-      <section className="border-b border-brand-black/10 bg-brand-white py-16 sm:py-20">
+      <section className="steel-hero-light border-b border-brand-black/10 py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-brand-red font-semibold text-xs tracking-[0.2em] uppercase mb-3">
             {pageLabel}
           </p>
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-brand-black">
+          <h1 className="steel-text-dark font-heading text-4xl font-extrabold sm:text-5xl">
             {pageTitle}
           </h1>
         </div>

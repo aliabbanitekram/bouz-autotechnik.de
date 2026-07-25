@@ -10,7 +10,7 @@ export default function SectionHeader({ eyebrow, title, text, align = 'left', to
       )}
       <h2
         className={`mt-3 font-heading text-2xl font-bold uppercase leading-tight sm:text-4xl lg:text-5xl ${
-          isLight ? 'text-brand-black' : 'text-brand-white'
+          isLight ? 'steel-text-dark' : 'steel-text'
         }`}
       >
         {title}

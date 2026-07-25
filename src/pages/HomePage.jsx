@@ -59,7 +59,7 @@ export default function HomePage() {
             <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
               {t('home.heroEyebrow')}
             </p>
-            <h1 className="mt-5 font-heading text-4xl font-bold uppercase leading-[1.08] text-brand-white drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="steel-text mt-5 font-heading text-4xl font-bold uppercase leading-[1.08] drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-brand-white/90 drop-shadow-lg sm:text-lg">{t('home.heroText')}</p>
@@ -190,7 +190,7 @@ export default function HomePage() {
 
       <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-4xl text-center">
-          <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-5xl">
+          <h2 className="steel-text font-heading text-3xl font-bold uppercase leading-tight sm:text-5xl">
             {t('home.finalTitle')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-brand-text">{t('home.finalText')}</p>

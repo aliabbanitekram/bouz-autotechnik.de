@@ -12,13 +12,12 @@ export default function AppointmentPage() {
   return (
     <main>
       <SEO page="appointment" />
-      <section className="border-b border-brand-black/10 bg-brand-white px-4 py-16 text-brand-black sm:px-6 lg:px-8">
+      <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow={t('appointmentPage.eyebrow')}
             title={t('appointmentPage.title')}
             text={t('appointmentPage.intro')}
-            tone="light"
           />
         </div>
       </section>
