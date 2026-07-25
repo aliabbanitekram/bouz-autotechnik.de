@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
-import ContactForm from '../components/ContactForm'
 import GoogleMapsEmbed from '../components/GoogleMapsEmbed'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
 import SectionHeader from '../components/SectionHeader'
+import WhatsAppContact from '../components/WhatsAppContact'
 import { ServiceIcon } from '../data/icons'
 
 export default function ContactPage() {
@@ -56,12 +56,7 @@ export default function ContactPage() {
               </dl>
             </div>
           </Reveal>
-          <Reveal delay={0.08}>
-            <h2 className="steel-text-dark mb-4 font-heading text-2xl font-bold uppercase sm:text-3xl">
-              {t('contactPage.formTitle')}
-            </h2>
-            <ContactForm type="contact" />
-          </Reveal>
+          <WhatsAppContact variant="card" delay={0.08} />
         </div>
       </section>
 
