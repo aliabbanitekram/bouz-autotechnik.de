@@ -75,23 +75,7 @@
     "cookieSettings": "Cookie-Einstellungen"
   },
   "footer": {
-    "social": [
-      {
-        "label": "Instagram",
-        "url": "https://www.instagram.com/",
-        "icon": "ExternalLink"
-      },
-      {
-        "label": "Facebook",
-        "url": "https://www.facebook.com/",
-        "icon": "ExternalLink"
-      },
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/",
-        "icon": "ExternalLink"
-      }
-    ]
+    "information": "Information"
   },
   "actions": {
     "requestAppointment": "Termin anfragen",
