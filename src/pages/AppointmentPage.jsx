@@ -27,26 +27,26 @@ export default function AppointmentPage() {
             <ContactForm type="appointment" />
           </Reveal>
           <Reveal className="space-y-5" delay={0.06}>
-            <aside className="rounded-lg border border-brand-black/10 bg-brand-white p-6 shadow-steel">
+            <aside className="industrial-panel rounded-lg p-6 shadow-steel">
               <ServiceIcon name="Clock" className="size-8 text-brand-red" />
-              <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-black">
+              <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
                 {t('appointmentPage.hoursTitle')}
               </h2>
-              <dl className="mt-5 space-y-4">
+              <dl className="mt-5 space-y-4 text-brand-text">
                 {hours.map((item) => (
-                  <div key={item.days} className="border-b border-brand-black/10 pb-4 last:border-0 last:pb-0">
-                    <dt className="font-semibold text-brand-black">{item.days}</dt>
-                    <dd className="mt-1 text-brand-steelDark">{item.time}</dd>
+                  <div key={item.days} className="border-b border-brand-steel/15 pb-4 last:border-0 last:pb-0">
+                    <dt className="font-semibold text-brand-white">{item.days}</dt>
+                    <dd className="mt-1 text-brand-text">{item.time}</dd>
                   </div>
                 ))}
               </dl>
             </aside>
-            <aside className="rounded-lg border border-brand-red/15 bg-brand-white p-6 shadow-steel">
+            <aside className="industrial-panel rounded-lg p-6 shadow-steel">
               <ServiceIcon name="MessageSquare" className="size-8 text-brand-red" />
-              <h2 className="mt-5 font-heading text-xl font-bold uppercase text-brand-black">
+              <h2 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">
                 {t('appointmentPage.noteTitle')}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-brand-steelDark">{t('appointmentPage.noteText')}</p>
+              <p className="mt-3 text-sm leading-6 text-brand-text">{t('appointmentPage.noteText')}</p>
             </aside>
           </Reveal>
         </div>
