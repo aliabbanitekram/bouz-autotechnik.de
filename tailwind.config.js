@@ -13,6 +13,8 @@ export default {
           steelDark: '#5F6368',
           red: '#E4212F',
           redDark: '#B81421',
+          whatsapp: '#25D366',
+          whatsappDark: '#0F3D2A',
           text: '#C9CDD3',
           white: '#F5F6F7',
         },
