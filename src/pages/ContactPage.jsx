@@ -57,7 +57,7 @@ export default function ContactPage() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="mb-4 font-heading text-3xl font-bold uppercase text-brand-white">
+            <h2 className="mb-4 font-heading text-2xl font-bold uppercase text-brand-white sm:text-3xl">
               {t('contactPage.formTitle')}
             </h2>
             <ContactForm type="contact" />
@@ -67,7 +67,7 @@ export default function ContactPage() {
 
       <section className="bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-5 font-heading text-3xl font-bold uppercase text-brand-white">
+          <h2 className="mb-5 font-heading text-2xl font-bold uppercase text-brand-white sm:text-3xl">
             {t('contactPage.mapTitle')}
           </h2>
           <div className="overflow-hidden rounded-lg border border-brand-steel/15">

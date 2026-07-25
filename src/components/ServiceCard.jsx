@@ -18,17 +18,17 @@ export default function ServiceCard({ service, compact = false, tone = 'dark' })
         <img
           src={media.image}
           alt={service.title}
-          className="aspect-[16/10] w-full object-cover opacity-90 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+          className="object-cover w-full transition duration-500 aspect-16/10 opacity-90 group-hover:scale-105 group-hover:opacity-100"
           loading={compact ? 'lazy' : 'eager'}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 via-transparent to-transparent" />
-        <span className="absolute right-5 top-5 flex size-20 items-center justify-center rounded-lg bg-brand-charcoal/95 text-brand-red shadow-xl ring-1 ring-brand-steel/15 sm:size-24">
+        <div className="absolute inset-0 bg-linear-to-t from-brand-black/40 via-transparent to-transparent" />
+        <span className="absolute flex items-center justify-center rounded-lg shadow-xl right-5 top-5 size-20 bg-brand-charcoal/95 text-brand-red ring-1 ring-brand-steel/15 sm:size-24">
           <ServiceIcon name={service.icon} className="size-9 sm:size-11" />
         </span>
       </div>
-      <div className="flex min-h-60 flex-col justify-between p-6">
+      <div className="flex flex-col justify-between p-6 min-h-60">
         <div>
-          <h3 className={`font-heading text-3xl font-bold uppercase ${isLight ? 'text-brand-black' : 'text-brand-white'}`}>
+          <h3 className={`font-heading text-2xl font-bold uppercase leading-tight sm:text-3xl ${isLight ? 'text-brand-black' : 'text-brand-white'}`}>
             {service.title}
           </h3>
           {!compact && (
@@ -39,7 +39,7 @@ export default function ServiceCard({ service, compact = false, tone = 'dark' })
         </div>
         <Link
           to={`/service/${service.id}`}
-          className="focus-ring mt-8 inline-flex min-h-12 w-fit items-center gap-3 rounded-md bg-brand-black px-6 py-3 font-heading text-base font-bold uppercase tracking-wider text-brand-white transition hover:bg-brand-red"
+          className="inline-flex items-center gap-3 px-6 py-3 mt-8 text-base font-bold tracking-wider uppercase transition rounded-md focus-ring min-h-12 w-fit bg-brand-black font-heading text-brand-white hover:bg-brand-red"
         >
           <ServiceIcon name="ExternalLink" className="size-5" />
           <span>{t('common.learnMore')}</span>

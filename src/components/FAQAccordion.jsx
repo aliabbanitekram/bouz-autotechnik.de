@@ -21,7 +21,7 @@ export default function FAQAccordion({
       <div className="mx-auto max-w-4xl">
         {showTitle && (
           <h2
-            className={`font-heading text-3xl font-bold uppercase sm:text-5xl ${
+            className={`font-heading text-2xl font-bold uppercase sm:text-4xl ${
               isLight ? 'text-brand-black' : 'text-brand-white'
             }`}
           >
@@ -43,7 +43,7 @@ export default function FAQAccordion({
                   onClick={() => setOpen(isOpen ? -1 : index)}
                 >
                   <span
-                    className={`font-heading text-lg font-semibold uppercase ${
+                    className={`font-heading text-base font-semibold uppercase sm:text-lg ${
                       isLight ? 'text-brand-black' : 'text-brand-white'
                     }`}
                   >

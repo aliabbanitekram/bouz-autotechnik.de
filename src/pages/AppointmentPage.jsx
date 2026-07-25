@@ -29,7 +29,7 @@ export default function AppointmentPage() {
           <Reveal className="space-y-5" delay={0.06}>
             <aside className="industrial-panel rounded-lg p-6">
               <ServiceIcon name="Clock" className="size-8 text-brand-red" />
-              <h2 className="mt-5 font-heading text-3xl font-bold uppercase text-brand-white">
+              <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
                 {t('appointmentPage.hoursTitle')}
               </h2>
               <dl className="mt-5 space-y-4">
@@ -43,7 +43,7 @@ export default function AppointmentPage() {
             </aside>
             <aside className="industrial-panel rounded-lg p-6">
               <ServiceIcon name="MessageSquare" className="size-8 text-brand-red" />
-              <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
+              <h2 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">
                 {t('appointmentPage.noteTitle')}
               </h2>
               <p className="mt-3 text-sm leading-6 text-brand-text">{t('appointmentPage.noteText')}</p>

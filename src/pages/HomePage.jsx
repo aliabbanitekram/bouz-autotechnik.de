@@ -59,10 +59,10 @@ export default function HomePage() {
             <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
               {t('home.heroEyebrow')}
             </p>
-            <h1 className="mt-5 font-heading text-5xl font-bold uppercase leading-[0.92] text-brand-white drop-shadow-2xl sm:text-7xl lg:text-8xl">
+            <h1 className="mt-5 font-heading text-4xl font-bold uppercase leading-[1.08] text-brand-white drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-brand-white/90 drop-shadow-lg">{t('home.heroText')}</p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-brand-white/90 drop-shadow-lg sm:text-lg">{t('home.heroText')}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink to="/terminanfrage" icon="CalendarCheck">
                 {t('actions.requestAppointment')}
@@ -81,7 +81,7 @@ export default function HomePage() {
             <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
               {t('home.aboutEyebrow')}
             </p>
-            <h2 className="mt-4 font-heading text-4xl font-bold uppercase text-brand-white sm:text-6xl">
+            <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-5xl">
               {t('home.aboutTitle')}
             </h2>
             <p className="mt-5 text-lg leading-8 text-brand-text">{t('home.aboutLead')}</p>
@@ -98,7 +98,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/45 to-brand-black/20" />
               <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
                 <div>
-                  <h3 className="max-w-xl font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
+                  <h3 className="max-w-xl font-heading text-xl font-bold uppercase leading-tight text-brand-white sm:text-3xl lg:text-4xl">
                     <AccentEdgeWords text={t('home.aboutShortLine')} />
                   </h3>
                   <p className="mt-1 text-sm font-semibold text-brand-white sm:text-base">{addressLine}</p>
@@ -119,7 +119,7 @@ export default function HomePage() {
               <p className="font-heading text-sm font-bold uppercase tracking-[0.22em] text-brand-red">
                 {t('home.aboutCardKicker')}
               </p>
-              <h3 className="mt-3 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-5xl">
+              <h3 className="mt-3 font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
                 {t('home.aboutCardTitle')}
               </h3>
               <p className="mt-4 text-base leading-7 text-brand-text">{t('home.aboutCardText')}</p>
@@ -175,7 +175,7 @@ export default function HomePage() {
                     name={['KeyRound', 'Car', 'FileCheck2'][index]}
                     className="size-8 text-brand-red"
                   />
-                  <h3 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
+                  <h3 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">
                     {perk.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-brand-text">{perk.description}</p>
@@ -190,7 +190,7 @@ export default function HomePage() {
 
       <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-4xl text-center">
-          <h2 className="font-heading text-4xl font-bold uppercase text-brand-white sm:text-6xl">
+          <h2 className="font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-5xl">
             {t('home.finalTitle')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-brand-text">{t('home.finalText')}</p>

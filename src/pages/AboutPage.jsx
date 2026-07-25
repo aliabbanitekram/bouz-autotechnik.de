@@ -42,7 +42,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal className="industrial-panel rounded-lg p-6 sm:p-8" delay={0.06}>
             <ServiceIcon name="BadgeCheck" className="size-9 text-brand-red" />
-            <h2 className="mt-5 font-heading text-3xl font-bold uppercase text-brand-white">
+            <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white sm:text-3xl">
               {t('aboutPage.qualityTitle')}
             </h2>
             <ul className="mt-5 grid gap-3">
@@ -60,7 +60,7 @@ export default function AboutPage() {
       <section className="bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <h2 className="font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
+            <h2 className="font-heading text-2xl font-bold uppercase text-brand-white sm:text-4xl">
               {t('aboutPage.teamTitle')}
             </h2>
           </Reveal>
@@ -71,7 +71,7 @@ export default function AboutPage() {
                   <div className="flex aspect-[4/3] items-center justify-center rounded-md bg-brand-black text-brand-steel">
                     <ServiceIcon name="Users" className="size-12" />
                   </div>
-                  <h3 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">{member.name}</h3>
+                  <h3 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">{member.name}</h3>
                   <p className="mt-2 text-sm text-brand-text">{member.role}</p>
                 </article>
               </Reveal>
@@ -83,7 +83,7 @@ export default function AboutPage() {
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <h2 className="font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
+            <h2 className="font-heading text-2xl font-bold uppercase text-brand-white sm:text-4xl">
               {t('aboutPage.galleryTitle')}
             </h2>
           </Reveal>

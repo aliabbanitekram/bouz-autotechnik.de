@@ -27,6 +27,16 @@ body {
     #0b0d10;
 }
 
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
+.grid > * {
+  min-width: 0;
+}
+
 button,
 input,
 select,

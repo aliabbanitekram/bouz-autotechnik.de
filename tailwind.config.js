@@ -18,7 +18,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Oswald', 'Arial Narrow', 'sans-serif'],
+        heading: ['Inter', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {

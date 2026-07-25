@@ -43,7 +43,7 @@ export default function ServiceDetailPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/55 to-brand-black/10" />
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <h1 className="font-heading text-4xl font-bold uppercase leading-none text-brand-white">
+                <h1 className="font-heading text-3xl font-bold uppercase leading-tight text-brand-white">
                   {service.title}
                 </h1>
                 <p className="mt-5 text-lg leading-7 text-brand-white">{narrative.lead}</p>
@@ -67,7 +67,7 @@ export default function ServiceDetailPage() {
               <p className="mt-6 font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
                 {t('servicePage.eyebrow')}
               </p>
-              <h1 className="mt-4 font-heading text-5xl font-bold uppercase leading-tight text-brand-white sm:text-7xl">
+              <h1 className="mt-4 font-heading text-4xl font-bold uppercase leading-tight text-brand-white lg:text-6xl xl:text-7xl">
                 {service.title}
               </h1>
               <p className="mt-6 text-lg leading-8 text-brand-text">{narrative.lead}</p>
@@ -114,7 +114,7 @@ export default function ServiceDetailPage() {
       <section className="px-4 pt-8 pb-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.85fr]">
           <article className="industrial-panel rounded-lg p-6 sm:p-8">
-            <h2 className="font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
+            <h2 className="font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {detail.problemTitle}
             </h2>
             <p className="mt-5 text-base leading-8 text-brand-text">{detail.problemIntro}</p>
@@ -137,13 +137,13 @@ export default function ServiceDetailPage() {
                 </span>
               </div>
             </div>
-            <blockquote className="mt-8 border-l-4 border-brand-red pl-5 font-heading text-2xl font-bold uppercase leading-tight text-brand-white">
+            <blockquote className="mt-8 border-l-4 border-brand-red pl-5 font-heading text-xl font-bold uppercase leading-tight text-brand-white sm:text-2xl">
               "{detail.quote}"
             </blockquote>
           </article>
 
           <aside className="industrial-panel rounded-lg p-6 sm:p-8">
-            <h2 className="font-heading text-3xl font-bold uppercase text-brand-white">
+            <h2 className="font-heading text-2xl font-bold uppercase text-brand-white sm:text-3xl">
               {t('serviceDetail.includes')}
             </h2>
             <ul className="mt-6 grid gap-4">
@@ -164,7 +164,7 @@ export default function ServiceDetailPage() {
       <section className="bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <h2 className="font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
+            <h2 className="font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {t('serviceDetail.signsTitle')}
             </h2>
             <p className="mt-4 text-base leading-7 text-brand-text">{t('serviceDetail.signsIntro')}</p>
@@ -172,8 +172,8 @@ export default function ServiceDetailPage() {
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {detail.signs.map((sign, index) => (
               <article key={sign.title} className="industrial-panel rounded-lg p-6">
-                <p className="steel-text font-heading text-5xl font-bold">{index + 1}</p>
-                <h3 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
+                <p className="steel-text font-heading text-4xl font-bold sm:text-5xl">{index + 1}</p>
+                <h3 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">
                   {sign.title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-brand-text">{sign.text}</p>
@@ -189,7 +189,7 @@ export default function ServiceDetailPage() {
             <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
               {t('serviceDetail.whyBouz')}
             </p>
-            <h2 className="mt-4 font-heading text-3xl font-bold uppercase text-brand-white sm:text-5xl">
+            <h2 className="mt-4 font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {detail.localTitle}
             </h2>
             <p className="mt-5 text-base leading-8 text-brand-text">{detail.localText}</p>
@@ -204,7 +204,7 @@ export default function ServiceDetailPage() {
           </article>
           <article className="bg-hero-vignette rounded-lg border border-brand-steel/15 p-6 sm:p-8">
             <ServiceIcon name={service.icon} className="size-10 text-brand-red" />
-            <h2 className="mt-5 font-heading text-4xl font-bold uppercase text-brand-white sm:text-5xl">
+            <h2 className="mt-5 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
               {detail.readyTitle}
             </h2>
             <p className="mt-4 text-base leading-7 text-brand-text">{detail.readyText}</p>
