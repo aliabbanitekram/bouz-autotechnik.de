@@ -15,6 +15,7 @@ export default {
           redDark: '#B81421',
           whatsapp: '#25D366',
           whatsappDark: '#0F3D2A',
+          whatsappHover: '#1FB85A',
           text: '#C9CDD3',
           white: '#F5F6F7',
         },

@@ -84,10 +84,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-brand-white/90 drop-shadow-lg sm:text-lg">{t('home.heroText')}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink to="/terminanfrage" icon="CalendarCheck">
-                {t('actions.requestAppointment')}
-              </ButtonLink>
-              <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
+              <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone" fullWidth>
                 {t('actions.callNow')}
               </ButtonLink>
             </div>
@@ -112,7 +109,7 @@ export default function HomePage() {
             </p>
           </div>
           <a
-            className="focus-ring mx-auto inline-flex min-h-11 w-full max-w-sm items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-7 py-3 font-heading text-base font-bold text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-white md:mx-0 md:w-auto md:min-w-64"
+            className="focus-ring mx-auto inline-flex min-h-11 w-full max-w-sm items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-7 py-3 font-heading text-base font-bold text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover md:mx-0 md:w-auto md:min-w-64"
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
