@@ -114,6 +114,11 @@
     "badge": "Independent workshop for all makes",
     "placeholderImage": "Workshop photo coming soon"
   },
+  "form": {
+    "privacyPrefix": "By submitting this form, you confirm that you have read and accepted our",
+    "privacyLink": "privacy policy",
+    "privacySuffix": "."
+  },
   "services": [
     {
       "id": "ac-heating",
@@ -298,7 +303,14 @@
       "service": "Requested service",
       "date": "Preferred date",
       "message": "Message",
-      "messagePlaceholder": "What should we inspect or repair?"
+      "phoneCountry": "Select country code, currently {{country}} {{code}}",
+      "messagePlaceholder": "What should we inspect or repair?",
+      "placeholders": {
+        "name": "Max Smith",
+        "phone": "Enter phone number",
+        "email": "name@example.com",
+        "vehicle": "e.g. VW Golf 7, BMW 3 Series"
+      }
     },
     "hoursTitle": "Opening hours",
     "noteTitle": "What happens next",
@@ -382,7 +394,13 @@
       "email": "Email",
       "phone": "Phone",
       "message": "Message",
-      "messagePlaceholder": "How can we help?"
+      "phoneCountry": "Select country code, currently {{country}} {{code}}",
+      "messagePlaceholder": "How can we help?",
+      "placeholders": {
+        "name": "Max Smith",
+        "phone": "Enter phone number",
+        "email": "name@example.com"
+      }
     },
     "success": "Thank you, your message has been prepared. Your email app will open shortly."
   },

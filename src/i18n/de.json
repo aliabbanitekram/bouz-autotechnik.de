@@ -114,6 +114,11 @@
     "badge": "Freie Werkstatt für alle Marken",
     "placeholderImage": "Werkstattfoto folgt"
   },
+  "form": {
+    "privacyPrefix": "Mit dem Absenden bestätigen Sie, dass Sie unsere",
+    "privacyLink": "Datenschutzerklärung",
+    "privacySuffix": " gelesen haben und akzeptieren."
+  },
   "services": [
     {
       "id": "ac-heating",
@@ -298,7 +303,14 @@
       "service": "Gewünschte Leistung",
       "date": "Wunschtermin",
       "message": "Nachricht",
-      "messagePlaceholder": "Was sollen wir prüfen oder reparieren?"
+      "phoneCountry": "Ländervorwahl auswählen, aktuell {{country}} {{code}}",
+      "messagePlaceholder": "Was sollen wir prüfen oder reparieren?",
+      "placeholders": {
+        "name": "Max Mustermann",
+        "phone": "Telefonnummer eingeben",
+        "email": "name@beispiel.de",
+        "vehicle": "z. B. VW Golf 7, BMW 3er"
+      }
     },
     "hoursTitle": "Öffnungszeiten",
     "noteTitle": "Was danach passiert",
@@ -382,7 +394,13 @@
       "email": "E-Mail",
       "phone": "Telefon",
       "message": "Nachricht",
-      "messagePlaceholder": "Wie können wir helfen?"
+      "phoneCountry": "Ländervorwahl auswählen, aktuell {{country}} {{code}}",
+      "messagePlaceholder": "Wie können wir helfen?",
+      "placeholders": {
+        "name": "Max Mustermann",
+        "phone": "Telefonnummer eingeben",
+        "email": "name@beispiel.de"
+      }
     },
     "success": "Danke, Ihre Nachricht wurde vorbereitet. Ihr E-Mail-Programm öffnet sich gleich."
   },
