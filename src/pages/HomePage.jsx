@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import heroRoad from '../assets/home-hero-road.jpg'
+import heroRoad from '../assets/home-hero-road-vw.jpg'
 import aboutWorkshop from '../assets/services/diagnostic-service-03.jpg'
 import ButtonLink from '../components/ButtonLink'
 import HomeFAQTeaser from '../components/HomeFAQTeaser'
@@ -38,20 +38,20 @@ export default function HomePage() {
   return (
     <main>
       <SEO page="home" />
-      <section className="relative flex min-h-[72svh] items-end overflow-hidden px-4 py-12 sm:min-h-[78svh] sm:px-6 lg:min-h-[82svh] lg:px-8">
+      <section className="relative flex min-h-[84svh] items-end overflow-hidden px-4 pb-8 pt-12 sm:min-h-[86svh] sm:px-6 sm:pb-10 sm:pt-14 lg:min-h-[88svh] lg:px-8 lg:py-14">
         <img
           src={heroRoad}
           alt={t('home.heroImageAlt')}
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-[62%_center] lg:object-center"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/55 to-brand-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-black/70 via-brand-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/48 to-brand-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-black/68 via-brand-black/16 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-brand-black to-transparent" />
         <div className="absolute inset-x-0 top-0 h-px bg-steel-gradient opacity-50" />
         <div className="relative z-10 mx-auto w-full max-w-7xl">
           <motion.div
-            className="max-w-4xl pb-4 sm:pb-8"
+            className="max-w-4xl"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
