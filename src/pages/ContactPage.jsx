@@ -22,7 +22,7 @@ export default function ContactPage() {
           />
         </div>
       </section>
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-brand-steelLight px-4 py-16 text-brand-black sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal className="space-y-5">
             <div className="industrial-panel rounded-lg p-6">
@@ -57,7 +57,7 @@ export default function ContactPage() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <h2 className="mb-4 font-heading text-2xl font-bold uppercase text-brand-white sm:text-3xl">
+            <h2 className="steel-text-dark mb-4 font-heading text-2xl font-bold uppercase sm:text-3xl">
               {t('contactPage.formTitle')}
             </h2>
             <ContactForm type="contact" />
@@ -65,9 +65,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-brand-steelLight px-4 pb-16 text-brand-black sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-5 font-heading text-2xl font-bold uppercase text-brand-white sm:text-3xl">
+          <h2 className="steel-text-dark mb-5 font-heading text-2xl font-bold uppercase sm:text-3xl">
             {t('contactPage.mapTitle')}
           </h2>
           <div className="overflow-hidden rounded-lg border border-brand-steel/15">

@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 import { ServiceIcon } from '../data/icons'
 import { phoneCountries } from '../data/phoneCountries'
 
-const darkInputClass =
-  'focus-ring w-full rounded-md border border-brand-steel/20 bg-brand-black px-4 py-3 text-brand-white placeholder:text-brand-steelDark'
-
 const lightInputClass =
   'focus-ring w-full rounded-md border border-brand-steel/35 bg-brand-white px-4 py-3 text-brand-black shadow-sm [color-scheme:light] placeholder:text-brand-steelDark'
 
@@ -26,16 +23,11 @@ export default function ContactForm({ type = 'contact' }) {
   const phoneFieldRef = useRef(null)
   const fieldsKey = type === 'appointment' ? 'appointmentPage.fields' : 'contactPage.fields'
   const successKey = type === 'appointment' ? 'appointmentPage.success' : 'contactPage.success'
-  const isAppointment = type === 'appointment'
-  const inputClass = isAppointment ? lightInputClass : darkInputClass
-  const labelClass = isAppointment ? 'grid gap-2 text-sm font-medium text-brand-steelDark' : 'grid gap-2 text-sm text-brand-text'
-  const phoneShellClass = isAppointment
-    ? 'border-brand-steel/35 bg-brand-white text-brand-black shadow-sm'
-    : 'border-brand-steel/20 bg-brand-black text-brand-white'
-  const phoneDividerClass = isAppointment ? 'border-brand-steel/35' : 'border-brand-steel/20'
-  const phoneInputClass = isAppointment
-    ? 'text-brand-black placeholder:text-brand-steelDark'
-    : 'text-brand-white placeholder:text-brand-steelDark'
+  const inputClass = lightInputClass
+  const labelClass = 'grid gap-2 text-sm font-medium text-brand-steelDark'
+  const phoneShellClass = 'border-brand-steel/35 bg-brand-white text-brand-black shadow-sm'
+  const phoneDividerClass = 'border-brand-steel/35'
+  const phoneInputClass = 'text-brand-black placeholder:text-brand-steelDark'
 
   useEffect(() => {
     if (!countryPickerOpen) return undefined
@@ -78,19 +70,11 @@ export default function ContactForm({ type = 'contact' }) {
 
   return (
     <form
-      className={
-        isAppointment
-          ? 'rounded-lg border border-brand-black/10 bg-brand-white p-5 text-brand-black shadow-steel sm:p-6 lg:p-8'
-          : 'industrial-panel rounded-lg p-5 sm:p-6'
-      }
+      className="rounded-lg border border-brand-black/10 bg-brand-white p-5 text-brand-black shadow-steel sm:p-6 lg:p-8"
       onSubmit={onSubmit}
     >
       {sent && (
-        <div
-          className={`mb-5 rounded-md border border-brand-red/35 bg-brand-red/10 px-4 py-3 text-sm ${
-            isAppointment ? 'text-brand-redDark' : 'text-brand-white'
-          }`}
-        >
+        <div className="mb-5 rounded-md border border-brand-red/35 bg-brand-red/10 px-4 py-3 text-sm text-brand-redDark">
           {t(successKey)}
         </div>
       )}
@@ -230,9 +214,7 @@ export default function ContactForm({ type = 'contact' }) {
       </label>
 
       <label
-        className={`mt-5 flex items-start gap-3 text-sm leading-6 ${
-          isAppointment ? 'text-brand-steelDark' : 'text-brand-text'
-        }`}
+        className="mt-5 flex items-start gap-3 text-sm leading-6 text-brand-steelDark"
       >
         <input
           type="checkbox"

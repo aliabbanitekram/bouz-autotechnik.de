@@ -150,7 +150,7 @@ export default function HomePage() {
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {services.slice(0, 6).map((service, index) => (
               <Reveal key={service.id} delay={index * 0.03}>
-                <ServiceCard service={service} compact tone="light" />
+                <ServiceCard service={service} compact tone="light" showDescription />
               </Reveal>
             ))}
           </div>

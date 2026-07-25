@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { ServiceIcon } from '../data/icons'
 import { getServiceMedia } from '../data/serviceMedia'
 
-export default function ServiceCard({ service, compact = false, tone = 'dark' }) {
+export default function ServiceCard({ service, compact = false, tone = 'dark', showDescription = !compact }) {
   const { t } = useTranslation()
   const media = getServiceMedia(service.id)
   const isLight = tone === 'light'
@@ -31,7 +31,7 @@ export default function ServiceCard({ service, compact = false, tone = 'dark' })
           <h3 className={`font-heading text-2xl font-bold uppercase leading-tight sm:text-3xl ${isLight ? 'text-brand-black' : 'text-brand-white'}`}>
             {service.title}
           </h3>
-          {!compact && (
+          {showDescription && (
             <p className={`mt-4 text-sm leading-6 ${isLight ? 'text-brand-steelDark' : 'text-brand-text'}`}>
               {service.teaser}
             </p>
