@@ -46,11 +46,14 @@ export default function ContactPage() {
             </div>
             <div className="industrial-panel rounded-lg p-6">
               <ServiceIcon name="Clock" className="size-8 text-brand-red" />
-              <dl className="mt-5 space-y-3">
+              <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
+                {t('appointmentPage.hoursTitle')}
+              </h2>
+              <dl className="mt-5 space-y-4 text-brand-text">
                 {hours.map((item) => (
-                  <div key={item.days} className="flex justify-between gap-4 text-sm">
-                    <dt className="text-brand-white">{item.days}</dt>
-                    <dd className="text-right text-brand-text">{item.time}</dd>
+                  <div key={item.days} className="border-b border-brand-steel/15 pb-4 last:border-0 last:pb-0">
+                    <dt className="font-semibold text-brand-white">{item.days}</dt>
+                    <dd className="mt-1 text-brand-text">{item.time}</dd>
                   </div>
                 ))}
               </dl>

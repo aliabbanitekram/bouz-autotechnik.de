@@ -133,8 +133,8 @@ export default function HomePage() {
                 <ButtonLink to="/unternehmen" variant="secondary" icon="ArrowRight">
                   {t('common.learnMore')}
                 </ButtonLink>
-                <ButtonLink to="/terminanfrage" icon="CalendarCheck">
-                  {t('actions.requestAppointment')}
+                <ButtonLink to="/kontakt" icon="MessageSquare">
+                  {t('nav.contact')}
                 </ButtonLink>
               </div>
             </div>
@@ -195,8 +195,8 @@ export default function HomePage() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.finalText')}</p>
           <div className="mt-8 flex justify-center">
-            <ButtonLink to="/terminanfrage" icon="CalendarCheck">
-              {t('actions.requestAppointment')}
+            <ButtonLink to="/kontakt" icon="MessageSquare">
+              {t('nav.contact')}
             </ButtonLink>
           </div>
         </Reveal>

@@ -1,6 +1,5 @@
 export const navItems = [
   { key: 'home', path: '/' },
-  { key: 'appointment', path: '/terminanfrage' },
   { key: 'service', path: '/service' },
   { key: 'about', path: '/unternehmen' },
   { key: 'faq', path: '/faq' },

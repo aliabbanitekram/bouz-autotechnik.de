@@ -50,8 +50,8 @@ export default function ServiceDetailPage() {
               </div>
             </div>
             <div className="mt-5 flex flex-col gap-3">
-              <ButtonLink to="/terminanfrage" icon="CalendarCheck">
-                {t('actions.requestAppointment')}
+              <ButtonLink to="/kontakt" icon="MessageSquare">
+                {t('nav.contact')}
               </ButtonLink>
               <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
                 {t('actions.callNow')}
@@ -72,8 +72,8 @@ export default function ServiceDetailPage() {
               </h1>
               <p className="mt-6 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{narrative.lead}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink to="/terminanfrage" icon="CalendarCheck">
-                  {t('actions.requestAppointment')}
+                <ButtonLink to="/kontakt" icon="MessageSquare">
+                  {t('nav.contact')}
                 </ButtonLink>
                 <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
                   {t('actions.callNow')}
@@ -209,8 +209,8 @@ export default function ServiceDetailPage() {
             </h2>
             <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.readyText}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink to="/terminanfrage" icon="CalendarCheck">
-                {t('serviceDetail.readyButton')}
+              <ButtonLink to="/kontakt" icon="MessageSquare">
+                {t('nav.contact')}
               </ButtonLink>
               <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
                 {t('actions.callNow')}

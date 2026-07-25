@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import ScrollToTop from './components/ScrollToTop'
 import AboutPage from './pages/AboutPage'
-import AppointmentPage from './pages/AppointmentPage'
 import ContactPage from './pages/ContactPage'
 import FAQPage from './pages/FAQPage'
 import HomePage from './pages/HomePage'
@@ -18,7 +17,6 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="terminanfrage" element={<AppointmentPage />} />
           <Route path="service" element={<ServicePage />} />
           <Route path="service/:serviceId" element={<ServiceDetailPage />} />
           <Route path="unternehmen" element={<AboutPage />} />
