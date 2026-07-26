@@ -69,8 +69,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/48 to-brand-black/5" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black/68 via-brand-black/16 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-brand-black to-transparent" />
-        <div className="absolute inset-x-0 top-0 h-px bg-steel-gradient opacity-50" />
-        <div className="relative z-10 mx-auto w-full max-w-7xl">
+        <div className="absolute inset-x-0 top-0 h-px opacity-50 bg-steel-gradient" />
+        <div className="relative z-10 w-full mx-auto max-w-7xl">
           <motion.div
             className="max-w-4xl"
             initial={{ opacity: 0, y: 24 }}
@@ -83,8 +83,8 @@ export default function HomePage() {
             <h1 className="steel-text mt-5 font-heading text-4xl font-bold uppercase leading-[1.08] drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-sm leading-6 text-brand-white/90 drop-shadow-lg sm:text-base sm:leading-7">{t('home.heroText')}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <p className="max-w-2xl mt-6 text-sm leading-6 text-brand-white/90 drop-shadow-lg sm:text-base sm:leading-7">{t('home.heroText')}</p>
+            <div className="flex flex-col gap-3 mt-8 sm:flex-row">
               <StaticButton variant="secondary" icon="Phone" fullWidth>
                 {t('actions.callNow')}
               </StaticButton>
@@ -95,37 +95,37 @@ export default function HomePage() {
 
       <WhatsAppContact disabled />
 
-      <section className="border-y border-brand-steel/15 bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 border-y border-brand-steel/15 bg-brand-charcoal sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <Reveal className="mx-auto max-w-3xl text-center">
+          <Reveal className="max-w-3xl mx-auto text-center">
             <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
               {t('home.aboutEyebrow')}
             </p>
-            <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight uppercase font-heading text-brand-white sm:text-5xl">
               {t('home.aboutTitle')}
             </h2>
             <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.aboutLead')}</p>
           </Reveal>
 
-          <Reveal className="industrial-panel mt-10 overflow-hidden rounded-lg p-5 sm:p-6 lg:p-8" delay={0.08}>
+          <Reveal className="p-5 mt-10 overflow-hidden rounded-lg industrial-panel sm:p-6 lg:p-8" delay={0.08}>
             <div className="relative overflow-hidden rounded-md">
               <img
                 src={aboutWorkshop}
                 alt={t('home.aboutImageAlt')}
-                className="h-[340px] w-full object-cover brightness-[0.68] sm:h-[420px]"
+                className="h-85 w-full object-cover brightness-[0.68] sm:h-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/45 to-brand-black/20" />
+              <div className="absolute inset-0 bg-linear-to-t from-brand-black via-brand-black/45 to-brand-black/20" />
               <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
                 <div>
-                  <h3 className="max-w-xl font-heading text-xl font-bold uppercase leading-tight text-brand-white sm:text-3xl lg:text-4xl">
+                  <h3 className="max-w-xl text-xl font-bold leading-tight uppercase font-heading text-brand-white sm:text-3xl lg:text-4xl">
                     <AccentEdgeWords text={t('home.aboutShortLine')} />
                   </h3>
                   <p className="mt-1 text-sm font-semibold text-brand-white sm:text-base">{addressLine}</p>
                 </div>
                 <button
                   type="button"
-                  className="focus-ring mx-auto inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-brand-red bg-brand-black/60 px-7 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-white backdrop-blur transition hover:bg-brand-red"
+                  className="inline-flex items-center justify-center gap-3 py-3 mx-auto text-sm font-bold tracking-wider uppercase transition border rounded-md focus-ring min-h-12 border-brand-red bg-brand-black/60 px-7 font-heading text-brand-white backdrop-blur hover:bg-brand-red"
                 >
                   <ServiceIcon name="MapPin" className="size-4" />
                   <span>{t('actions.openInMaps')}</span>
@@ -133,17 +133,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-8 max-w-4xl">
+            <div className="max-w-4xl mt-8">
               <p className="font-heading text-sm font-bold uppercase tracking-[0.22em] text-brand-red">
                 {t('home.aboutCardKicker')}
               </p>
-              <h3 className="mt-3 font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
+              <h3 className="mt-3 text-2xl font-bold leading-tight uppercase font-heading text-brand-white sm:text-4xl">
                 {t('home.aboutCardTitle')}
               </h3>
               <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.aboutCardText')}</p>
             </div>
 
-            <div className="mt-7 max-w-4xl space-y-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">
+            <div className="max-w-4xl space-y-4 text-sm leading-6 mt-7 text-brand-text sm:text-base sm:leading-7">
               {aboutParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -160,12 +160,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-brand-white px-4 py-16 text-brand-black sm:px-6 lg:px-8">
+      <section className="px-4 py-16 bg-brand-white text-brand-black sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeader title={t('home.servicesTitle')} text={t('home.servicesText')} tone="light" />
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 mt-10 md:grid-cols-2 xl:grid-cols-3">
             {services.slice(0, 6).map((service, index) => (
               <Reveal key={service.id} delay={index * 0.03}>
                 <ServiceCard service={service} compact tone="light" showDescription />
@@ -180,20 +180,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
+      <section className="px-4 py-16 bg-brand-charcoal sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeader title={t('home.perksTitle')} />
           </Reveal>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 mt-8 md:grid-cols-3">
             {perks.map((perk, index) => (
               <Reveal key={perk.title} delay={index * 0.06}>
-                <article className="industrial-panel h-full rounded-lg p-6">
+                <article className="h-full p-6 rounded-lg industrial-panel">
                   <ServiceIcon
                     name={['KeyRound', 'Car', 'FileCheck2'][index]}
                     className="size-8 text-brand-red"
                   />
-                  <h3 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">
+                  <h3 className="mt-5 text-xl font-bold uppercase font-heading text-brand-white">
                     {perk.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-brand-text">{perk.description}</p>
@@ -206,13 +206,13 @@ export default function HomePage() {
 
       <HomeFAQTeaser itemIndexes={homeFaqIndexes} disableNavigation />
 
-      <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto max-w-4xl text-center">
-          <h2 className="steel-text font-heading text-3xl font-bold uppercase leading-tight sm:text-5xl">
+      <section className="px-4 py-16 bg-hero-vignette sm:px-6 lg:px-8">
+        <Reveal className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold leading-tight uppercase steel-text font-heading sm:text-5xl">
             {t('home.finalTitle')}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.finalText')}</p>
-          <div className="mt-8 flex justify-center">
+          <p className="max-w-2xl mx-auto mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.finalText')}</p>
+          <div className="flex justify-center mt-8">
             <StaticButton icon="MessageSquare">
               {t('nav.contact')}
             </StaticButton>
