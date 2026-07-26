@@ -97,7 +97,7 @@ const EN_SECTIONS = [
         level: 3,
         title: 'Information on the responsible party',
         paragraphs: [
-          'The responsible party for data processing on this website is: Bouz Autotechnik, Musterstrasse 12, 40210 Dusseldorf. Phone: +49 211 000000. Email: info@bouz-autotechnik.de.',
+          'The responsible party for data processing on this website is: Bouz Autotechnik, Musterstrasse 12, 40210 Dusseldorf. Phone: +49 179 1601841. Email: info@bouz-autotechnik.de.',
           'The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data, such as names or email addresses.',
         ],
       },
@@ -450,7 +450,7 @@ export default function PrivacyPage() {
                 <h3 className="font-heading font-semibold text-lg text-brand-black mt-6 mb-2">Hinweis zur verantwortlichen Stelle</h3>
                 <p className="text-brand-steelDark text-sm leading-6 sm:text-base sm:leading-relaxed mt-2">Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
                 <p className="text-brand-steelDark text-sm leading-6 sm:text-base sm:leading-relaxed mt-2">Bouz Autotechnik<br />Musterstraße 12<br />40210 Düsseldorf</p>
-                <p className="text-brand-steelDark text-sm leading-6 sm:text-base sm:leading-relaxed mt-2">Telefon: <a href="tel:+49211000000" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline break-all">+49 211 000000</a><br />E-Mail: <a href="mailto:info@bouz-autotechnik.de" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline break-all">info@bouz-autotechnik.de</a></p>
+                <p className="text-brand-steelDark text-sm leading-6 sm:text-base sm:leading-relaxed mt-2">Telefon: <a href="tel:+491791601841" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline break-all">+49 179 1601841</a><br />E-Mail: <a href="mailto:info@bouz-autotechnik.de" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline break-all">info@bouz-autotechnik.de</a></p>
                 <p className="text-brand-steelDark text-sm leading-6 sm:text-base sm:leading-relaxed mt-2">Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
                 <h3 className="font-heading font-semibold text-lg text-brand-black mt-6 mb-2">Speicherdauer</h3>
                 <p className="text-brand-steelDark text-sm leading-6 sm:text-base sm:leading-relaxed mt-2">Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.</p>

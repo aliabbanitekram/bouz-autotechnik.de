@@ -12,7 +12,7 @@
       "line2": "40210 Düsseldorf",
       "note": "Adresse als Platzhalter bis zur finalen Freigabe"
     },
-    "phone": "+49 211 000000",
+    "phone": "+49 179 1601841",
     "email": "info@bouz-autotechnik.de",
     "hours": [
       {
@@ -324,7 +324,8 @@
     "serviceScope": "Leistungsumfang",
     "andMore": "und mehr",
     "whyBouz": "Warum Bouz",
-    "readyButton": "Termin anfragen"
+    "readyButton": "Termin anfragen",
+    "whatsappMessage": "Hallo Bouz Autotechnik, ich interessiere mich für {{service}} und möchte dazu eine Frage stellen bzw. einen Termin vereinbaren."
   },
   "aboutPage": {
     "eyebrow": "ÜBER UNS",
@@ -526,7 +527,7 @@
     "imprintSections": [
       "Bouz Autotechnik, Musterstraße 12, 40210 Düsseldorf",
       "Vertreten durch: Inhaber wird ergänzt",
-      "Telefon: +49 211 000000, E-Mail: info@bouz-autotechnik.de",
+      "Telefon: +49 179 1601841, E-Mail: info@bouz-autotechnik.de",
       "Umsatzsteuer-ID und Handwerkskammerangaben werden ergänzt."
     ],
     "privacySections": [
