@@ -10,9 +10,11 @@ import './index.css'
 import App from './App.jsx'
 import { ConsentProvider } from './components/CookieConsent/ConsentProvider.jsx'
 
+const routerBaseName = import.meta.env.BASE_URL === '/' ? undefined : import.meta.env.BASE_URL.replace(/\/$/, '')
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBaseName}>
       <ConsentProvider>
         <App />
       </ConsentProvider>
