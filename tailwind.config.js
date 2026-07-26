@@ -13,19 +13,22 @@ export default {
           steelDark: '#5F6368',
           red: '#E4212F',
           redDark: '#B81421',
+          whatsapp: '#25D366',
+          whatsappDark: '#0F3D2A',
+          whatsappHover: '#1FB85A',
           text: '#C9CDD3',
           white: '#F5F6F7',
         },
       },
       fontFamily: {
-        heading: ['Oswald', 'Arial Narrow', 'sans-serif'],
+        heading: ['Inter', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'steel-gradient':
           'linear-gradient(135deg, #F5F6F7 0%, #E8EAED 25%, #9AA0A6 55%, #5F6368 100%)',
         'hero-vignette':
-          'radial-gradient(circle at 50% 15%, rgba(95, 99, 104, 0.32), rgba(18, 21, 26, 0.42) 34%, #0B0D10 76%)',
+          'radial-gradient(circle at 50% 10%, rgba(232, 234, 237, 0.13), rgba(154, 160, 166, 0.22) 24%, rgba(18, 21, 26, 0.7) 48%, #0B0D10 86%)',
         'red-glow':
           'radial-gradient(circle at center, rgba(228, 33, 47, 0.28), transparent 62%)',
       },

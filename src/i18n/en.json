@@ -34,10 +34,6 @@
       "title": "Bouz Autotechnik | Independent master workshop in Dusseldorf",
       "description": "Bouz Autotechnik is the independent master workshop for all makes: maintenance, diagnostics, tires, inspections, body repair and honest advice."
     },
-    "offers": {
-      "title": "Offers | Bouz Autotechnik",
-      "description": "Current workshop offers for tires, inspections, oil changes, climate service and safety checks at Bouz Autotechnik."
-    },
     "appointment": {
       "title": "Appointment Request | Bouz Autotechnik",
       "description": "Request your workshop appointment online with Bouz Autotechnik. Fast, direct and without waiting on hold."
@@ -69,7 +65,6 @@
   },
   "nav": {
     "home": "Home",
-    "offers": "Offers",
     "appointment": "Appointment",
     "service": "Service",
     "about": "About us",
@@ -80,29 +75,12 @@
     "cookieSettings": "Cookie Settings"
   },
   "footer": {
-    "social": [
-      {
-        "label": "Instagram",
-        "url": "https://www.instagram.com/",
-        "icon": "ExternalLink"
-      },
-      {
-        "label": "Facebook",
-        "url": "https://www.facebook.com/",
-        "icon": "ExternalLink"
-      },
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/",
-        "icon": "ExternalLink"
-      }
-    ]
+    "information": "Information"
   },
   "actions": {
     "requestAppointment": "Request appointment",
     "callNow": "Call now",
     "viewServices": "View services",
-    "viewOffers": "View offers",
     "sendRequest": "Send request",
     "sendMessage": "Send message",
     "openCookieSettings": "Open cookie settings",
@@ -119,6 +97,11 @@
     "required": "Required",
     "badge": "Independent workshop for all makes",
     "placeholderImage": "Workshop photo coming soon"
+  },
+  "form": {
+    "privacyPrefix": "By submitting this form, you confirm that you have read and accepted our",
+    "privacyLink": "privacy policy",
+    "privacySuffix": "."
   },
   "services": [
     {
@@ -210,44 +193,6 @@
     "maintenance": "Maintenance",
     "powertrain": "Powertrain"
   },
-  "offers": [
-    {
-      "title": "Seasonal tire check",
-      "price": "29",
-      "label": "Ready for the season",
-      "description": "Tread, pressure, age, visual inspection and a recommendation for the next tire change."
-    },
-    {
-      "title": "Inspection pre-check",
-      "price": "49",
-      "label": "Stress-free testing",
-      "description": "We check typical inspection issues and discuss required work transparently."
-    },
-    {
-      "title": "Oil change package",
-      "price": "89",
-      "label": "For many common models",
-      "description": "Approved engine oil, filter change and a short visual check of key fluids."
-    },
-    {
-      "title": "Climate service check",
-      "price": "59",
-      "label": "Check cooling performance",
-      "description": "Temperature measurement, visual inspection and recommendation for service or disinfection."
-    },
-    {
-      "title": "Brake safety check",
-      "price": "39",
-      "label": "Clear diagnosis",
-      "description": "Pads, discs, lines and brake fluid in a quick workshop check."
-    },
-    {
-      "title": "Holiday check",
-      "price": "45",
-      "label": "Before the long drive",
-      "description": "Tires, lights, fluids, battery and brakes checked compactly."
-    }
-  ],
   "home": {
     "heroEyebrow": "Bouz Autotechnik master workshop",
     "heroTitle": "Drive safely. Feel confident.",
@@ -273,6 +218,11 @@
       "Manufacturer-standard diagnostics",
       "Transparent approval before repairs"
     ],
+    "whatsappEyebrow": "WhatsApp contact",
+    "whatsappTitle": "Quick & direct - contact us via WhatsApp",
+    "whatsappText": "Do you have questions about our services or would you like to schedule an appointment? Simply contact us via WhatsApp - we will respond quickly and easily.",
+    "whatsappCta": "Contact us now",
+    "whatsappMessage": "Hello Bouz Autotechnik, I have a question or would like to request an appointment.",
     "aboutEyebrow": "About us",
     "aboutTitle": "Certified work. No half measures.",
     "aboutLead": "Bouz Autotechnik is a master workshop for drivers who do not want experiments when it comes to safety, diagnostics and repair.",
@@ -321,15 +271,13 @@
         "description": "We support documentation and insurance handling."
       }
     ],
-    "highlightQuote": "A good workshop experience starts with trust, not the invoice.",
-    "highlightAuthor": "Bouz Autotechnik",
+    "faqEyebrow": "Connect with us",
+    "faqTitle": "Have a Question?",
+    "faqText": "Check out our FAQ page or connect with our customer service team. Click below for more information.",
+    "faqPrimary": "FAQs",
+    "faqSecondary": "Customer Service",
     "finalTitle": "Does your vehicle need attention?",
     "finalText": "Briefly describe the issue. We will get back to you with a suitable appointment suggestion."
-  },
-  "offersPage": {
-    "eyebrow": "Current offers",
-    "title": "Useful packages instead of bait prices",
-    "intro": "Our offers are deliberately clear. The exact scope depends on the vehicle, so you always receive transparent approval before any added work."
   },
   "appointmentPage": {
     "eyebrow": "Appointment request",
@@ -344,7 +292,14 @@
       "service": "Requested service",
       "date": "Preferred date",
       "message": "Message",
-      "messagePlaceholder": "What should we inspect or repair?"
+      "phoneCountry": "Select country code, currently {{country}} {{code}}",
+      "messagePlaceholder": "What should we inspect or repair?",
+      "placeholders": {
+        "name": "Max Smith",
+        "phone": "Enter phone number",
+        "email": "name@example.com",
+        "vehicle": "e.g. VW Golf 7, BMW 3 Series"
+      }
     },
     "hoursTitle": "Opening hours",
     "noteTitle": "What happens next",
@@ -428,7 +383,13 @@
       "email": "Email",
       "phone": "Phone",
       "message": "Message",
-      "messagePlaceholder": "How can we help?"
+      "phoneCountry": "Select country code, currently {{country}} {{code}}",
+      "messagePlaceholder": "How can we help?",
+      "placeholders": {
+        "name": "Max Smith",
+        "phone": "Enter phone number",
+        "email": "name@example.com"
+      }
     },
     "success": "Thank you, your message has been prepared. Your email app will open shortly."
   },

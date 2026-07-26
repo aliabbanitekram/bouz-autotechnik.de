@@ -12,7 +12,7 @@ export default function ImprintPage() {
         <p className="font-heading text-sm font-bold uppercase tracking-[0.22em] text-brand-red">
           {t('legal.placeholder')}
         </p>
-        <h1 className="mt-4 font-heading text-5xl font-bold uppercase text-brand-white">
+        <h1 className="steel-text mt-4 font-heading text-4xl font-bold uppercase sm:text-5xl">
           {t('legal.imprintTitle')}
         </h1>
         <div className="industrial-panel mt-8 rounded-lg p-6">

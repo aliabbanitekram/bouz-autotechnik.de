@@ -21,18 +21,18 @@ export default function AppointmentPage() {
           />
         </div>
       </section>
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-brand-steelLight px-4 py-16 text-brand-black sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <Reveal>
             <ContactForm type="appointment" />
           </Reveal>
           <Reveal className="space-y-5" delay={0.06}>
-            <aside className="industrial-panel rounded-lg p-6">
+            <aside className="industrial-panel rounded-lg p-6 shadow-steel">
               <ServiceIcon name="Clock" className="size-8 text-brand-red" />
-              <h2 className="mt-5 font-heading text-3xl font-bold uppercase text-brand-white">
+              <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
                 {t('appointmentPage.hoursTitle')}
               </h2>
-              <dl className="mt-5 space-y-4">
+              <dl className="mt-5 space-y-4 text-brand-text">
                 {hours.map((item) => (
                   <div key={item.days} className="border-b border-brand-steel/15 pb-4 last:border-0 last:pb-0">
                     <dt className="font-semibold text-brand-white">{item.days}</dt>
@@ -41,9 +41,9 @@ export default function AppointmentPage() {
                 ))}
               </dl>
             </aside>
-            <aside className="industrial-panel rounded-lg p-6">
+            <aside className="industrial-panel rounded-lg p-6 shadow-steel">
               <ServiceIcon name="MessageSquare" className="size-8 text-brand-red" />
-              <h2 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
+              <h2 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">
                 {t('appointmentPage.noteTitle')}
               </h2>
               <p className="mt-3 text-sm leading-6 text-brand-text">{t('appointmentPage.noteText')}</p>

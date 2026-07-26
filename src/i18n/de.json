@@ -34,10 +34,6 @@
       "title": "Bouz Autotechnik | Freie Meisterwerkstatt in Düsseldorf",
       "description": "Bouz Autotechnik ist die freie Meisterwerkstatt für alle Marken: Wartung, Diagnose, Reifen, HU/AU, Unfallreparatur und faire Beratung."
     },
-    "offers": {
-      "title": "Angebote | Bouz Autotechnik",
-      "description": "Aktuelle Werkstattangebote für Reifen, HU/AU, Ölwechsel, Klimaservice und Sicherheitschecks bei Bouz Autotechnik."
-    },
     "appointment": {
       "title": "Terminanfrage | Bouz Autotechnik",
       "description": "Fragen Sie Ihren Werkstatttermin bei Bouz Autotechnik online an. Schnell, unkompliziert und ohne Warteschleife."
@@ -69,7 +65,6 @@
   },
   "nav": {
     "home": "Startseite",
-    "offers": "Angebote",
     "appointment": "Terminanfrage",
     "service": "Service",
     "about": "ÜBER UNS",
@@ -80,29 +75,12 @@
     "cookieSettings": "Cookie-Einstellungen"
   },
   "footer": {
-    "social": [
-      {
-        "label": "Instagram",
-        "url": "https://www.instagram.com/",
-        "icon": "ExternalLink"
-      },
-      {
-        "label": "Facebook",
-        "url": "https://www.facebook.com/",
-        "icon": "ExternalLink"
-      },
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/",
-        "icon": "ExternalLink"
-      }
-    ]
+    "information": "Information"
   },
   "actions": {
     "requestAppointment": "Termin anfragen",
     "callNow": "Jetzt anrufen",
     "viewServices": "Service ansehen",
-    "viewOffers": "Angebote ansehen",
     "sendRequest": "Anfrage senden",
     "sendMessage": "Nachricht senden",
     "openCookieSettings": "Cookie-Einstellungen öffnen",
@@ -119,6 +97,11 @@
     "required": "Pflichtfeld",
     "badge": "Freie Werkstatt für alle Marken",
     "placeholderImage": "Werkstattfoto folgt"
+  },
+  "form": {
+    "privacyPrefix": "Mit dem Absenden bestätigen Sie, dass Sie unsere",
+    "privacyLink": "Datenschutzerklärung",
+    "privacySuffix": " gelesen haben und akzeptieren."
   },
   "services": [
     {
@@ -210,44 +193,6 @@
     "maintenance": "Wartung",
     "powertrain": "Antrieb"
   },
-  "offers": [
-    {
-      "title": "Saisonaler Reifencheck",
-      "price": "29",
-      "label": "Sicher durch die Saison",
-      "description": "Profil, Luftdruck, Alter, Sichtprüfung und Empfehlung für den nächsten Wechsel."
-    },
-    {
-      "title": "HU/AU Vorabcheck",
-      "price": "49",
-      "label": "Stressfrei zur Prüfung",
-      "description": "Wir prüfen typische Mängel vor der Hauptuntersuchung und besprechen nötige Arbeiten transparent."
-    },
-    {
-      "title": "Ölwechsel-Paket",
-      "price": "89",
-      "label": "Für viele gängige Modelle",
-      "description": "Motoröl nach Freigabe, Filterwechsel und kurzer Sichtcheck wichtiger Flüssigkeiten."
-    },
-    {
-      "title": "Klimaservice-Check",
-      "price": "59",
-      "label": "Kühle Leistung prüfen",
-      "description": "Temperaturmessung, Sichtprüfung und Empfehlung für Wartung oder Desinfektion."
-    },
-    {
-      "title": "Bremsen-Sicherheitscheck",
-      "price": "39",
-      "label": "Klare Diagnose",
-      "description": "Beläge, Scheiben, Leitungen und Bremsflüssigkeit im schnellen Werkstattcheck."
-    },
-    {
-      "title": "Urlaubscheck",
-      "price": "45",
-      "label": "Vor der langen Fahrt",
-      "description": "Reifen, Licht, Flüssigkeiten, Batterie und Bremsen kompakt geprüft."
-    }
-  ],
   "home": {
     "heroEyebrow": "Bouz Autotechnik Meisterbetrieb",
     "heroTitle": "Sicher unterwegs. Mit gutem Gefühl.",
@@ -273,6 +218,11 @@
       "Diagnose nach Herstellervorgaben",
       "Transparente Freigabe vor Reparatur"
     ],
+    "whatsappEyebrow": "WhatsApp Kontakt",
+    "whatsappTitle": "Schnell & direkt - kontaktieren Sie uns via WhatsApp",
+    "whatsappText": "Haben Sie Fragen zu unseren Leistungen oder möchten Sie einen Termin vereinbaren? Schreiben Sie uns einfach über WhatsApp - wir antworten schnell und unkompliziert.",
+    "whatsappCta": "Jetzt kontaktieren",
+    "whatsappMessage": "Hallo Bouz Autotechnik, ich habe eine Frage bzw. möchte einen Termin anfragen.",
     "aboutEyebrow": "Über uns",
     "aboutTitle": "Zertifizierte Arbeit. Keine halben Sachen.",
     "aboutLead": "Bouz Autotechnik ist ein Meisterbetrieb für Menschen, die bei Sicherheit, Diagnose und Reparatur keine Experimente wollen.",
@@ -321,15 +271,13 @@
         "description": "Wir unterstützen bei Dokumentation und Versicherungsabwicklung."
       }
     ],
-    "highlightQuote": "Ein gutes Werkstatterlebnis beginnt nicht mit der Rechnung, sondern mit Vertrauen.",
-    "highlightAuthor": "Bouz Autotechnik",
+    "faqEyebrow": "Kontakt aufnehmen",
+    "faqTitle": "Haben Sie eine Frage?",
+    "faqText": "Besuchen Sie unsere FAQ-Seite oder kontaktieren Sie unser Serviceteam. Hier finden Sie schnell die nächsten Schritte.",
+    "faqPrimary": "FAQs",
+    "faqSecondary": "Kundenservice",
     "finalTitle": "Ihr Fahrzeug braucht Aufmerksamkeit?",
     "finalText": "Schildern Sie kurz Ihr Anliegen. Wir melden uns mit einem passenden Terminvorschlag."
-  },
-  "offersPage": {
-    "eyebrow": "Aktuelle Angebote",
-    "title": "Sinnvolle Pakete statt Lockpreise",
-    "intro": "Unsere Angebote sind bewusst klar formuliert. Der genaue Umfang hängt vom Fahrzeug ab, deshalb erhalten Sie vor Zusatzarbeiten immer eine transparente Rücksprache."
   },
   "appointmentPage": {
     "eyebrow": "Terminanfrage",
@@ -344,7 +292,14 @@
       "service": "Gewünschte Leistung",
       "date": "Wunschtermin",
       "message": "Nachricht",
-      "messagePlaceholder": "Was sollen wir prüfen oder reparieren?"
+      "phoneCountry": "Ländervorwahl auswählen, aktuell {{country}} {{code}}",
+      "messagePlaceholder": "Was sollen wir prüfen oder reparieren?",
+      "placeholders": {
+        "name": "Max Mustermann",
+        "phone": "Telefonnummer eingeben",
+        "email": "name@beispiel.de",
+        "vehicle": "z. B. VW Golf 7, BMW 3er"
+      }
     },
     "hoursTitle": "Öffnungszeiten",
     "noteTitle": "Was danach passiert",
@@ -428,7 +383,13 @@
       "email": "E-Mail",
       "phone": "Telefon",
       "message": "Nachricht",
-      "messagePlaceholder": "Wie können wir helfen?"
+      "phoneCountry": "Ländervorwahl auswählen, aktuell {{country}} {{code}}",
+      "messagePlaceholder": "Wie können wir helfen?",
+      "placeholders": {
+        "name": "Max Mustermann",
+        "phone": "Telefonnummer eingeben",
+        "email": "name@beispiel.de"
+      }
     },
     "success": "Danke, Ihre Nachricht wurde vorbereitet. Ihr E-Mail-Programm öffnet sich gleich."
   },
