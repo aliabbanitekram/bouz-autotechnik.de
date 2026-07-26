@@ -2,6 +2,7 @@ import { Navigate, Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ButtonLink from '../components/ButtonLink'
 import SEO from '../components/SEO'
+import { WhatsAppIcon } from '../components/WhatsAppContact'
 import { ServiceIcon } from '../data/icons'
 import { getServiceDetailContent } from '../data/serviceDetailContent'
 import { getServiceMedia } from '../data/serviceMedia'
@@ -19,6 +20,8 @@ export default function ServiceDetailPage() {
   const narrative = getServiceNarrative(i18n.language, service.id)
   const detail = getServiceDetailContent(i18n.language, service.id)
   const trust = t('serviceDetail.trust', { returnObjects: true })
+  const whatsappNumber = t('site.phone').replace(/\D/g, '')
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t('serviceDetail.whatsappMessage', { service: service.title }))}`
 
   return (
     <main>
@@ -50,9 +53,15 @@ export default function ServiceDetailPage() {
               </div>
             </div>
             <div className="mt-5 flex flex-col gap-3">
-              <ButtonLink to="/kontakt" icon="MessageSquare">
-                {t('nav.contact')}
-              </ButtonLink>
+              <a
+                className="focus-ring inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>{t('home.whatsappCta')}</span>
+                <WhatsAppIcon className="size-5" />
+              </a>
               <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
                 {t('actions.callNow')}
               </ButtonLink>
@@ -72,9 +81,15 @@ export default function ServiceDetailPage() {
               </h1>
               <p className="mt-6 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{narrative.lead}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink to="/kontakt" icon="MessageSquare">
-                  {t('nav.contact')}
-                </ButtonLink>
+                <a
+                  className="focus-ring inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover"
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{t('home.whatsappCta')}</span>
+                  <WhatsAppIcon className="size-5" />
+                </a>
                 <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
                   {t('actions.callNow')}
                 </ButtonLink>
@@ -185,19 +200,19 @@ export default function ServiceDetailPage() {
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <article className="industrial-panel rounded-lg p-6 sm:p-8">
+          <article className="steel-hero-light rounded-lg border border-brand-black/10 p-6 text-brand-black shadow-steel sm:p-8">
             <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
               {t('serviceDetail.whyBouz')}
             </p>
-            <h2 className="mt-4 font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
+            <h2 className="steel-text-dark mt-4 font-heading text-2xl font-bold uppercase leading-tight sm:text-4xl">
               {detail.localTitle}
             </h2>
-            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.localText}</p>
+            <p className="mt-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">{detail.localText}</p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {trust.map((item) => (
-                <div key={item.title} className="rounded-md bg-brand-black p-4">
-                  <h3 className="font-heading text-lg font-bold uppercase text-brand-white">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-brand-text">{item.description}</p>
+                <div key={item.title} className="rounded-md border border-brand-black/10 bg-brand-steelLight/75 p-4 shadow-sm">
+                  <h3 className="font-heading text-lg font-bold uppercase text-brand-black">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-brand-steelDark">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -209,9 +224,15 @@ export default function ServiceDetailPage() {
             </h2>
             <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.readyText}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink to="/kontakt" icon="MessageSquare">
-                {t('nav.contact')}
-              </ButtonLink>
+              <a
+                className="focus-ring inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>{t('home.whatsappCta')}</span>
+                <WhatsAppIcon className="size-5" />
+              </a>
               <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
                 {t('actions.callNow')}
               </ButtonLink>

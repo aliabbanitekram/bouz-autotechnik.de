@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import Reveal from './Reveal'
 
-function WhatsAppIcon({ className = 'size-6' }) {
+export function WhatsAppIcon({ className = 'size-6' }) {
   return (
     <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
       <path

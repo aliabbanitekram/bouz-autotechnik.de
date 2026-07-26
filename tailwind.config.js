@@ -9,6 +9,7 @@ export default {
           charcoal: '#12151A',
           panel: '#171B22',
           steelLight: '#E8EAED',
+          steelFooter: '#52636D',
           steel: '#9AA0A6',
           steelDark: '#5F6368',
           red: '#E4212F',
