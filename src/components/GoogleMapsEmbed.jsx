@@ -3,7 +3,7 @@ import { ServiceIcon } from '../data/icons'
 import { useConsent } from './CookieConsent/useConsent'
 
 const mapSrc =
-  'https://maps.google.com/maps?q=D%C3%BCsseldorf%2C%20Germany&t=&z=12&ie=UTF8&iwloc=&output=embed'
+  'https://maps.google.com/maps?q=K%C3%B6lner%20Str.%2011%2C%2047805%20Krefeld%2C%20Germany&t=&z=15&ie=UTF8&iwloc=&output=embed'
 
 export default function GoogleMapsEmbed() {
   const { t } = useTranslation()

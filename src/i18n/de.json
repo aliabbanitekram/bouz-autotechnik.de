@@ -8,11 +8,11 @@
     "name": "Bouz Autotechnik",
     "tagline": "Meisterbetrieb",
     "address": {
-      "line1": "Musterstraße 12",
-      "line2": "40210 Düsseldorf",
-      "note": "Adresse als Platzhalter bis zur finalen Freigabe"
+      "line1": "Kölner Str. 11",
+      "line2": "47805 Krefeld",
+      "note": "Standort in Krefeld"
     },
-    "phone": "+49 179 1601841",
+    "phone": "+49 163 7991046",
     "email": "info@bouz-autotechnik.de",
     "hours": [
       {
@@ -31,7 +31,7 @@
   },
   "seo": {
     "home": {
-      "title": "Bouz Autotechnik | Freie Meisterwerkstatt in Düsseldorf",
+      "title": "Bouz Autotechnik | Freie Meisterwerkstatt in Krefeld",
       "description": "Bouz Autotechnik ist die freie Meisterwerkstatt für alle Marken: Wartung, Diagnose, Reifen, HU/AU, Unfallreparatur und faire Beratung."
     },
     "appointment": {
@@ -52,7 +52,7 @@
     },
     "contact": {
       "title": "Kontakt | Bouz Autotechnik",
-      "description": "Kontaktieren Sie Bouz Autotechnik für Termine, Fragen und Anfahrt zur freien Meisterwerkstatt in Düsseldorf."
+      "description": "Kontaktieren Sie Bouz Autotechnik für Termine, Fragen und Anfahrt zur freien Meisterwerkstatt in Krefeld."
     },
     "imprint": {
       "title": "Impressum | Bouz Autotechnik",
@@ -376,7 +376,7 @@
   "contactPage": {
     "eyebrow": "Kontakt",
     "title": "Wir sind erreichbar, wenn Ihr Fahrzeug Hilfe braucht",
-    "intro": "Rufen Sie an, schreiben Sie eine Nachricht oder senden Sie direkt eine Terminanfrage. Die Karte nutzt vorerst Düsseldorf als Platzhalterstandort.",
+    "intro": "Rufen Sie an, schreiben Sie über WhatsApp oder planen Sie die Anfahrt direkt zur Werkstatt in Krefeld.",
     "formTitle": "Kurze Nachricht",
     "mapTitle": "Anfahrt",
     "fields": {
@@ -525,9 +525,9 @@
     "privacyTitle": "Datenschutz",
     "placeholder": "Platzhaltertext bis zur finalen juristischen Freigabe.",
     "imprintSections": [
-      "Bouz Autotechnik, Musterstraße 12, 40210 Düsseldorf",
+      "Bouz Autotechnik, Kölner Str. 11, 47805 Krefeld",
       "Vertreten durch: Inhaber wird ergänzt",
-      "Telefon: +49 179 1601841, E-Mail: info@bouz-autotechnik.de",
+      "Telefon: +49 163 7991046, E-Mail: info@bouz-autotechnik.de",
       "Umsatzsteuer-ID und Handwerkskammerangaben werden ergänzt."
     ],
     "privacySections": [

@@ -8,11 +8,11 @@
     "name": "Bouz Autotechnik",
     "tagline": "Master workshop",
     "address": {
-      "line1": "Musterstrasse 12",
-      "line2": "40210 Dusseldorf",
-      "note": "Address placeholder until final approval"
+      "line1": "Kölner Str. 11",
+      "line2": "47805 Krefeld",
+      "note": "Location in Krefeld"
     },
-    "phone": "+49 179 1601841",
+    "phone": "+49 163 7991046",
     "email": "info@bouz-autotechnik.de",
     "hours": [
       {
@@ -31,7 +31,7 @@
   },
   "seo": {
     "home": {
-      "title": "Bouz Autotechnik | Independent master workshop in Dusseldorf",
+      "title": "Bouz Autotechnik | Independent master workshop in Krefeld",
       "description": "Bouz Autotechnik is the independent master workshop for all makes: maintenance, diagnostics, tires, inspections, body repair and honest advice."
     },
     "appointment": {
@@ -52,7 +52,7 @@
     },
     "contact": {
       "title": "Contact | Bouz Autotechnik",
-      "description": "Contact Bouz Autotechnik for appointments, questions and directions to the independent master workshop in Dusseldorf."
+      "description": "Contact Bouz Autotechnik for appointments, questions and directions to the independent master workshop in Krefeld."
     },
     "imprint": {
       "title": "Legal Notice | Bouz Autotechnik",
@@ -376,7 +376,7 @@
   "contactPage": {
     "eyebrow": "Contact",
     "title": "We are reachable when your vehicle needs help",
-    "intro": "Call, send a message or request an appointment directly. The map currently uses Dusseldorf as a placeholder location.",
+    "intro": "Call, message us on WhatsApp or plan your route directly to the workshop in Krefeld.",
     "formTitle": "Short message",
     "mapTitle": "Directions",
     "fields": {
@@ -525,9 +525,9 @@
     "privacyTitle": "Privacy Policy",
     "placeholder": "Placeholder text until final legal approval.",
     "imprintSections": [
-      "Bouz Autotechnik, Musterstrasse 12, 40210 Dusseldorf",
+      "Bouz Autotechnik, Kölner Str. 11, 47805 Krefeld",
       "Represented by: owner to be added",
-      "Phone: +49 179 1601841, Email: info@bouz-autotechnik.de",
+      "Phone: +49 163 7991046, Email: info@bouz-autotechnik.de",
       "VAT ID and chamber of crafts details to be added."
     ],
     "privacySections": [
