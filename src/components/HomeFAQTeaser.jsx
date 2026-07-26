@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import ButtonLink from './ButtonLink'
 import { ServiceIcon } from '../data/icons'
 
-export default function HomeFAQTeaser({ itemIndexes }) {
+export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }) {
   const { t } = useTranslation()
   const allItems = t('faq.items', { returnObjects: true })
   const items = itemIndexes.map((index) => allItems[index]).filter(Boolean)
@@ -55,9 +55,19 @@ export default function HomeFAQTeaser({ itemIndexes }) {
             )
           })}
           <div className="pt-3">
-            <ButtonLink to="/faq" icon="ArrowRight" fullWidth>
-              {t('home.faqPrimary')}
-            </ButtonLink>
+            {disableNavigation ? (
+              <button
+                type="button"
+                className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-red to-brand-redDark px-8 py-4 font-heading text-base font-bold uppercase tracking-wider text-white shadow-red transition hover:from-brand-redDark hover:to-brand-red"
+              >
+                <span>{t('home.faqPrimary')}</span>
+                <ServiceIcon name="ArrowRight" className="size-4" />
+              </button>
+            ) : (
+              <ButtonLink to="/faq" icon="ArrowRight" fullWidth>
+                {t('home.faqPrimary')}
+              </ButtonLink>
+            )}
           </div>
         </div>
       </div>

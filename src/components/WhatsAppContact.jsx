@@ -19,7 +19,7 @@ export function WhatsAppIcon({ className = 'size-6' }) {
   )
 }
 
-function WhatsAppContent({ layout = 'row' }) {
+function WhatsAppContent({ layout = 'row', disabled = false }) {
   const { t } = useTranslation()
   const whatsappNumber = t('site.phone').replace(/\D/g, '')
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t('home.whatsappMessage'))}`
@@ -41,25 +41,35 @@ function WhatsAppContent({ layout = 'row' }) {
           {t('home.whatsappText')}
         </p>
       </div>
-      <a
-        className={`focus-ring inline-flex min-h-11 w-full max-w-sm items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-7 py-3 font-heading text-base font-bold text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover ${isRow ? 'mx-auto md:mx-0 md:w-auto md:min-w-64' : 'mx-auto'}`}
-        href={whatsappUrl}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <WhatsAppIcon className="size-5" />
-        <span>{t('home.whatsappCta')}</span>
-      </a>
+      {disabled ? (
+        <button
+          type="button"
+          className={`focus-ring inline-flex min-h-11 w-full max-w-sm items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-7 py-3 font-heading text-base font-bold text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover ${isRow ? 'mx-auto md:mx-0 md:w-auto md:min-w-64' : 'mx-auto'}`}
+        >
+          <WhatsAppIcon className="size-5" />
+          <span>{t('home.whatsappCta')}</span>
+        </button>
+      ) : (
+        <a
+          className={`focus-ring inline-flex min-h-11 w-full max-w-sm items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-7 py-3 font-heading text-base font-bold text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover ${isRow ? 'mx-auto md:mx-0 md:w-auto md:min-w-64' : 'mx-auto'}`}
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <WhatsAppIcon className="size-5" />
+          <span>{t('home.whatsappCta')}</span>
+        </a>
+      )}
     </>
   )
 }
 
-export default function WhatsAppContact({ variant = 'section', delay = 0 }) {
+export default function WhatsAppContact({ variant = 'section', delay = 0, disabled = false }) {
   if (variant === 'card') {
     return (
       <Reveal className="h-full" delay={delay}>
         <div className="flex h-full flex-col items-center justify-center gap-5 rounded-lg border border-brand-whatsapp/20 bg-brand-whatsappDark px-5 py-10 text-center text-brand-white shadow-steel sm:px-8">
-          <WhatsAppContent layout="stack" />
+          <WhatsAppContent layout="stack" disabled={disabled} />
         </div>
       </Reveal>
     )
@@ -68,7 +78,7 @@ export default function WhatsAppContact({ variant = 'section', delay = 0 }) {
   return (
     <section className="border-y border-brand-whatsapp/20 bg-brand-whatsappDark px-4 py-8 text-brand-white sm:px-6 sm:py-10 lg:px-8">
       <Reveal className="mx-auto grid max-w-7xl items-center gap-5 text-center md:grid-cols-[84px_1fr_auto] md:text-left" delay={delay}>
-        <WhatsAppContent />
+        <WhatsAppContent disabled={disabled} />
       </Reveal>
     </section>
   )

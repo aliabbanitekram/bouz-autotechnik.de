@@ -13,6 +13,27 @@ import { ServiceIcon } from '../data/icons'
 
 const homeFaqIndexes = [17, 4, 8, 21]
 
+const staticButtonBase =
+  'focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider transition'
+
+const staticButtonVariants = {
+  primary: 'bg-gradient-to-r from-brand-red to-brand-redDark text-white shadow-red hover:from-brand-redDark hover:to-brand-red',
+  secondary:
+    'border border-brand-steel/35 bg-brand-steelLight/5 text-brand-white hover:border-brand-red hover:text-white',
+}
+
+function StaticButton({ children, variant = 'primary', icon = 'ArrowRight', fullWidth = false }) {
+  return (
+    <button
+      type="button"
+      className={`${staticButtonBase} ${fullWidth ? 'w-full min-h-14 px-8 py-4 text-base' : ''} ${staticButtonVariants[variant]}`}
+    >
+      <span>{children}</span>
+      {icon && <ServiceIcon name={icon} className="size-4" />}
+    </button>
+  )
+}
+
 function AccentEdgeWords({ text }) {
   const words = text.split(' ')
   const first = words.slice(0, 2).join(' ')
@@ -34,7 +55,6 @@ export default function HomePage() {
   const aboutParagraphs = t('home.aboutParagraphs', { returnObjects: true })
   const perks = t('home.perks', { returnObjects: true })
   const addressLine = `${t('site.address.line1')}, ${t('site.address.line2')}`
-  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressLine)}`
 
   return (
     <main>
@@ -65,15 +85,15 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-2xl text-sm leading-6 text-brand-white/90 drop-shadow-lg sm:text-base sm:leading-7">{t('home.heroText')}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone" fullWidth>
+              <StaticButton variant="secondary" icon="Phone" fullWidth>
                 {t('actions.callNow')}
-              </ButtonLink>
+              </StaticButton>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <WhatsAppContact />
+      <WhatsAppContact disabled />
 
       <section className="border-y border-brand-steel/15 bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -103,15 +123,13 @@ export default function HomePage() {
                   </h3>
                   <p className="mt-1 text-sm font-semibold text-brand-white sm:text-base">{addressLine}</p>
                 </div>
-                <a
+                <button
+                  type="button"
                   className="focus-ring mx-auto inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-brand-red bg-brand-black/60 px-7 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-white backdrop-blur transition hover:bg-brand-red"
-                  href={mapUrl}
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   <ServiceIcon name="MapPin" className="size-4" />
                   <span>{t('actions.openInMaps')}</span>
-                </a>
+                </button>
               </div>
             </div>
 
@@ -130,12 +148,12 @@ export default function HomePage() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">
-                <ButtonLink to="/unternehmen" variant="secondary" icon="ArrowRight">
+                <StaticButton variant="secondary" icon="ArrowRight">
                   {t('common.learnMore')}
-                </ButtonLink>
-                <ButtonLink to="/kontakt" icon="MessageSquare">
+                </StaticButton>
+                <StaticButton icon="MessageSquare">
                   {t('nav.contact')}
-                </ButtonLink>
+                </StaticButton>
               </div>
             </div>
           </Reveal>
@@ -186,7 +204,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <HomeFAQTeaser itemIndexes={homeFaqIndexes} />
+      <HomeFAQTeaser itemIndexes={homeFaqIndexes} disableNavigation />
 
       <section className="bg-hero-vignette px-4 py-16 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-4xl text-center">
@@ -195,9 +213,9 @@ export default function HomePage() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.finalText')}</p>
           <div className="mt-8 flex justify-center">
-            <ButtonLink to="/kontakt" icon="MessageSquare">
+            <StaticButton icon="MessageSquare">
               {t('nav.contact')}
-            </ButtonLink>
+            </StaticButton>
           </div>
         </Reveal>
       </section>
