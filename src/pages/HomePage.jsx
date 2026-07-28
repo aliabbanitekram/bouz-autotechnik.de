@@ -8,7 +8,6 @@ import ButtonLink from '../components/ButtonLink'
 import HomeFAQTeaser from '../components/HomeFAQTeaser'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
-import SectionHeader from '../components/SectionHeader'
 import ServiceCard from '../components/ServiceCard'
 import WhatsAppContact from '../components/WhatsAppContact'
 import { ServiceIcon } from '../data/icons'
@@ -178,7 +177,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute -left-[70px] top-14 hidden h-[124px] w-[270px] skew-x-[-20deg] bg-brand-red lg:block" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
-          <Reveal className="relative pb-12">
+          <Reveal className="relative pb-20 sm:pb-24">
             <div className="relative overflow-hidden bg-brand-steelLight shadow-[0_22px_60px_rgba(11,13,16,0.16)]">
               <img
                 src={aboutWorkshop}
@@ -188,11 +187,11 @@ export default function HomePage() {
               />
             </div>
             <div className="absolute bottom-0 -translate-x-1/2 left-1/2">
-              <span className="block rounded-sm bg-brand-white px-5 py-3 shadow-[0_18px_48px_rgba(11,13,16,0.22)] ring-1 ring-brand-black/10">
+              <span className="block rounded-sm bg-brand-white px-6 py-5 shadow-[0_24px_64px_rgba(11,13,16,0.26)] ring-1 ring-brand-black/10 sm:px-8 sm:py-6">
                 <img
                   src={meisterBadge}
                   alt="Meisterbetrieb der Kfz-Innung"
-                  className="h-23 w-auto sm:h-[112px]"
+                  className="h-32 w-auto sm:h-40 lg:h-44"
                   loading="lazy"
                 />
               </span>
@@ -233,7 +232,18 @@ export default function HomePage() {
       <section className="px-4 py-16 bg-brand-white text-brand-black sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <SectionHeader title={t('home.servicesTitle')} text={t('home.servicesText')} tone="light" />
+            <div className="max-w-3xl">
+              <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
+                <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
+                {t('home.servicesEyebrow')}
+              </p>
+              <h2 className="mt-5 text-4xl font-black leading-tight uppercase font-heading text-brand-black sm:text-5xl lg:text-6xl">
+                {t('home.servicesTitle')}
+              </h2>
+              <p className="mt-8 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+                {t('home.servicesText')}
+              </p>
+            </div>
           </Reveal>
           <div className="grid gap-6 mt-10 md:grid-cols-2 xl:grid-cols-3">
             {services.slice(0, 6).map((service, index) => (
