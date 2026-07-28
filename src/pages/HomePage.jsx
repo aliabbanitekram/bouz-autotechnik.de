@@ -121,7 +121,7 @@ export default function HomePage() {
   return (
     <main>
       <SEO page="home" />
-      <section className="relative isolate flex min-h-[calc(100svh-80px)] items-center overflow-hidden bg-brand-white px-4 py-12 text-brand-black sm:min-h-[calc(100svh-80px)] sm:px-6 sm:py-14 lg:min-h-[calc(100vh-92px)] lg:px-8">
+      <section className="relative isolate flex min-h-[calc(100svh-80px)] items-start overflow-hidden bg-brand-white px-4 pb-8 pt-12 text-brand-black sm:min-h-[calc(100svh-80px)] sm:px-6 sm:py-12 lg:min-h-[calc(100vh-92px)] lg:items-center lg:px-8">
         <div className="absolute inset-y-0 left-[22%] -z-30 w-px bg-brand-black/8" />
         <div className="absolute inset-y-0 left-[50%] -z-30 w-px bg-brand-black/8" />
         <div className="absolute inset-y-0 right-[22%] -z-30 w-px bg-brand-black/8" />
@@ -141,16 +141,16 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.05fr)]">
           <motion.div
-            className="max-w-3xl pt-6 pb-48 mx-auto text-left sm:pb-64 sm:pt-14 lg:mx-0 lg:pb-0 lg:pt-0"
-            initial={{ opacity: 0, y: 24 }}
+            className="max-w-3xl pb-48 mx-auto text-left sm:pb-64 sm:pt-10 lg:mx-0 lg:pb-0 lg:pt-0"
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
+            <p className="font-heading text-sm font-black uppercase leading-6 tracking-[0.3em] text-brand-red sm:text-base sm:leading-7">
               <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
               {t('home.heroEyebrow')}
             </p>
-            <h1 className="mt-5 font-heading text-4xl font-black uppercase leading-[1.08] text-brand-black sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.4rem]">
+            <h1 className="mt-5 font-heading text-3xl font-black uppercase leading-[1.08] text-brand-black sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.8rem]">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
             <p className="max-w-xl mt-6 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:text-lg lg:leading-8">{t('home.heroText')}</p>
@@ -176,27 +176,26 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute -left-[70px] top-14 hidden h-[124px] w-[270px] skew-x-[-20deg] bg-brand-red lg:block" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
           <Reveal className="relative pb-12">
             <div className="relative overflow-hidden bg-brand-steelLight shadow-[0_22px_60px_rgba(11,13,16,0.16)]">
               <img
                 src={aboutWorkshop}
                 alt={t('home.aboutImageAlt')}
-                className="h-[360px] w-full object-cover object-[52%_center] sm:h-[520px] lg:h-[610px]"
+                className="h-90 w-full object-cover object-[52%_center] sm:h-[520px] lg:h-[610px]"
                 loading="lazy"
               />
             </div>
-            <div className="absolute bottom-0 left-5 right-5 bg-brand-red px-8 py-5 [clip-path:polygon(7%_0,100%_0,93%_100%,0_100%)] sm:left-10 sm:right-10 sm:px-12 sm:py-6 lg:left-16 lg:right-12">
-              <div className="flex items-center justify-center">
-                <span className="px-5 py-3 rounded-sm shadow-xl bg-brand-white">
-                  <img
-                    src={meisterBadge}
-                    alt="Meisterbetrieb der Kfz-Innung"
-                    className="h-[88px] w-auto sm:h-[104px]"
-                    loading="lazy"
-                  />
-                </span>
-              </div>
+            <div className="absolute bottom-0 -translate-x-1/2 left-1/2">
+              <span className="block rounded-sm bg-brand-white px-5 py-3 shadow-[0_18px_48px_rgba(11,13,16,0.22)] ring-1 ring-brand-black/10">
+                <img
+                  src={meisterBadge}
+                  alt="Meisterbetrieb der Kfz-Innung"
+                  className="h-23 w-auto sm:h-[112px]"
+                  loading="lazy"
+                />
+              </span>
             </div>
           </Reveal>
 
@@ -208,10 +207,10 @@ export default function HomePage() {
             <h2 className="mt-5 text-4xl font-black leading-tight uppercase font-heading text-brand-black sm:text-5xl lg:text-6xl">
               {t('home.aboutTitle')}
             </h2>
-            <p className="mt-8 text-base leading-8 text-brand-steelDark sm:text-lg sm:leading-8">
+            <p className="mt-8 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
               {t('home.aboutLead')}
             </p>
-            <div className="mt-6 space-y-5 text-base leading-8 text-brand-steelDark sm:text-lg sm:leading-8">
+            <div className="mt-6 space-y-4 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
               <p>
                 <strong className="font-black text-brand-black">{t('home.aboutCardTitle')}</strong>{' '}
                 {t('home.aboutCardText')}
