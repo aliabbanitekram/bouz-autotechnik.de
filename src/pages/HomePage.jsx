@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -8,9 +9,10 @@ import ButtonLink from '../components/ButtonLink'
 import HomeFAQTeaser from '../components/HomeFAQTeaser'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
-import ServiceCard from '../components/ServiceCard'
 import WhatsAppContact from '../components/WhatsAppContact'
 import { ServiceIcon } from '../data/icons'
+import { serviceDetailContent } from '../data/serviceDetailContent'
+import { getServiceMedia } from '../data/serviceMedia'
 
 const homeFaqIndexes = [17, 4, 8, 21]
 
@@ -113,9 +115,16 @@ function VehiclesSection() {
 }
 
 export default function HomePage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const services = t('services', { returnObjects: true })
   const aboutParagraphs = t('home.aboutParagraphs', { returnObjects: true })
+  const homeServices = services
+  const [activeServiceId, setActiveServiceId] = useState(homeServices[0]?.id)
+  const activeService = homeServices.find((service) => service.id === activeServiceId) ?? homeServices[0]
+  const activeMedia = activeService ? getServiceMedia(activeService.id) : null
+  const detailLanguage = i18n.resolvedLanguage?.startsWith('de') ? 'de' : 'en'
+  const activeDetail = activeService ? serviceDetailContent[detailLanguage]?.[activeService.id] : null
+  const serviceScope = activeDetail?.serviceItems?.slice(0, 3) ?? []
 
   return (
     <main>
@@ -229,8 +238,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-4 py-16 bg-brand-white text-brand-black sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden px-4 py-16 bg-brand-white text-brand-black sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+        <div className="relative mx-auto max-w-7xl">
           <Reveal>
             <div className="max-w-3xl">
               <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
@@ -245,17 +257,80 @@ export default function HomePage() {
               </p>
             </div>
           </Reveal>
-          <div className="grid gap-6 mt-10 md:grid-cols-2 xl:grid-cols-3">
-            {services.slice(0, 6).map((service, index) => (
-              <Reveal key={service.id} delay={index * 0.03}>
-                <ServiceCard service={service} compact tone="light" showDescription />
-              </Reveal>
-            ))}
-          </div>
-          <div className="mt-8">
-            <ButtonLink to="/service" variant="dark" icon="ArrowRight">
-              {t('actions.viewServices')}
-            </ButtonLink>
+          {activeService && (
+            <Reveal className="mt-10" delay={0.06}>
+              <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
+                <div className="grid gap-4 sm:grid-cols-2 lg:col-span-5">
+                  {homeServices.map((service) => {
+                    const isActive = service.id === activeService.id
+
+                    return (
+                      <button
+                        key={service.id}
+                        type="button"
+                        aria-pressed={isActive}
+                        onClick={() => setActiveServiceId(service.id)}
+                        className={`focus-ring flex min-h-22 items-center gap-5 px-6 py-5 text-left transition sm:min-h-24 lg:min-h-23 ${
+                          isActive
+                            ? 'bg-brand-red text-brand-white shadow-red'
+                            : 'bg-brand-black/[0.045] text-brand-black hover:bg-brand-black/[0.075]'
+                        }`}
+                      >
+                        <ServiceIcon
+                          name={service.icon}
+                          className={`size-9 shrink-0 ${isActive ? 'text-brand-white' : 'text-brand-red'}`}
+                        />
+                        <span className="font-heading text-xl font-black leading-tight text-current sm:text-2xl">
+                          {service.title}
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+
+                <div className="overflow-hidden bg-brand-black/[0.04] lg:col-span-3">
+                  <img
+                    src={activeMedia.image}
+                    alt={activeService.title}
+                    className="h-72 w-full object-cover sm:h-95 lg:h-full"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-center lg:col-span-4">
+                  <h3 className="font-heading text-3xl font-black leading-tight text-brand-black sm:text-4xl">
+                    {activeService.title}
+                  </h3>
+                  <p className="mt-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+                    {activeService.description}
+                  </p>
+                  {serviceScope.length > 0 && (
+                    <ul className="mt-7 space-y-4 text-sm font-semibold leading-6 text-brand-steelDark sm:text-base">
+                      {serviceScope.map((item) => (
+                        <li key={item} className="flex gap-4">
+                          <ServiceIcon name="Check" className="mt-1 size-5 shrink-0 text-brand-red" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <div className="mt-8">
+                    <ButtonLink to={`/service/${activeService.id}`} variant="primary" icon="ArrowRight">
+                      {t('common.learnMore')}
+                    </ButtonLink>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          )}
+          <div className="mt-10">
+            <Link
+              to="/service"
+              className="focus-ring inline-flex min-h-14 items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:px-10 sm:text-base"
+            >
+              <span>{t('actions.viewServices')}</span>
+              <ServiceIcon name="ArrowRight" className="size-5" />
+            </Link>
           </div>
         </div>
       </section>
