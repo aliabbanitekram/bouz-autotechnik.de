@@ -92,3 +92,28 @@ img {
 .focus-ring:focus-visible {
   box-shadow: 0 0 0 3px rgba(228, 33, 47, 0.36);
 }
+
+@keyframes brand-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.brand-marquee-track {
+  animation: brand-marquee 34s linear infinite;
+}
+
+.brand-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee-track {
+    animation: none;
+    transform: none;
+  }
+}

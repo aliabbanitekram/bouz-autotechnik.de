@@ -12,7 +12,7 @@ function LanguageToggle() {
   return (
     <button
       type="button"
-      className="focus-ring inline-flex h-10 items-center gap-1 rounded-md border border-brand-steel/30 bg-brand-panel/80 px-2 font-heading text-xs font-bold uppercase tracking-wider text-brand-steelLight transition hover:border-brand-red hover:text-white"
+      className="focus-ring inline-flex h-11 items-center gap-1 border border-brand-black/10 bg-brand-white px-3 font-heading text-sm font-black uppercase tracking-[0.16em] text-brand-black transition hover:border-brand-red hover:text-brand-red"
       aria-label={t('language.switch')}
       onClick={() => i18n.changeLanguage(nextLanguage)}
     >
@@ -28,22 +28,22 @@ export default function Header() {
   const [open, setOpen] = useState(false)
 
   const navLinkClass = ({ isActive }) =>
-    `font-heading text-sm font-semibold uppercase tracking-wider transition ${
-      isActive ? 'text-brand-red' : 'text-brand-steelLight hover:text-white'
+    `flex h-full items-center px-4 font-heading text-sm font-black uppercase tracking-[0.22em] transition xl:px-5 ${
+      isActive ? 'bg-brand-black/[0.055] text-brand-red' : 'text-brand-black hover:bg-brand-black/[0.04] hover:text-brand-red'
     }`
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-steel/15 bg-brand-black/88 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-brand-black/10 bg-brand-white text-brand-black shadow-[0_1px_0_rgba(11,13,16,0.05)]">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-[92px] lg:px-8">
         <Link to="/" className="focus-ring flex items-center gap-3 rounded-md" onClick={() => setOpen(false)}>
           <img
             src={logo}
             alt={t('site.name')}
-            className="h-14 w-14 object-contain"
+            className="h-12 w-12 object-contain lg:h-14 lg:w-14"
             loading="eager"
           />
           <span className="hidden min-w-0 sm:block">
-            <span className="steel-text block font-heading text-2xl font-bold uppercase leading-none tracking-wider">
+            <span className="block font-heading text-xl font-black uppercase leading-none tracking-[0.18em] text-brand-black lg:text-2xl">
               {t('site.name')}
             </span>
             <span className="block font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red">
@@ -52,7 +52,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-4 lg:flex xl:gap-6" aria-label="Primary">
+        <nav className="hidden h-full items-center lg:flex" aria-label="Primary">
           {navItems.map((item) => (
             <NavLink key={item.key} to={item.path} className={navLinkClass}>
               {t(`nav.${item.key}`)}
@@ -68,27 +68,27 @@ export default function Header() {
           <LanguageToggle />
           <button
             type="button"
-            className="focus-ring inline-flex size-11 items-center justify-center rounded-md border border-brand-steel/25 bg-brand-panel text-brand-white"
+            className="focus-ring inline-flex size-12 items-center justify-center border border-brand-black/10 bg-brand-white text-brand-black transition hover:border-brand-red hover:text-brand-red"
             aria-label={open ? t('common.menuClose') : t('common.menuOpen')}
             onClick={() => setOpen((current) => !current)}
           >
-            <ServiceIcon name={open ? 'X' : 'Menu'} className="size-5" />
+            <ServiceIcon name={open ? 'X' : 'Menu'} className="size-7 stroke-[2.6]" />
           </button>
         </div>
       </div>
 
       {open && (
-        <div className="border-t border-brand-steel/15 bg-brand-black px-4 py-5 lg:hidden">
+        <div className="border-t border-brand-black/10 bg-brand-white px-4 py-5 shadow-xl lg:hidden">
           <nav className="grid gap-2" aria-label="Mobile">
             {navItems.map((item) => (
               <NavLink
                 key={item.key}
                 to={item.path}
                 className={({ isActive }) =>
-                  `rounded-md px-4 py-3 font-heading text-base font-bold uppercase tracking-wider ${
+                  `px-4 py-4 font-heading text-base font-black uppercase tracking-[0.18em] transition ${
                     isActive
                       ? 'bg-brand-red text-white'
-                      : 'bg-brand-panel text-brand-steelLight hover:text-white'
+                      : 'bg-brand-black/[0.045] text-brand-black hover:bg-brand-black/[0.075] hover:text-brand-red'
                   }`
                 }
                 onClick={() => setOpen(false)}
