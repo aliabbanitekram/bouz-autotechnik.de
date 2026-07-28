@@ -231,6 +231,7 @@
     "aboutCardKicker": "Master workshop & quality promise",
     "aboutCardTitle": "We work so mistakes are prevented before they happen.",
     "aboutCardText": "Every job follows a clear process: inspect, measure, document, explain and repair only after approval.",
+    "aboutCta": "More about us",
     "aboutParagraphs": [
       "Our workshop stands for certified master craftsmanship, modern diagnostics and experience with vehicles of every make. We do not work from guesses; we work with measured data, manufacturer specifications and careful hands-on inspection.",
       "Perfectionism does not mean working slowly. It means checking every safety-relevant step deliberately, using suitable original-equipment quality parts and explaining every result in a way you can understand.",
@@ -259,21 +260,6 @@
     "vehiclesCta": "See all vehicles",
     "servicesTitle": "Workshop service without detours",
     "servicesText": "From oil changes to electronic diagnostics: we keep the process clear, communication direct and results dependable.",
-    "perksTitle": "More mobility, less effort",
-    "perks": [
-      {
-        "title": "Pick-up & delivery",
-        "description": "By arrangement, we collect your vehicle and bring it back."
-      },
-      {
-        "title": "Replacement mobility",
-        "description": "Stay mobile while your car is in the workshop."
-      },
-      {
-        "title": "Damage service",
-        "description": "We support documentation and insurance handling."
-      }
-    ],
     "faqEyebrow": "Connect with us",
     "faqTitle": "Have a Question?",
     "faqText": "Check out our FAQ page or connect with our customer service team. Click below for more information.",

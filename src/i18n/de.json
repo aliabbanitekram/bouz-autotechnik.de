@@ -231,6 +231,7 @@
     "aboutCardKicker": "Meisterbetrieb & Qualitätsversprechen",
     "aboutCardTitle": "Wir arbeiten so, dass Fehler gar nicht erst entstehen.",
     "aboutCardText": "Jeder Auftrag folgt einem klaren Ablauf: prüfen, messen, dokumentieren, erklären und erst nach Freigabe reparieren.",
+    "aboutCta": "Mehr über uns",
     "aboutParagraphs": [
       "Unsere Werkstatt steht für zertifizierte Meisterarbeit, moderne Diagnose und Erfahrung mit Fahrzeugen aller Marken. Wir verlassen uns nicht auf Vermutungen, sondern auf Messwerte, Herstellervorgaben und saubere handwerkliche Kontrolle.",
       "Perfektionismus bedeutet für uns nicht langsam zu arbeiten. Es bedeutet, jeden sicherheitsrelevanten Schritt bewusst zu prüfen, passende Teile in Erstausrüsterqualität einzusetzen und jedes Ergebnis nachvollziehbar zu erklären.",
@@ -259,21 +260,6 @@
     "vehiclesCta": "Alle Marken ansehen",
     "servicesTitle": "Werkstattservice ohne Umwege",
     "servicesText": "Vom Ölwechsel bis zur Elektronikdiagnose: Wir halten den Ablauf klar, die Kommunikation direkt und das Ergebnis belastbar.",
-    "perksTitle": "Mehr Mobilität, weniger Aufwand",
-    "perks": [
-      {
-        "title": "Hol- & Bring-Service",
-        "description": "Nach Absprache holen wir Ihr Fahrzeug ab und bringen es wieder zurück."
-      },
-      {
-        "title": "Mobilitätsersatzfahrzeug",
-        "description": "Bleiben Sie beweglich, wenn Ihr Auto in der Werkstatt ist."
-      },
-      {
-        "title": "Schadenservice",
-        "description": "Wir unterstützen bei Dokumentation und Versicherungsabwicklung."
-      }
-    ],
     "faqEyebrow": "Kontakt aufnehmen",
     "faqTitle": "Haben Sie eine Frage?",
     "faqText": "Besuchen Sie unsere FAQ-Seite oder kontaktieren Sie unser Serviceteam. Hier finden Sie schnell die nächsten Schritte.",
