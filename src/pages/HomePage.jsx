@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import heroBmw from '../assets/hero/carserv-bmw.png'
 import meisterBadge from '../assets/logo-kfz-meisterbetrieb-menden.png'
 import aboutWorkshop from '../assets/services/diagnostic-service-03.jpg'
-import ButtonLink from '../components/ButtonLink'
 import HomeFAQTeaser from '../components/HomeFAQTeaser'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
@@ -314,11 +313,13 @@ export default function HomePage() {
                       ))}
                     </ul>
                   )}
-                  <div className="mt-8">
-                    <ButtonLink to={`/service/${activeService.id}`} variant="primary" icon="ArrowRight">
-                      {t('common.learnMore')}
-                    </ButtonLink>
-                  </div>
+                  <Link
+                    to={`/service/${activeService.id}`}
+                    className="focus-ring mt-8 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base"
+                  >
+                    <span>{t('common.learnMore')}</span>
+                    <ServiceIcon name="ArrowRight" className="size-5" />
+                  </Link>
                 </div>
               </div>
             </Reveal>
