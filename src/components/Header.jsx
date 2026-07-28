@@ -34,12 +34,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand-black/10 bg-brand-white text-brand-black shadow-[0_1px_0_rgba(11,13,16,0.05)]">
-      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-[92px] lg:px-8">
+      <div className="mx-auto flex h-28 w-full max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-[92px] lg:px-8">
         <Link to="/" className="focus-ring flex items-center gap-3 rounded-md" onClick={() => setOpen(false)}>
           <img
             src={logo}
             alt={t('site.name')}
-            className="h-12 w-12 object-contain lg:h-14 lg:w-14"
+            className="h-24 w-24 object-contain sm:h-12 sm:w-12 lg:h-14 lg:w-14"
             loading="eager"
           />
           <span className="hidden min-w-0 sm:block">

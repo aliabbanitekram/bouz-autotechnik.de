@@ -16,7 +16,7 @@ export default function Footer() {
           <img
             src={logo}
             alt={t('site.name')}
-            className="h-20 w-20 object-contain"
+            className="h-28 w-28 object-contain sm:h-20 sm:w-20"
             loading="lazy"
           />
           <p className="mt-5 max-w-sm text-sm leading-6 text-brand-white">{t('home.heroText')}</p>
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-brand-steel/15 bg-brand-black px-4 py-5 text-center text-xs text-brand-white sm:px-6">
-        © {new Date().getFullYear()} {t('site.name')}
+        &copy; {new Date().getFullYear()} {t('site.name')}
       </div>
     </footer>
   )
