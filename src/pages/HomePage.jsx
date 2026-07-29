@@ -248,9 +248,10 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red lg:block" />
         <div className="relative mx-auto max-w-7xl">
           <Reveal>
-            <div className="max-w-3xl">
+            <div className="max-w-3xl lg:mx-auto lg:text-center">
               <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
                 <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
                 {t('home.servicesEyebrow')}
