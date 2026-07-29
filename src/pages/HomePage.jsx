@@ -297,8 +297,8 @@ export default function HomePage() {
 
                 <motion.div
                   ref={serviceDetailRef}
-                  key={`${activeService.id}-image`}
-                  className="scroll-mt-28 overflow-hidden bg-brand-black/[0.04] sm:scroll-mt-24 lg:col-span-3"
+                  key={activeService.id}
+                  className="scroll-mt-28 overflow-hidden bg-brand-black/[0.035] sm:scroll-mt-24 lg:col-span-7"
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.34, ease: 'easeOut' }}
@@ -306,41 +306,34 @@ export default function HomePage() {
                   <img
                     src={activeMedia.image}
                     alt={activeService.title}
-                    className="h-72 w-full object-cover sm:h-95 lg:h-full"
+                    className="h-72 w-full object-cover sm:h-95 lg:h-[238px] xl:h-[258px]"
                     loading="lazy"
                   />
-                </motion.div>
-
-                <motion.div
-                  key={`${activeService.id}-copy`}
-                  className="flex flex-col justify-center lg:col-span-4"
-                  initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.34, ease: 'easeOut', delay: 0.04 }}
-                >
-                  <h3 className="font-heading text-3xl font-black leading-tight text-brand-black sm:text-4xl">
-                    {activeService.title}
-                  </h3>
-                  <p className="mt-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
-                    {activeService.description}
-                  </p>
-                  {serviceScope.length > 0 && (
-                    <ul className="mt-7 space-y-4 text-sm font-semibold leading-6 text-brand-steelDark sm:text-base">
-                      {serviceScope.map((item) => (
-                        <li key={item} className="flex gap-4">
-                          <ServiceIcon name="Check" className="mt-1 size-5 shrink-0 text-brand-red" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <Link
-                    to={`/service/${activeService.id}`}
-                    className="focus-ring mt-8 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base"
-                  >
-                    <span>{t('common.learnMore')}</span>
-                    <ServiceIcon name="ArrowRight" className="size-5" />
-                  </Link>
+                  <div className="p-6 sm:p-8 lg:p-6 xl:p-7">
+                    <h3 className="font-heading text-3xl font-black leading-tight text-brand-black sm:text-4xl lg:text-[2.45rem] xl:text-[2.75rem]">
+                      {activeService.title}
+                    </h3>
+                    <p className="mt-4 max-w-3xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:mt-3">
+                      {activeService.description}
+                    </p>
+                    {serviceScope.length > 0 && (
+                      <ul className="mt-5 grid gap-3 text-sm font-semibold leading-6 text-brand-steelDark sm:grid-cols-3 sm:text-base lg:mt-4 lg:gap-4">
+                        {serviceScope.map((item) => (
+                          <li key={item} className="flex gap-3">
+                            <ServiceIcon name="Check" className="mt-1 size-5 shrink-0 text-brand-red" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <Link
+                      to={`/service/${activeService.id}`}
+                      className="focus-ring mt-6 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base lg:mt-5"
+                    >
+                      <span>{t('common.learnMore')}</span>
+                      <ServiceIcon name="ArrowRight" className="size-5" />
+                    </Link>
+                  </div>
                 </motion.div>
               </div>
             </Reveal>
