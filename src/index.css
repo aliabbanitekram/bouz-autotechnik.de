@@ -85,6 +85,20 @@ img {
   border: 1px solid rgba(154, 160, 166, 0.24);
 }
 
+.service-detail-hero-grid,
+.service-detail-content-grid,
+.service-detail-cta-grid {
+  display: grid;
+}
+
+@media (min-width: 1024px) {
+  .service-detail-hero-grid,
+  .service-detail-content-grid,
+  .service-detail-cta-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
 .focus-ring {
   outline: none;
 }

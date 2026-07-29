@@ -1,6 +1,5 @@
 import { Navigate, Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import ButtonLink from '../components/ButtonLink'
 import SEO from '../components/SEO'
 import { WhatsAppIcon } from '../components/WhatsAppContact'
 import { ServiceIcon } from '../data/icons'
@@ -8,10 +7,45 @@ import { getServiceDetailContent } from '../data/serviceDetailContent'
 import { getServiceMedia } from '../data/serviceMedia'
 import { getServiceNarrative } from '../data/serviceNarratives'
 
+function GridLines() {
+  return (
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+      <span className="absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
+      <span className="absolute inset-y-0 left-1/2 w-px bg-brand-black/8" />
+      <span className="absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+    </div>
+  )
+}
+
+function SectionLabel({ children }) {
+  return (
+    <p className="font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red">
+      <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
+      {children}
+    </p>
+  )
+}
+
+function DarkButton({ children, href, icon = 'ArrowRight', className = '', external = false }) {
+  const props = external ? { target: '_blank', rel: 'noreferrer' } : {}
+
+  return (
+    <a
+      className={`focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base ${className}`}
+      href={href}
+      {...props}
+    >
+      <span>{children}</span>
+      {icon === 'WhatsApp' ? <WhatsAppIcon className="size-5" /> : <ServiceIcon name={icon} className="size-5" />}
+    </a>
+  )
+}
+
 export default function ServiceDetailPage() {
   const { serviceId } = useParams()
   const { t, i18n } = useTranslation()
   const services = t('services', { returnObjects: true })
+  const serviceGroups = t('serviceGroups', { returnObjects: true })
   const service = services.find((item) => item.id === serviceId)
 
   if (!service) return <Navigate to="/service" replace />
@@ -20,224 +54,156 @@ export default function ServiceDetailPage() {
   const narrative = getServiceNarrative(i18n.language, service.id)
   const detail = getServiceDetailContent(i18n.language, service.id)
   const trust = t('serviceDetail.trust', { returnObjects: true })
-  const whatsappNumber = t('site.phone').replace(/\D/g, '')
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(t('serviceDetail.whatsappMessage', { service: service.title }))}`
+  const phone = t('site.phone')
+  const telHref = `tel:${phone.replace(/\s/g, '')}`
+  const whatsappNumber = phone.replace(/\D/g, '')
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    t('serviceDetail.whatsappMessage', { service: service.title }),
+  )}`
 
   return (
-    <main>
+    <main className="bg-brand-white text-brand-black">
       <SEO page="service" />
-      <section className="bg-hero-vignette px-4 pt-6 pb-4 sm:px-6 sm:pb-6 lg:px-8 lg:py-10">
-        <div className="mx-auto max-w-7xl">
+
+      <section className="relative overflow-hidden border-b border-brand-black/10 bg-brand-white px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+        <GridLines />
+        <div className="relative mx-auto max-w-7xl">
           <Link
             to="/service"
-            className="focus-ring inline-flex items-center gap-2 rounded-md font-heading text-sm font-bold uppercase tracking-wider text-brand-steelLight transition hover:text-brand-red"
+            className="focus-ring inline-flex items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.18em] text-brand-black transition hover:text-brand-red"
           >
             <ServiceIcon name="ArrowRight" className="size-4 rotate-180" />
             {t('nav.service')}
           </Link>
 
-          <div className="mt-5 lg:hidden">
-            <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-brand-steel/15 bg-brand-panel shadow-steel">
-              <img
-                src={media.image}
-                alt={service.title}
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="eager"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/55 to-brand-black/10" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <h1 className="steel-text font-heading text-3xl font-bold uppercase leading-tight">
-                  {service.title}
-                </h1>
-                <p className="mt-5 text-sm leading-6 text-brand-white sm:text-base sm:leading-7">{narrative.lead}</p>
-              </div>
-            </div>
-            <div className="mt-5 flex flex-col gap-3">
-              <a
-                className="focus-ring inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover"
-                href={whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{t('home.whatsappCta')}</span>
-                <WhatsAppIcon className="size-5" />
-              </a>
-              <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
-                {t('actions.callNow')}
-              </ButtonLink>
-            </div>
-          </div>
-
-          <div className="mt-8 hidden items-center gap-10 lg:grid lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <div className="flex size-16 items-center justify-center rounded-lg bg-brand-red/12 text-brand-red ring-1 ring-brand-red/25">
-                <ServiceIcon name={service.icon} className="size-8" />
-              </div>
-              <p className="mt-6 font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
-                {t('servicePage.eyebrow')}
-              </p>
-              <h1 className="steel-text mt-4 font-heading text-4xl font-bold uppercase leading-tight lg:text-6xl xl:text-7xl">
+          <div className="service-detail-hero-grid mt-8 gap-8 lg:items-end">
+            <div className="max-w-3xl">
+              <SectionLabel>{serviceGroups[service.group] || t('servicePage.eyebrow')}</SectionLabel>
+              <h1 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
                 {service.title}
               </h1>
-              <p className="mt-6 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{narrative.lead}</p>
+              <p className="mt-6 max-w-2xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+                {narrative.lead}
+              </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  className="focus-ring inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover"
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{t('home.whatsappCta')}</span>
-                  <WhatsAppIcon className="size-5" />
-                </a>
-                <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
+                <DarkButton href={whatsappUrl} icon="WhatsApp" external className="bg-brand-whatsapp text-brand-black hover:bg-brand-whatsappHover">
+                  {t('home.whatsappCta')}
+                </DarkButton>
+                <DarkButton href={telHref} icon="Phone">
                   {t('actions.callNow')}
-                </ButtonLink>
+                </DarkButton>
               </div>
             </div>
-            <div className="overflow-hidden rounded-lg border border-brand-steel/15 bg-brand-panel shadow-steel">
+
+            <div className="relative overflow-hidden bg-brand-black shadow-[0_30px_80px_rgba(11,13,16,0.18)]">
               <img
                 src={media.image}
                 alt={service.title}
-                className="aspect-16/11 w-full object-cover"
+                className="aspect-[16/11] w-full object-cover lg:aspect-[16/10]"
                 loading="eager"
               />
-            </div>
-          </div>
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {trust.map((item, index) => (
-              <div
-                key={item.title}
-                className="industrial-panel grid grid-cols-[20%_1fr] items-start rounded-lg p-4 lg:block"
-              >
-                <ServiceIcon
-                  name={['Gauge', 'ShieldCheck', 'Wrench', 'Camera'][index]}
-                  className="mt-1 h-auto w-[82%] max-w-14 text-brand-red lg:mt-0 lg:size-6 lg:w-6 lg:max-w-none"
-                />
-                <div className="min-w-0 pl-3 sm:pl-2 lg:pl-0">
-                  <h2 className="font-heading text-lg font-bold uppercase text-brand-white lg:mt-3">
-                    {item.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-6 text-brand-text">{item.description}</p>
-                </div>
+              <div className="absolute left-0 top-0 flex size-20 items-center justify-center bg-brand-red text-brand-white sm:size-24">
+                <ServiceIcon name={service.icon} className="size-9 sm:size-10" />
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="px-4 pt-8 pb-14 sm:px-6 sm:py-16 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.85fr]">
-          <article className="industrial-panel rounded-lg p-6 sm:p-8">
-            <h2 className="font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
+      <section className="relative overflow-hidden px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <GridLines />
+        <div className="service-detail-content-grid relative mx-auto max-w-7xl gap-10 lg:items-start">
+          <article>
+            <SectionLabel>{t('serviceDetail.serviceScope')}</SectionLabel>
+            <h2 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
               {detail.problemTitle}
             </h2>
-            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.problemIntro}</p>
-            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{service.description}</p>
-            <div className="mt-8">
-              <h3 className="font-heading text-xl font-bold uppercase text-brand-white">
-                {t('serviceDetail.serviceScope')}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {detail.serviceItems.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-md border border-brand-steel/20 bg-brand-black px-4 py-2 text-sm font-semibold text-brand-steelLight"
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="rounded-md border border-brand-red/25 bg-brand-red/12 px-4 py-2 text-sm font-semibold text-brand-white">
-                  {t('serviceDetail.andMore')}
-                </span>
+            <div className="mt-7 max-w-3xl space-y-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+              <p>{detail.problemIntro}</p>
+              <p>{narrative.body}</p>
+            </div>
+
+            <div className="mt-9 grid gap-3 sm:grid-cols-2">
+              {detail.serviceItems.map((item) => (
+                <div key={item} className="flex min-h-14 items-center gap-4 bg-brand-black/[0.055] px-5 py-4">
+                  <ServiceIcon name="Check" className="size-5 shrink-0 text-brand-red" />
+                  <span className="font-semibold text-brand-steelDark">{item}</span>
+                </div>
+              ))}
+              <div className="flex min-h-14 items-center gap-4 bg-brand-red px-5 py-4 text-brand-white">
+                <ServiceIcon name="Check" className="size-5 shrink-0" />
+                <span className="font-semibold">{t('serviceDetail.andMore')}</span>
               </div>
             </div>
-            <blockquote className="mt-8 border-l-4 border-brand-red pl-5 font-heading text-xl font-bold uppercase leading-tight text-brand-white sm:text-2xl">
-              "{detail.quote}"
-            </blockquote>
           </article>
 
-          <aside className="industrial-panel rounded-lg p-6 sm:p-8">
-            <h2 className="font-heading text-2xl font-bold uppercase text-brand-white sm:text-3xl">
-              {t('serviceDetail.includes')}
+          <aside className="bg-brand-black p-6 text-brand-white shadow-[0_28px_70px_rgba(11,13,16,0.18)] sm:p-8 lg:sticky lg:top-28">
+            <SectionLabel>{t('serviceDetail.whyBouz')}</SectionLabel>
+            <h2 className="mt-6 font-heading text-3xl font-black uppercase leading-tight text-brand-white sm:text-4xl">
+              {detail.localTitle}
             </h2>
-            <ul className="mt-6 grid gap-4">
-              {narrative.bullets.map((item) => (
-                <li key={item} className="flex gap-3 text-brand-text">
-                  <ServiceIcon name="CheckCircle2" className="mt-0.5 size-5 shrink-0 text-brand-red" />
-                  <span className="text-sm leading-6 sm:text-base">{item}</span>
-                </li>
+            <p className="mt-5 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.localText}</p>
+            <div className="mt-7 grid gap-3">
+              {trust.map((item, index) => (
+                <div key={item.title} className="grid grid-cols-[44px_1fr] gap-4 border border-brand-steel/15 bg-brand-white/[0.06] p-4">
+                  <ServiceIcon
+                    name={['Gauge', 'ShieldCheck', 'Wrench', 'Camera'][index]}
+                    className="size-8 text-brand-red"
+                  />
+                  <div>
+                    <h3 className="font-heading text-lg font-black uppercase text-brand-white">{item.title}</h3>
+                    <p className="mt-1 text-sm leading-6 text-brand-text">{item.description}</p>
+                  </div>
+                </div>
               ))}
-            </ul>
-            <div className="mt-8 border-t border-brand-steel/15 pt-6">
-              <p className="text-sm leading-6 text-brand-steelLight">{t('serviceDetail.note')}</p>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="bg-brand-charcoal px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-brand-white px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+        <GridLines />
+        <div className="relative mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <h2 className="font-heading text-2xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
+            <SectionLabel>{t('servicePage.eyebrow')}</SectionLabel>
+            <h2 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
               {t('serviceDetail.signsTitle')}
             </h2>
-            <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('serviceDetail.signsIntro')}</p>
+            <p className="mt-6 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+              {t('serviceDetail.signsIntro')}
+            </p>
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+
+          <div className="mt-10 grid gap-px overflow-hidden border border-brand-black/10 bg-brand-black/10 md:grid-cols-2 xl:grid-cols-4">
             {detail.signs.map((sign, index) => (
-              <article key={sign.title} className="industrial-panel rounded-lg p-6">
-                <p className="steel-text font-heading text-4xl font-bold sm:text-5xl">{index + 1}</p>
-                <h3 className="mt-5 font-heading text-xl font-bold uppercase text-brand-white">
-                  {sign.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-brand-text">{sign.text}</p>
+              <article key={sign.title} className="bg-brand-white p-6 sm:p-8">
+                <p className="font-heading text-5xl font-black text-brand-red">{String(index + 1).padStart(2, '0')}</p>
+                <h3 className="mt-6 font-heading text-2xl font-black uppercase leading-tight text-brand-black">{sign.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-brand-steelDark">{sign.text}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <article className="steel-hero-light rounded-lg border border-brand-black/10 p-6 text-brand-black shadow-steel sm:p-8">
-            <p className="font-heading text-sm font-bold uppercase tracking-[0.24em] text-brand-red">
-              {t('serviceDetail.whyBouz')}
-            </p>
-            <h2 className="steel-text-dark mt-4 font-heading text-2xl font-bold uppercase leading-tight sm:text-4xl">
-              {detail.localTitle}
-            </h2>
-            <p className="mt-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">{detail.localText}</p>
-            <div className="mt-7 grid gap-3 sm:grid-cols-2">
-              {trust.map((item) => (
-                <div key={item.title} className="rounded-md border border-brand-black/10 bg-brand-steelLight/75 p-4 shadow-sm">
-                  <h3 className="font-heading text-lg font-bold uppercase text-brand-black">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-brand-steelDark">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </article>
-          <article className="bg-hero-vignette rounded-lg border border-brand-steel/15 p-6 sm:p-8">
-            <ServiceIcon name={service.icon} className="size-10 text-brand-red" />
-            <h2 className="mt-5 font-heading text-3xl font-bold uppercase leading-tight text-brand-white sm:text-4xl">
+      <section className="relative overflow-hidden px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+        <GridLines />
+        <div className="service-detail-cta-grid relative mx-auto max-w-7xl gap-8 bg-brand-black p-7 text-brand-white sm:p-10 lg:items-center">
+          <div>
+            <SectionLabel>{t('actions.contact')}</SectionLabel>
+            <h2 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-white sm:text-5xl lg:text-6xl">
               {detail.readyTitle}
             </h2>
-            <p className="mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.readyText}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                className="focus-ring inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-brand-whatsapp px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover"
-                href={whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{t('home.whatsappCta')}</span>
-                <WhatsAppIcon className="size-5" />
-              </a>
-              <ButtonLink href={`tel:${t('site.phone').replaceAll(' ', '')}`} variant="secondary" icon="Phone">
-                {t('actions.callNow')}
-              </ButtonLink>
-            </div>
-          </article>
+            <p className="mt-5 max-w-2xl text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.readyText}</p>
+          </div>
+          <div className="flex flex-col gap-3 lg:items-end">
+            <DarkButton href={whatsappUrl} icon="WhatsApp" external className="bg-brand-whatsapp text-brand-black hover:bg-brand-whatsappHover">
+              {t('home.whatsappCta')}
+            </DarkButton>
+            <DarkButton href={telHref} icon="Phone" className="border border-brand-white/20">
+              {t('actions.callNow')}
+            </DarkButton>
+          </div>
         </div>
       </section>
     </main>
