@@ -10,44 +10,54 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
   const [open, setOpen] = useState(0)
 
   return (
-    <section className="bg-brand-white px-4 py-16 text-brand-black sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div>
-          <p className="font-heading text-sm font-bold uppercase tracking-[0.18em] text-brand-red">
+    <section className="relative overflow-hidden bg-brand-white px-4 py-16 text-brand-black sm:px-6 sm:py-20 lg:px-8">
+      <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
+      <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
+      <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+      <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red lg:block" />
+
+      <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+        <div className="max-w-2xl">
+          <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
+            <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
             {t('home.faqEyebrow')}
           </p>
-          <h2 className="mt-5 text-3xl font-bold leading-tight text-brand-black sm:text-4xl">
+          <h2 className="mt-5 text-4xl font-black leading-tight uppercase font-heading text-brand-black sm:text-5xl lg:text-6xl">
             {t('home.faqTitle')}
           </h2>
-          <p className="mt-4 max-w-xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+          <p className="mt-8 max-w-xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
             {t('home.faqText')}
           </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {items.map((item, index) => {
             const isOpen = open === index
 
             return (
               <article
                 key={item.question}
-                className="overflow-hidden rounded-2xl border border-brand-steelDark/10 bg-brand-black/[0.03] shadow-sm transition hover:border-brand-red/35"
+                className={`overflow-hidden border transition ${
+                  isOpen
+                    ? 'border-brand-red/20 bg-brand-white shadow-[0_18px_45px_rgba(11,13,16,0.08)]'
+                    : 'border-brand-black/5 bg-brand-black/[0.045] hover:bg-brand-black/[0.07]'
+                }`}
               >
                 <button
                   type="button"
-                  className="focus-ring flex w-full items-center justify-between gap-4 px-5 py-5 text-left"
+                  className="focus-ring flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7 sm:py-6"
                   onClick={() => setOpen(isOpen ? -1 : index)}
                 >
-                  <span className="text-base font-bold leading-snug text-brand-black sm:text-lg">
+                  <span className="font-heading text-xl font-black leading-tight text-brand-black sm:text-2xl lg:text-[1.45rem]">
                     {item.question}
                   </span>
                   <ServiceIcon
                     name="ChevronDown"
-                    className={`size-5 shrink-0 text-brand-red transition ${isOpen ? 'rotate-180' : ''}`}
+                    className={`size-5 shrink-0 text-brand-red transition duration-300 ${isOpen ? 'rotate-180' : ''}`}
                   />
                 </button>
                 {isOpen && (
-                  <p className="px-5 pb-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+                  <p className="px-5 pb-6 text-sm leading-6 text-brand-steelDark sm:px-7 sm:text-base sm:leading-7">
                     {item.answer}
                   </p>
                 )}
@@ -58,13 +68,13 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
             {disableNavigation ? (
               <button
                 type="button"
-                className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-red to-brand-redDark px-8 py-4 font-heading text-base font-bold uppercase tracking-wider text-white shadow-red transition hover:from-brand-redDark hover:to-brand-red"
+                className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-auto sm:px-10 sm:text-base lg:w-full"
               >
                 <span>{t('home.faqPrimary')}</span>
-                <ServiceIcon name="ArrowRight" className="size-4" />
+                <ServiceIcon name="ArrowRight" className="size-5" />
               </button>
             ) : (
-              <ButtonLink to="/faq" icon="ArrowRight" fullWidth>
+              <ButtonLink to="/faq" icon="ArrowRight">
                 {t('home.faqPrimary')}
               </ButtonLink>
             )}
