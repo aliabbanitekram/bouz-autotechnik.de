@@ -2,13 +2,19 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  background: #0b0d10;
-  color: #f5f6f7;
+  color-scheme: light;
+  background: #f5f6f7;
+  color: #0b0d10;
   font-family: Inter, system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+  background: #0b0d10;
+  color: #f5f6f7;
 }
 
 * {
@@ -22,6 +28,10 @@ html {
 body {
   min-width: 320px;
   margin: 0;
+  background: #f5f6f7;
+}
+
+html[data-theme='dark'] body {
   background:
     radial-gradient(circle at 50% 0%, rgba(95, 99, 104, 0.24), transparent 34%),
     #0b0d10;
@@ -129,5 +139,121 @@ img {
   .brand-marquee-track {
     animation: none;
     transform: none;
+  }
+}
+
+.home-page {
+  --home-bg: #f5f6f7;
+  --home-text: #0b0d10;
+  --home-muted: #5f6368;
+  --home-panel: rgba(11, 13, 16, 0.045);
+  --home-panel-hover: rgba(11, 13, 16, 0.075);
+  --home-grid: rgba(11, 13, 16, 0.08);
+  --home-angle: #f1f2f3;
+  --home-button: #0b0d10;
+  --home-button-hover: #e4212f;
+  --home-button-text: #f5f6f7;
+  --home-brand-border: rgba(154, 160, 166, 0.16);
+  --home-brand-text: rgba(95, 99, 104, 0.68);
+  --home-faq-open: #f5f6f7;
+  --home-faq-closed: rgba(11, 13, 16, 0.045);
+  --home-shadow: 0 18px 45px rgba(11, 13, 16, 0.08);
+}
+
+.home-page--dark {
+  --home-bg: #0b0d10;
+  --home-text: #f5f6f7;
+  --home-muted: #c9cdd3;
+  --home-panel: rgba(245, 246, 247, 0.075);
+  --home-panel-hover: rgba(245, 246, 247, 0.11);
+  --home-grid: rgba(245, 246, 247, 0.09);
+  --home-angle: #12151a;
+  --home-button: #e4212f;
+  --home-button-hover: #b81421;
+  --home-button-text: #f5f6f7;
+  --home-brand-border: rgba(232, 234, 237, 0.14);
+  --home-brand-text: rgba(232, 234, 237, 0.72);
+  --home-faq-open: rgba(245, 246, 247, 0.075);
+  --home-faq-closed: rgba(245, 246, 247, 0.055);
+  --home-shadow: 0 22px 55px rgba(0, 0, 0, 0.32);
+}
+
+.home-surface {
+  background-color: var(--home-bg);
+  color: var(--home-text);
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+.home-heading,
+.home-text-link {
+  color: var(--home-text);
+}
+
+.home-muted {
+  color: var(--home-muted);
+}
+
+.home-grid-line {
+  background-color: var(--home-grid);
+}
+
+.home-hero-angle {
+  background-color: var(--home-angle);
+}
+
+.home-mobile-hero-fade {
+  --tw-gradient-from: var(--home-bg) var(--tw-gradient-from-position);
+  --tw-gradient-via: color-mix(in srgb, var(--home-bg) 80%, transparent) var(--tw-gradient-via-position);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.home-primary-button {
+  background-color: var(--home-button);
+  color: var(--home-button-text);
+}
+
+.home-primary-button:hover {
+  background-color: var(--home-button-hover);
+}
+
+.home-panel,
+.home-service-tab,
+.home-faq-item--closed {
+  background-color: var(--home-panel);
+  color: var(--home-text);
+}
+
+.home-service-tab:hover,
+.home-faq-item--closed:hover {
+  background-color: var(--home-panel-hover);
+}
+
+.home-faq-item--open {
+  background-color: var(--home-faq-open);
+  box-shadow: var(--home-shadow);
+}
+
+.home-brand-card {
+  border-color: var(--home-brand-border);
+}
+
+.home-brand-name {
+  color: var(--home-brand-text);
+}
+
+.home-brand-name:hover {
+  color: var(--home-text);
+}
+
+.home-page--dark .home-hero-car {
+  filter: drop-shadow(0 26px 70px rgba(0, 0, 0, 0.48));
+  opacity: 0.72;
+}
+
+@media (min-width: 1024px) {
+  .home-page--dark .home-hero-car {
+    opacity: 0.9;
   }
 }

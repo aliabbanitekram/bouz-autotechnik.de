@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import ScrollToTop from './components/ScrollToTop'
+import { ThemeProvider } from './context/ThemeContext'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import FAQPage from './pages/FAQPage'
@@ -12,7 +13,7 @@ import ServicePage from './pages/ServicePage'
 
 export default function App() {
   return (
-    <>
+    <ThemeProvider>
       <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -27,6 +28,6 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
-    </>
+    </ThemeProvider>
   )
 }

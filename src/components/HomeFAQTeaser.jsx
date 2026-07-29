@@ -10,11 +10,11 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
   const [open, setOpen] = useState(0)
 
   return (
-    <section className="relative overflow-hidden bg-brand-white px-4 py-16 text-brand-black sm:px-6 sm:py-20 lg:px-8">
-      <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
-      <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
-      <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
-      <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
+    <section className="home-surface relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[22%] w-px" />
+      <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[50%] w-px" />
+      <div className="home-grid-line pointer-events-none absolute inset-y-0 right-[22%] w-px" />
+      <div className="home-red-accent pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="max-w-3xl lg:mx-auto lg:text-center">
@@ -22,10 +22,10 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
             <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
             {t('home.faqEyebrow')}
           </p>
-          <h2 className="mt-5 font-heading text-4xl font-black leading-tight uppercase text-brand-black sm:text-5xl lg:text-6xl">
+          <h2 className="home-heading mt-5 font-heading text-4xl font-black leading-tight uppercase sm:text-5xl lg:text-6xl">
             {t('home.faqTitle')}
           </h2>
-          <p className="mt-8 max-w-3xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:mx-auto">
+          <p className="home-muted mt-8 max-w-3xl text-sm leading-6 sm:text-base sm:leading-7 lg:mx-auto">
             {t('home.faqText')}
           </p>
         </div>
@@ -37,10 +37,10 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
             return (
               <article
                 key={item.question}
-                className={`overflow-hidden border transition ${
+                className={`home-faq-item overflow-hidden border transition ${
                   isOpen
-                    ? 'border-brand-red/20 bg-brand-white shadow-[0_18px_45px_rgba(11,13,16,0.08)]'
-                    : 'border-brand-black/5 bg-brand-black/[0.045] hover:bg-brand-black/[0.07]'
+                    ? 'home-faq-item--open border-brand-red/20 shadow-[0_18px_45px_rgba(11,13,16,0.08)]'
+                    : 'home-faq-item--closed border-brand-black/5 hover:bg-brand-black/[0.07]'
                 }`}
               >
                 <button
@@ -48,7 +48,7 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
                   className="focus-ring flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7 sm:py-6"
                   onClick={() => setOpen(isOpen ? -1 : index)}
                 >
-                  <span className="font-heading text-lg font-black leading-tight text-brand-black sm:text-xl lg:text-[1.35rem]">
+                  <span className="home-heading font-heading text-lg font-black leading-tight sm:text-xl lg:text-[1.35rem]">
                     {item.question}
                   </span>
                   <ServiceIcon
@@ -57,7 +57,7 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
                   />
                 </button>
                 {isOpen && (
-                  <p className="px-5 pb-6 text-sm leading-6 text-brand-steelDark sm:px-7 sm:text-base sm:leading-7">
+                  <p className="home-muted px-5 pb-6 text-sm leading-6 sm:px-7 sm:text-base sm:leading-7">
                     {item.answer}
                   </p>
                 )}
@@ -68,7 +68,7 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
             {disableNavigation ? (
               <button
                 type="button"
-                className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
+                className="home-primary-button focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] transition sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('home.faqPrimary')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
