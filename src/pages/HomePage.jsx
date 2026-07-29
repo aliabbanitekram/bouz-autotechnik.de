@@ -148,13 +148,13 @@ export default function HomePage() {
             </h1>
             <p className="max-w-xl mt-6 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:text-lg lg:leading-8">{t('home.heroText')}</p>
             <div className="flex max-w-xl mt-8">
-              <Link
-                to="/service"
+              <button
+                type="button"
                 className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('actions.viewServices')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
-              </Link>
+              </button>
             </div>
           </motion.div>
           <div className="hidden min-h-105 lg:block" aria-hidden="true" />
@@ -305,26 +305,26 @@ export default function HomePage() {
                         ))}
                       </ul>
                     )}
-                    <Link
-                      to={`/service/${activeService.id}`}
+                    <button
+                      type="button"
                       className="focus-ring mt-6 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base lg:mt-5"
                     >
                       <span>{t('common.learnMore')}</span>
                       <ServiceIcon name="ArrowRight" className="size-5" />
-                    </Link>
+                    </button>
                   </div>
                 </motion.div>
               </div>
             </Reveal>
           )}
           <div className="mt-10">
-            <Link
-              to="/service"
+            <button
+              type="button"
               className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
             >
               <span>{t('actions.viewServices')}</span>
               <ServiceIcon name="ArrowRight" className="size-5" />
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -364,13 +364,13 @@ export default function HomePage() {
               <p className="mt-5 max-w-xl text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
                 {t('home.finalText')}
               </p>
-              <Link
-                to="/kontakt"
+              <button
+                type="button"
                 className="focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('nav.contact')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
-              </Link>
+              </button>
             </Reveal>
           </div>
         </div>
