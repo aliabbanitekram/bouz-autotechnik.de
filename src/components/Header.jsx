@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../assets/bouz-autotechnik-logo-clean.png'
+import logo from '../assets/bouz-autotechnik-logo-ai-transparent.png'
 import { ServiceIcon } from '../data/icons'
 import { navItems } from '../data/navigation'
 
@@ -35,11 +35,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-black/10 bg-brand-white text-brand-black shadow-[0_1px_0_rgba(11,13,16,0.05)]">
       <div className="mx-auto flex h-28 w-full max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-[92px] lg:px-8">
-        <Link to="/" className="focus-ring flex items-center gap-3 rounded-md" onClick={() => setOpen(false)}>
+        <Link to="/" className="flex items-center gap-3 rounded-md focus-ring" onClick={() => setOpen(false)}>
           <img
             src={logo}
             alt={t('site.name')}
-            className="h-24 w-24 object-contain sm:h-12 sm:w-12 lg:h-14 lg:w-14"
+            className="object-contain w-24 h-24 sm:h-12 sm:w-12 lg:h-14 lg:w-14"
             loading="eager"
           />
           <span className="hidden min-w-0 sm:block">
@@ -52,7 +52,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden h-full items-center lg:flex" aria-label="Primary">
+        <nav className="items-center hidden h-full lg:flex" aria-label="Primary">
           {navItems.map((item) => (
             <NavLink key={item.key} to={item.path} className={navLinkClass}>
               {t(`nav.${item.key}`)}
@@ -60,7 +60,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="items-center hidden gap-3 lg:flex">
           <LanguageToggle />
         </div>
 
@@ -68,7 +68,7 @@ export default function Header() {
           <LanguageToggle />
           <button
             type="button"
-            className="focus-ring inline-flex size-12 items-center justify-center border border-brand-black/10 bg-brand-white text-brand-black transition hover:border-brand-red hover:text-brand-red"
+            className="inline-flex items-center justify-center transition border focus-ring size-12 border-brand-black/10 bg-brand-white text-brand-black hover:border-brand-red hover:text-brand-red"
             aria-label={open ? t('common.menuClose') : t('common.menuOpen')}
             onClick={() => setOpen((current) => !current)}
           >
@@ -78,7 +78,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-brand-black/10 bg-brand-white px-4 py-5 shadow-xl lg:hidden">
+        <div className="px-4 py-5 border-t shadow-xl border-brand-black/10 bg-brand-white lg:hidden">
           <nav className="grid gap-2" aria-label="Mobile">
             {navItems.map((item) => (
               <NavLink

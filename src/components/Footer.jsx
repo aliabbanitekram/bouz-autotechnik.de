@@ -16,7 +16,7 @@ export default function Footer() {
           <img
             src={logo}
             alt={t('site.name')}
-            className="h-28 w-28 object-contain sm:h-20 sm:w-20"
+            className="h-28 w-28 object-contain sm:h-24 sm:w-24"
             loading="lazy"
           />
           <p className="mt-5 max-w-sm text-sm leading-6 text-brand-white">{t('home.heroText')}</p>
