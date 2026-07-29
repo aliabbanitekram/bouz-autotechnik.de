@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -119,11 +119,18 @@ export default function HomePage() {
   const aboutParagraphs = t('home.aboutParagraphs', { returnObjects: true })
   const homeServices = services
   const [activeServiceId, setActiveServiceId] = useState(homeServices[0]?.id)
+  const serviceDetailRef = useRef(null)
   const activeService = homeServices.find((service) => service.id === activeServiceId) ?? homeServices[0]
   const activeMedia = activeService ? getServiceMedia(activeService.id) : null
   const detailLanguage = i18n.resolvedLanguage?.startsWith('de') ? 'de' : 'en'
   const activeDetail = activeService ? serviceDetailContent[detailLanguage]?.[activeService.id] : null
   const serviceScope = activeDetail?.serviceItems?.slice(0, 3) ?? []
+  const handleServiceSelect = (serviceId) => {
+    setActiveServiceId(serviceId)
+    window.setTimeout(() => {
+      serviceDetailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 80)
+  }
 
   return (
     <main>
@@ -268,7 +275,7 @@ export default function HomePage() {
                         key={service.id}
                         type="button"
                         aria-pressed={isActive}
-                        onClick={() => setActiveServiceId(service.id)}
+                        onClick={() => handleServiceSelect(service.id)}
                         className={`focus-ring flex min-h-22 items-center gap-5 px-6 py-5 text-left transition sm:min-h-24 lg:min-h-23 ${
                           isActive
                             ? 'bg-brand-red text-brand-white shadow-red'
@@ -287,16 +294,29 @@ export default function HomePage() {
                   })}
                 </div>
 
-                <div className="overflow-hidden bg-brand-black/[0.04] lg:col-span-3">
+                <motion.div
+                  ref={serviceDetailRef}
+                  key={`${activeService.id}-image`}
+                  className="scroll-mt-28 overflow-hidden bg-brand-black/[0.04] sm:scroll-mt-24 lg:col-span-3"
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.34, ease: 'easeOut' }}
+                >
                   <img
                     src={activeMedia.image}
                     alt={activeService.title}
                     className="h-72 w-full object-cover sm:h-95 lg:h-full"
                     loading="lazy"
                   />
-                </div>
+                </motion.div>
 
-                <div className="flex flex-col justify-center lg:col-span-4">
+                <motion.div
+                  key={`${activeService.id}-copy`}
+                  className="flex flex-col justify-center lg:col-span-4"
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.34, ease: 'easeOut', delay: 0.04 }}
+                >
                   <h3 className="font-heading text-3xl font-black leading-tight text-brand-black sm:text-4xl">
                     {activeService.title}
                   </h3>
@@ -320,7 +340,7 @@ export default function HomePage() {
                     <span>{t('common.learnMore')}</span>
                     <ServiceIcon name="ArrowRight" className="size-5" />
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </Reveal>
           )}
