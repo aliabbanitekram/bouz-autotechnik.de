@@ -48,7 +48,7 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
                   className="focus-ring flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7 sm:py-6"
                   onClick={() => setOpen(isOpen ? -1 : index)}
                 >
-                  <span className="font-heading text-xl font-black leading-tight text-brand-black sm:text-2xl lg:text-[1.45rem]">
+                  <span className="font-heading text-lg font-black leading-tight text-brand-black sm:text-xl lg:text-[1.35rem]">
                     {item.question}
                   </span>
                   <ServiceIcon
