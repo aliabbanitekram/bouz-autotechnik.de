@@ -2,6 +2,7 @@ import { Navigate, Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import SEO from '../components/SEO'
 import { WhatsAppIcon } from '../components/WhatsAppContact'
+import { useTheme } from '../context/useTheme'
 import { ServiceIcon } from '../data/icons'
 import { getServiceDetailContent } from '../data/serviceDetailContent'
 import { getServiceMedia } from '../data/serviceMedia'
@@ -10,9 +11,9 @@ import { getServiceNarrative } from '../data/serviceNarratives'
 function GridLines() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-      <span className="absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
-      <span className="absolute inset-y-0 left-1/2 w-px bg-brand-black/8" />
-      <span className="absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+      <span className="home-grid-line absolute inset-y-0 left-[22%] w-px" />
+      <span className="home-grid-line absolute inset-y-0 left-1/2 w-px" />
+      <span className="home-grid-line absolute inset-y-0 right-[22%] w-px" />
     </div>
   )
 }
@@ -28,10 +29,11 @@ function SectionLabel({ children }) {
 
 function DarkButton({ children, href, icon = 'ArrowRight', className = '', external = false }) {
   const props = external ? { target: '_blank', rel: 'noreferrer' } : {}
+  const buttonClass = icon === 'WhatsApp' ? 'service-whatsapp-button' : 'home-primary-button'
 
   return (
     <a
-      className={`focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base ${className}`}
+      className={`${buttonClass} focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] transition sm:w-[316px] sm:px-10 sm:text-base ${className}`}
       href={href}
       {...props}
     >
@@ -44,6 +46,7 @@ function DarkButton({ children, href, icon = 'ArrowRight', className = '', exter
 export default function ServiceDetailPage() {
   const { serviceId } = useParams()
   const { t, i18n } = useTranslation()
+  const { isDark } = useTheme()
   const services = t('services', { returnObjects: true })
   const serviceGroups = t('serviceGroups', { returnObjects: true })
   const service = services.find((item) => item.id === serviceId)
@@ -62,15 +65,15 @@ export default function ServiceDetailPage() {
   )}`
 
   return (
-    <main className="bg-brand-white text-brand-black">
+    <main className={`home-page ${isDark ? 'home-page--dark' : 'home-page--light'}`}>
       <SEO page="service" />
 
-      <section className="relative overflow-hidden border-b border-brand-black/10 bg-brand-white px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+      <section className="home-surface relative overflow-hidden border-b border-brand-black/10 px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
         <GridLines />
         <div className="relative mx-auto max-w-7xl">
           <Link
             to="/service"
-            className="focus-ring inline-flex items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.18em] text-brand-black transition hover:text-brand-red"
+            className="home-text-link focus-ring inline-flex items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.18em] transition hover:text-brand-red"
           >
             <ServiceIcon name="ArrowRight" className="size-4 rotate-180" />
             {t('nav.service')}
@@ -79,10 +82,10 @@ export default function ServiceDetailPage() {
           <div className="service-detail-hero-grid mt-8 gap-8 lg:items-end">
             <div className="max-w-3xl">
               <SectionLabel>{serviceGroups[service.group] || t('servicePage.eyebrow')}</SectionLabel>
-              <h1 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
+              <h1 className="home-heading mt-6 font-heading text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
                 {service.title}
               </h1>
-              <p className="mt-6 max-w-2xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+              <p className="home-muted mt-6 max-w-2xl text-sm leading-6 sm:text-base sm:leading-7">
                 {narrative.lead}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -110,24 +113,24 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <section className="home-surface relative overflow-hidden px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <GridLines />
         <div className="service-detail-content-grid relative mx-auto max-w-7xl gap-10 lg:items-start">
           <article>
             <SectionLabel>{t('serviceDetail.serviceScope')}</SectionLabel>
-            <h2 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
+            <h2 className="home-heading mt-6 font-heading text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
               {detail.problemTitle}
             </h2>
-            <div className="mt-7 max-w-3xl space-y-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+            <div className="home-muted mt-7 max-w-3xl space-y-5 text-sm leading-6 sm:text-base sm:leading-7">
               <p>{detail.problemIntro}</p>
               <p>{narrative.body}</p>
             </div>
 
             <div className="mt-9 grid gap-3 sm:grid-cols-2">
               {detail.serviceItems.map((item) => (
-                <div key={item} className="flex min-h-14 items-center gap-4 bg-brand-black/[0.055] px-5 py-4">
+                <div key={item} className="home-panel flex min-h-14 items-center gap-4 px-5 py-4">
                   <ServiceIcon name="Check" className="size-5 shrink-0 text-brand-red" />
-                  <span className="font-semibold text-brand-steelDark">{item}</span>
+                  <span className="home-muted font-semibold">{item}</span>
                 </div>
               ))}
               <div className="flex min-h-14 items-center gap-4 bg-brand-red px-5 py-4 text-brand-white">
@@ -161,32 +164,32 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-brand-white px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+      <section className="home-surface relative overflow-hidden px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
         <GridLines />
         <div className="relative mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <SectionLabel>{t('servicePage.eyebrow')}</SectionLabel>
-            <h2 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
+            <h2 className="home-heading mt-6 font-heading text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
               {t('serviceDetail.signsTitle')}
             </h2>
-            <p className="mt-6 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+            <p className="home-muted mt-6 text-sm leading-6 sm:text-base sm:leading-7">
               {t('serviceDetail.signsIntro')}
             </p>
           </div>
 
-          <div className="mt-10 grid gap-px overflow-hidden border border-brand-black/10 bg-brand-black/10 md:grid-cols-2 xl:grid-cols-4">
+          <div className="service-signs-grid mt-10 grid gap-px overflow-hidden border md:grid-cols-2 xl:grid-cols-4">
             {detail.signs.map((sign, index) => (
-              <article key={sign.title} className="bg-brand-white p-6 sm:p-8">
+              <article key={sign.title} className="home-panel p-6 sm:p-8">
                 <p className="font-heading text-5xl font-black text-brand-red">{String(index + 1).padStart(2, '0')}</p>
-                <h3 className="mt-6 font-heading text-2xl font-black uppercase leading-tight text-brand-black">{sign.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-brand-steelDark">{sign.text}</p>
+                <h3 className="home-heading mt-6 font-heading text-2xl font-black uppercase leading-tight">{sign.title}</h3>
+                <p className="home-muted mt-4 text-sm leading-6">{sign.text}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+      <section className="home-surface relative overflow-hidden px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
         <GridLines />
         <div className="service-detail-cta-grid relative mx-auto max-w-7xl gap-8 bg-brand-black p-7 text-brand-white sm:p-10 lg:items-center">
           <div>

@@ -2,21 +2,23 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import Reveal from '../components/Reveal'
+import { useTheme } from '../context/useTheme'
 import { ServiceIcon } from '../data/icons'
 import { getServiceMedia } from '../data/serviceMedia'
 
 export default function ServicePage() {
   const { t } = useTranslation()
+  const { isDark } = useTheme()
   const services = t('services', { returnObjects: true })
   const groups = t('serviceGroups', { returnObjects: true })
 
   return (
-    <main className="bg-brand-white text-brand-black">
+    <main className={`home-page ${isDark ? 'home-page--dark' : 'home-page--light'}`}>
       <SEO page="service" />
-      <section className="relative overflow-hidden border-b border-brand-black/10 bg-brand-white px-4 pb-14 pt-12 sm:px-6 sm:pb-18 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-22">
-        <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
-        <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
-        <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+      <section className="home-surface relative overflow-hidden border-b border-brand-black/10 px-4 pb-14 pt-12 sm:px-6 sm:pb-18 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-22">
+        <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[22%] w-px" />
+        <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[50%] w-px" />
+        <div className="home-grid-line pointer-events-none absolute inset-y-0 right-[22%] w-px" />
         <div className="pointer-events-none absolute -left-[190px] top-12 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
 
         <div className="relative mx-auto max-w-7xl">
@@ -25,20 +27,20 @@ export default function ServicePage() {
               <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
               {t('servicePage.eyebrow')}
             </p>
-            <h1 className="mt-5 max-w-5xl font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-7xl">
+            <h1 className="home-heading mt-5 max-w-5xl font-heading text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-7xl">
               {t('servicePage.title')}
             </h1>
-            <p className="mt-8 max-w-3xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+            <p className="home-muted mt-8 max-w-3xl text-sm leading-6 sm:text-base sm:leading-7">
               {t('servicePage.intro')}
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-24">
-        <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
-        <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
-        <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+      <section className="home-surface relative overflow-hidden px-4 py-14 sm:px-6 sm:py-18 lg:px-8 lg:py-24">
+        <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[22%] w-px" />
+        <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[50%] w-px" />
+        <div className="home-grid-line pointer-events-none absolute inset-y-0 right-[22%] w-px" />
 
         <div className="relative mx-auto grid max-w-7xl gap-6 lg:gap-8">
           {services.map((service, index) => {
@@ -47,7 +49,7 @@ export default function ServicePage() {
 
             return (
               <Reveal key={service.id} delay={index * 0.03}>
-                <article className="group grid overflow-hidden border border-brand-black/8 bg-brand-black/[0.035] shadow-[0_18px_55px_rgba(11,13,16,0.06)] transition hover:border-brand-red/25 hover:bg-brand-white lg:grid-cols-12">
+                <article className="service-list-card home-panel group grid overflow-hidden border shadow-[0_18px_55px_rgba(11,13,16,0.06)] transition hover:border-brand-red/25 lg:grid-cols-12">
                   <div className={`relative min-h-64 overflow-hidden sm:min-h-80 lg:col-span-5 lg:min-h-[420px] ${isEven ? '' : 'lg:order-2'}`}>
                     <img
                       src={media.image}
@@ -66,18 +68,18 @@ export default function ServicePage() {
                       <span className="mr-4 inline-block h-3 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
                       {groups[service.group] || t('servicePage.eyebrow')}
                     </p>
-                    <h2 className="mt-5 max-w-3xl font-heading text-3xl font-black uppercase leading-tight text-brand-black sm:text-4xl lg:text-5xl">
+                    <h2 className="home-heading mt-5 max-w-3xl font-heading text-3xl font-black uppercase leading-tight sm:text-4xl lg:text-5xl">
                       {service.title}
                     </h2>
-                    <p className="mt-6 max-w-3xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+                    <p className="home-muted mt-6 max-w-3xl text-sm leading-6 sm:text-base sm:leading-7">
                       {service.description}
                     </p>
-                    <p className="mt-5 max-w-2xl text-sm font-semibold leading-6 text-brand-steelDark sm:text-base">
+                    <p className="home-muted mt-5 max-w-2xl text-sm font-semibold leading-6 sm:text-base">
                       {service.teaser}
                     </p>
                     <Link
                       to={`/service/${service.id}`}
-                      className="focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
+                      className="home-primary-button focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] transition sm:w-[316px] sm:px-10 sm:text-base"
                     >
                       <span>{t('common.learnMore')}</span>
                       <ServiceIcon name="ArrowRight" className="size-5" />

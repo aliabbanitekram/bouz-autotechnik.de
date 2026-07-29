@@ -247,6 +247,28 @@ img {
   color: var(--home-text);
 }
 
+.service-list-card {
+  border-color: color-mix(in srgb, var(--home-text) 8%, transparent);
+}
+
+.service-list-card:hover {
+  background-color: var(--home-faq-open);
+}
+
+.service-signs-grid {
+  background-color: color-mix(in srgb, var(--home-text) 10%, transparent);
+  border-color: color-mix(in srgb, var(--home-text) 10%, transparent);
+}
+
+.service-whatsapp-button {
+  background-color: #25d366;
+  color: #0b0d10;
+}
+
+.service-whatsapp-button:hover {
+  background-color: #1fb85a;
+}
+
 .home-page--dark .home-hero-car {
   filter: drop-shadow(0 26px 70px rgba(0, 0, 0, 0.48));
   opacity: 0.72;
