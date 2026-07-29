@@ -266,8 +266,10 @@
     "faqText": "Check out our FAQ page or connect with our customer service team. Click below for more information.",
     "faqPrimary": "FAQs",
     "faqSecondary": "Customer Service",
-    "finalTitle": "Does your vehicle need attention?",
-    "finalText": "Briefly describe the issue. We will get back to you with a suitable appointment suggestion."
+    "finalEyebrow": "Car repairs and maintenance",
+    "finalTitle": "Call us now",
+    "finalText": "Briefly describe the issue. We will get back to you with a suitable appointment suggestion.",
+    "finalImageAlt": "Bouz Autotechnik mechanic working in the workshop"
   },
   "appointmentPage": {
     "eyebrow": "Appointment request",

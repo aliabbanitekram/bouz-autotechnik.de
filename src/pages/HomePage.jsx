@@ -43,27 +43,6 @@ const vehicleBrands = [
   'Dacia',
 ]
 
-const staticButtonBase =
-  'focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider transition'
-
-const staticButtonVariants = {
-  primary: 'bg-gradient-to-r from-brand-red to-brand-redDark text-white shadow-red hover:from-brand-redDark hover:to-brand-red',
-  secondary:
-    'border border-brand-steel/35 bg-brand-steelLight/5 text-brand-white hover:border-brand-red hover:text-white',
-}
-
-function StaticButton({ children, variant = 'primary', icon = 'ArrowRight', fullWidth = false }) {
-  return (
-    <button
-      type="button"
-      className={`${staticButtonBase} ${fullWidth ? 'w-full min-h-14 px-8 py-4 text-base' : ''} ${staticButtonVariants[variant]}`}
-    >
-      <span>{children}</span>
-      {icon && <ServiceIcon name={icon} className="size-4" />}
-    </button>
-  )
-}
-
 function VehiclesSection() {
   const { t } = useTranslation()
   const scrollingBrands = [...vehicleBrands, ...vehicleBrands]
@@ -352,18 +331,42 @@ export default function HomePage() {
 
       <HomeFAQTeaser itemIndexes={homeFaqIndexes} disableNavigation />
 
-      <section className="px-4 py-16 bg-hero-vignette sm:px-6 lg:px-8">
-        <Reveal className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold leading-tight uppercase steel-text font-heading sm:text-5xl">
-            {t('home.finalTitle')}
-          </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.finalText')}</p>
-          <div className="flex justify-center mt-8">
-            <StaticButton icon="MessageSquare">
-              {t('nav.contact')}
-            </StaticButton>
+      <section className="relative overflow-hidden bg-brand-white pt-20 text-brand-white sm:pt-24 lg:pt-32">
+        <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+
+        <div className="relative min-h-[360px] overflow-hidden bg-brand-black px-4 py-12 sm:min-h-[390px] sm:px-6 sm:py-14 lg:min-h-[355px] lg:px-8">
+          <img
+            src={aboutWorkshop}
+            alt={t('home.finalImageAlt')}
+            className="pointer-events-none absolute inset-y-0 right-0 h-full w-full object-cover object-[52%_center] opacity-25 mix-blend-luminosity sm:opacity-35 lg:w-[48%] lg:object-[45%_center] lg:opacity-75"
+            loading="lazy"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/45 lg:to-brand-black/10" />
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-12 bg-brand-red sm:h-14 lg:left-[48%] lg:h-24 lg:-skew-x-[22deg]" />
+          <div className="relative mx-auto max-w-7xl">
+            <Reveal className="relative z-10 max-w-2xl">
+              <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
+                <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
+                {t('home.finalEyebrow')}
+              </p>
+              <h2 className="mt-5 font-heading text-4xl font-black uppercase leading-tight text-brand-white sm:text-5xl lg:text-6xl">
+                {t('home.finalTitle')}
+              </h2>
+              <a
+                href={`tel:${t('site.phone').replaceAll(' ', '')}`}
+                className="focus-ring mt-7 inline-flex items-center gap-4 font-heading text-4xl font-black uppercase tracking-wide text-brand-white transition hover:text-brand-red sm:text-5xl lg:text-6xl"
+              >
+                <span>{t('site.phone')}</span>
+                <ServiceIcon name="Phone" className="size-8 text-brand-red sm:size-9" />
+              </a>
+              <p className="mt-5 max-w-xl text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
+                {t('home.finalText')}
+              </p>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
       </section>
     </main>
   )

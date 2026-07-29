@@ -266,8 +266,10 @@
     "faqText": "Besuchen Sie unsere FAQ-Seite oder kontaktieren Sie unser Serviceteam. Hier finden Sie schnell die nächsten Schritte.",
     "faqPrimary": "FAQs",
     "faqSecondary": "Kundenservice",
-    "finalTitle": "Ihr Fahrzeug braucht Aufmerksamkeit?",
-    "finalText": "Schildern Sie kurz Ihr Anliegen. Wir melden uns mit einem passenden Terminvorschlag."
+    "finalEyebrow": "Autoreparatur und Wartung",
+    "finalTitle": "Rufen Sie uns an",
+    "finalText": "Schildern Sie kurz Ihr Anliegen. Wir melden uns mit einem passenden Terminvorschlag.",
+    "finalImageAlt": "Bouz Autotechnik Mechaniker bei der Arbeit in der Werkstatt"
   },
   "appointmentPage": {
     "eyebrow": "Terminanfrage",

@@ -14,23 +14,23 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
       <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
       <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
       <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
-      <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red lg:block" />
+      <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
-        <div className="max-w-2xl">
+      <div className="relative mx-auto max-w-7xl">
+        <div className="max-w-3xl lg:mx-auto lg:text-center">
           <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
             <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
             {t('home.faqEyebrow')}
           </p>
-          <h2 className="mt-5 text-4xl font-black leading-tight uppercase font-heading text-brand-black sm:text-5xl lg:text-6xl">
+          <h2 className="mt-5 font-heading text-4xl font-black leading-tight uppercase text-brand-black sm:text-5xl lg:text-6xl">
             {t('home.faqTitle')}
           </h2>
-          <p className="mt-8 max-w-xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
+          <p className="mt-8 max-w-3xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:mx-auto">
             {t('home.faqText')}
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="mx-auto mt-10 max-w-5xl space-y-4 sm:mt-12">
           {items.map((item, index) => {
             const isOpen = open === index
 
