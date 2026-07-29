@@ -48,9 +48,9 @@ function VehiclesSection() {
   const scrollingBrands = [...vehicleBrands, ...vehicleBrands]
 
   return (
-    <section className="relative px-4 py-16 overflow-hidden bg-brand-white text-brand-black sm:px-6 sm:py-20 lg:px-8">
+    <section className="relative overflow-hidden bg-brand-white px-4 pb-10 pt-16 text-brand-black sm:px-6 sm:pb-12 sm:pt-20 lg:px-8 lg:pb-14">
       <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-steel/20" />
-      <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red lg:block" />
+      <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
       <div className="mx-auto max-w-7xl">
         <Reveal className="max-w-xl mx-auto text-center">
           <p className="font-heading text-xs font-bold uppercase tracking-[0.32em] text-brand-red">
@@ -119,7 +119,7 @@ export default function HomePage() {
         <div className="absolute inset-y-0 left-[50%] -z-30 w-px bg-brand-black/8" />
         <div className="absolute inset-y-0 right-[22%] -z-30 w-px bg-brand-black/8" />
         <div className="absolute inset-y-0 right-0 -z-20 w-[66%] bg-[#f1f2f3] [clip-path:polygon(26%_0,100%_0,100%_100%,0_100%)]" />
-        <div className="absolute -left-16 top-12 -z-10 hidden h-[120px] w-[248px] skew-x-[-20deg] bg-brand-red lg:block" />
+        <div className="absolute -left-16 top-12 -z-10 hidden h-[120px] w-[248px] skew-x-[-20deg] bg-brand-red xl:block" />
 
         <motion.img
           src={heroBmw}
@@ -139,22 +139,22 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-heading text-sm font-black uppercase leading-6 tracking-[0.3em] text-brand-red sm:text-base sm:leading-7">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
               <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
               {t('home.heroEyebrow')}
             </p>
-            <h1 className="mt-5 font-heading text-3xl font-black uppercase leading-[1.08] text-brand-black sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.8rem]">
+            <h1 className="mt-5 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
             <p className="max-w-xl mt-6 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:text-lg lg:leading-8">{t('home.heroText')}</p>
             <div className="flex max-w-xl mt-8">
-              <Link
-                to="/service"
-                className="focus-ring inline-flex min-h-14 items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:px-10 sm:text-base"
+              <button
+                type="button"
+                className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('actions.viewServices')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
-              </Link>
+              </button>
             </div>
           </motion.div>
           <div className="hidden min-h-105 lg:block" aria-hidden="true" />
@@ -169,7 +169,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
-        <div className="pointer-events-none absolute -left-[70px] top-14 hidden h-[124px] w-[270px] skew-x-[-20deg] bg-brand-red lg:block" />
+        <div className="pointer-events-none absolute -left-[70px] top-14 hidden h-[124px] w-[270px] skew-x-[-20deg] bg-brand-red xl:block" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
           <Reveal className="relative pb-20 sm:pb-24">
             <div className="relative overflow-hidden bg-brand-steelLight shadow-[0_22px_60px_rgba(11,13,16,0.16)]">
@@ -227,7 +227,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
-        <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red lg:block" />
+        <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
         <div className="relative mx-auto max-w-7xl">
           <Reveal>
             <div className="max-w-3xl lg:mx-auto lg:text-center">
@@ -256,7 +256,7 @@ export default function HomePage() {
                         type="button"
                         aria-pressed={isActive}
                         onClick={() => handleServiceSelect(service.id)}
-                        className={`focus-ring flex min-h-22 items-center gap-5 px-6 py-5 text-left transition sm:min-h-24 lg:min-h-23 ${
+                        className={`focus-ring flex min-h-22 items-center gap-4 px-4 py-5 text-left transition sm:min-h-24 lg:min-h-23 xl:gap-5 xl:px-6 ${
                           isActive
                             ? 'bg-brand-red text-brand-white shadow-red'
                             : 'bg-brand-black/[0.045] text-brand-black hover:bg-brand-black/[0.075]'
@@ -264,9 +264,9 @@ export default function HomePage() {
                       >
                         <ServiceIcon
                           name={service.icon}
-                          className={`size-9 shrink-0 ${isActive ? 'text-brand-white' : 'text-brand-red'}`}
+                          className={`size-9 shrink-0 lg:size-7 xl:size-9 ${isActive ? 'text-brand-white' : 'text-brand-red'}`}
                         />
-                        <span className="font-heading text-xl font-black leading-tight text-current sm:text-2xl">
+                        <span className="min-w-0 font-heading text-xl font-black leading-tight text-current lg:text-lg xl:text-2xl">
                           {service.title}
                         </span>
                       </button>
@@ -305,26 +305,26 @@ export default function HomePage() {
                         ))}
                       </ul>
                     )}
-                    <Link
-                      to={`/service/${activeService.id}`}
+                    <button
+                      type="button"
                       className="focus-ring mt-6 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base lg:mt-5"
                     >
                       <span>{t('common.learnMore')}</span>
                       <ServiceIcon name="ArrowRight" className="size-5" />
-                    </Link>
+                    </button>
                   </div>
                 </motion.div>
               </div>
             </Reveal>
           )}
           <div className="mt-10">
-            <Link
-              to="/service"
-              className="focus-ring inline-flex min-h-14 items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:px-10 sm:text-base"
+            <button
+              type="button"
+              className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
             >
               <span>{t('actions.viewServices')}</span>
               <ServiceIcon name="ArrowRight" className="size-5" />
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -344,7 +344,7 @@ export default function HomePage() {
             loading="lazy"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/45 lg:to-brand-black/10" />
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-12 bg-brand-red sm:h-14 lg:left-[48%] lg:h-24 lg:-skew-x-[22deg]" />
+          <div className="pointer-events-none absolute bottom-0 right-0 hidden bg-brand-red lg:left-[48%] lg:block lg:h-24 lg:-skew-x-[22deg]" />
           <div className="relative mx-auto max-w-7xl">
             <Reveal className="relative z-10 max-w-2xl">
               <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
@@ -356,14 +356,21 @@ export default function HomePage() {
               </h2>
               <a
                 href={`tel:${t('site.phone').replaceAll(' ', '')}`}
-                className="focus-ring mt-7 inline-flex items-center gap-4 font-heading text-4xl font-black uppercase tracking-wide text-brand-white transition hover:text-brand-red sm:text-5xl lg:text-6xl"
+                className="focus-ring mt-7 inline-flex items-center gap-3 font-heading text-3xl font-black uppercase tracking-wide text-brand-white transition hover:text-brand-red sm:gap-4 sm:text-5xl lg:text-6xl"
               >
+                <ServiceIcon name="Phone" className="size-7 text-brand-red sm:size-9" />
                 <span>{t('site.phone')}</span>
-                <ServiceIcon name="Phone" className="size-8 text-brand-red sm:size-9" />
               </a>
               <p className="mt-5 max-w-xl text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
                 {t('home.finalText')}
               </p>
+              <button
+                type="button"
+                className="focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:w-[316px] sm:px-10 sm:text-base"
+              >
+                <span>{t('nav.contact')}</span>
+                <ServiceIcon name="ArrowRight" className="size-5" />
+              </button>
             </Reveal>
           </div>
         </div>

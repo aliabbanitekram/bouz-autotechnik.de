@@ -48,7 +48,7 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
                   className="focus-ring flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7 sm:py-6"
                   onClick={() => setOpen(isOpen ? -1 : index)}
                 >
-                  <span className="font-heading text-xl font-black leading-tight text-brand-black sm:text-2xl lg:text-[1.45rem]">
+                  <span className="font-heading text-lg font-black leading-tight text-brand-black sm:text-xl lg:text-[1.35rem]">
                     {item.question}
                   </span>
                   <ServiceIcon
@@ -68,7 +68,7 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
             {disableNavigation ? (
               <button
                 type="button"
-                className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-auto sm:px-10 sm:text-base lg:w-full"
+                className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('home.faqPrimary')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
