@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -42,27 +42,6 @@ const vehicleBrands = [
   'Tesla',
   'Dacia',
 ]
-
-const staticButtonBase =
-  'focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider transition'
-
-const staticButtonVariants = {
-  primary: 'bg-gradient-to-r from-brand-red to-brand-redDark text-white shadow-red hover:from-brand-redDark hover:to-brand-red',
-  secondary:
-    'border border-brand-steel/35 bg-brand-steelLight/5 text-brand-white hover:border-brand-red hover:text-white',
-}
-
-function StaticButton({ children, variant = 'primary', icon = 'ArrowRight', fullWidth = false }) {
-  return (
-    <button
-      type="button"
-      className={`${staticButtonBase} ${fullWidth ? 'w-full min-h-14 px-8 py-4 text-base' : ''} ${staticButtonVariants[variant]}`}
-    >
-      <span>{children}</span>
-      {icon && <ServiceIcon name={icon} className="size-4" />}
-    </button>
-  )
-}
 
 function VehiclesSection() {
   const { t } = useTranslation()
@@ -119,11 +98,18 @@ export default function HomePage() {
   const aboutParagraphs = t('home.aboutParagraphs', { returnObjects: true })
   const homeServices = services
   const [activeServiceId, setActiveServiceId] = useState(homeServices[0]?.id)
+  const serviceDetailRef = useRef(null)
   const activeService = homeServices.find((service) => service.id === activeServiceId) ?? homeServices[0]
   const activeMedia = activeService ? getServiceMedia(activeService.id) : null
   const detailLanguage = i18n.resolvedLanguage?.startsWith('de') ? 'de' : 'en'
   const activeDetail = activeService ? serviceDetailContent[detailLanguage]?.[activeService.id] : null
   const serviceScope = activeDetail?.serviceItems?.slice(0, 3) ?? []
+  const handleServiceSelect = (serviceId) => {
+    setActiveServiceId(serviceId)
+    window.setTimeout(() => {
+      serviceDetailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 80)
+  }
 
   return (
     <main>
@@ -241,9 +227,10 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red lg:block" />
         <div className="relative mx-auto max-w-7xl">
           <Reveal>
-            <div className="max-w-3xl">
+            <div className="max-w-3xl lg:mx-auto lg:text-center">
               <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
                 <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
                 {t('home.servicesEyebrow')}
@@ -268,7 +255,7 @@ export default function HomePage() {
                         key={service.id}
                         type="button"
                         aria-pressed={isActive}
-                        onClick={() => setActiveServiceId(service.id)}
+                        onClick={() => handleServiceSelect(service.id)}
                         className={`focus-ring flex min-h-22 items-center gap-5 px-6 py-5 text-left transition sm:min-h-24 lg:min-h-23 ${
                           isActive
                             ? 'bg-brand-red text-brand-white shadow-red'
@@ -287,40 +274,46 @@ export default function HomePage() {
                   })}
                 </div>
 
-                <div className="overflow-hidden bg-brand-black/[0.04] lg:col-span-3">
+                <motion.div
+                  ref={serviceDetailRef}
+                  key={activeService.id}
+                  className="scroll-mt-28 overflow-hidden bg-brand-black/[0.035] sm:scroll-mt-24 lg:col-span-7"
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.34, ease: 'easeOut' }}
+                >
                   <img
                     src={activeMedia.image}
                     alt={activeService.title}
-                    className="h-72 w-full object-cover sm:h-95 lg:h-full"
+                    className="h-72 w-full object-cover sm:h-95 lg:h-[238px] xl:h-[258px]"
                     loading="lazy"
                   />
-                </div>
-
-                <div className="flex flex-col justify-center lg:col-span-4">
-                  <h3 className="font-heading text-3xl font-black leading-tight text-brand-black sm:text-4xl">
-                    {activeService.title}
-                  </h3>
-                  <p className="mt-5 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7">
-                    {activeService.description}
-                  </p>
-                  {serviceScope.length > 0 && (
-                    <ul className="mt-7 space-y-4 text-sm font-semibold leading-6 text-brand-steelDark sm:text-base">
-                      {serviceScope.map((item) => (
-                        <li key={item} className="flex gap-4">
-                          <ServiceIcon name="Check" className="mt-1 size-5 shrink-0 text-brand-red" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <Link
-                    to={`/service/${activeService.id}`}
-                    className="focus-ring mt-8 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base"
-                  >
-                    <span>{t('common.learnMore')}</span>
-                    <ServiceIcon name="ArrowRight" className="size-5" />
-                  </Link>
-                </div>
+                  <div className="p-6 sm:p-8 lg:p-6 xl:p-7">
+                    <h3 className="font-heading text-3xl font-black leading-tight text-brand-black sm:text-4xl lg:text-[2.45rem] xl:text-[2.75rem]">
+                      {activeService.title}
+                    </h3>
+                    <p className="mt-4 max-w-3xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:mt-3">
+                      {activeService.description}
+                    </p>
+                    {serviceScope.length > 0 && (
+                      <ul className="mt-5 grid gap-3 text-sm font-semibold leading-6 text-brand-steelDark sm:grid-cols-3 sm:text-base lg:mt-4 lg:gap-4">
+                        {serviceScope.map((item) => (
+                          <li key={item} className="flex gap-3">
+                            <ServiceIcon name="Check" className="mt-1 size-5 shrink-0 text-brand-red" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <Link
+                      to={`/service/${activeService.id}`}
+                      className="focus-ring mt-6 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base lg:mt-5"
+                    >
+                      <span>{t('common.learnMore')}</span>
+                      <ServiceIcon name="ArrowRight" className="size-5" />
+                    </Link>
+                  </div>
+                </motion.div>
               </div>
             </Reveal>
           )}
@@ -338,18 +331,42 @@ export default function HomePage() {
 
       <HomeFAQTeaser itemIndexes={homeFaqIndexes} disableNavigation />
 
-      <section className="px-4 py-16 bg-hero-vignette sm:px-6 lg:px-8">
-        <Reveal className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold leading-tight uppercase steel-text font-heading sm:text-5xl">
-            {t('home.finalTitle')}
-          </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{t('home.finalText')}</p>
-          <div className="flex justify-center mt-8">
-            <StaticButton icon="MessageSquare">
-              {t('nav.contact')}
-            </StaticButton>
+      <section className="relative overflow-hidden bg-brand-white pt-20 text-brand-white sm:pt-24 lg:pt-32">
+        <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
+        <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
+
+        <div className="relative min-h-[360px] overflow-hidden bg-brand-black px-4 py-12 sm:min-h-[390px] sm:px-6 sm:py-14 lg:min-h-[355px] lg:px-8">
+          <img
+            src={aboutWorkshop}
+            alt={t('home.finalImageAlt')}
+            className="pointer-events-none absolute inset-y-0 right-0 h-full w-full object-cover object-[52%_center] opacity-25 mix-blend-luminosity sm:opacity-35 lg:w-[48%] lg:object-[45%_center] lg:opacity-75"
+            loading="lazy"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/45 lg:to-brand-black/10" />
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-12 bg-brand-red sm:h-14 lg:left-[48%] lg:h-24 lg:-skew-x-[22deg]" />
+          <div className="relative mx-auto max-w-7xl">
+            <Reveal className="relative z-10 max-w-2xl">
+              <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
+                <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
+                {t('home.finalEyebrow')}
+              </p>
+              <h2 className="mt-5 font-heading text-4xl font-black uppercase leading-tight text-brand-white sm:text-5xl lg:text-6xl">
+                {t('home.finalTitle')}
+              </h2>
+              <a
+                href={`tel:${t('site.phone').replaceAll(' ', '')}`}
+                className="focus-ring mt-7 inline-flex items-center gap-4 font-heading text-4xl font-black uppercase tracking-wide text-brand-white transition hover:text-brand-red sm:text-5xl lg:text-6xl"
+              >
+                <span>{t('site.phone')}</span>
+                <ServiceIcon name="Phone" className="size-8 text-brand-red sm:size-9" />
+              </a>
+              <p className="mt-5 max-w-xl text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
+                {t('home.finalText')}
+              </p>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
       </section>
     </main>
   )
