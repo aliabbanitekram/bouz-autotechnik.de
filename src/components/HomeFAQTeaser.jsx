@@ -68,7 +68,7 @@ export default function HomeFAQTeaser({ itemIndexes, disableNavigation = false }
             {disableNavigation ? (
               <button
                 type="button"
-                className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-auto sm:px-10 sm:text-base lg:w-full"
+                className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('home.faqPrimary')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />

@@ -139,18 +139,18 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-heading text-sm font-black uppercase leading-6 tracking-[0.3em] text-brand-red sm:text-base sm:leading-7">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
               <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
               {t('home.heroEyebrow')}
             </p>
-            <h1 className="mt-5 font-heading text-3xl font-black uppercase leading-[1.08] text-brand-black sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.8rem]">
+            <h1 className="mt-5 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
             <p className="max-w-xl mt-6 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:text-lg lg:leading-8">{t('home.heroText')}</p>
             <div className="flex max-w-xl mt-8">
               <Link
                 to="/service"
-                className="focus-ring inline-flex min-h-14 items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:px-10 sm:text-base"
+                className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('actions.viewServices')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
@@ -320,7 +320,7 @@ export default function HomePage() {
           <div className="mt-10">
             <Link
               to="/service"
-              className="focus-ring inline-flex min-h-14 items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:px-10 sm:text-base"
+              className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
             >
               <span>{t('actions.viewServices')}</span>
               <ServiceIcon name="ArrowRight" className="size-5" />
@@ -358,12 +358,19 @@ export default function HomePage() {
                 href={`tel:${t('site.phone').replaceAll(' ', '')}`}
                 className="focus-ring mt-7 inline-flex items-center gap-4 font-heading text-4xl font-black uppercase tracking-wide text-brand-white transition hover:text-brand-red sm:text-5xl lg:text-6xl"
               >
-                <span>{t('site.phone')}</span>
                 <ServiceIcon name="Phone" className="size-8 text-brand-red sm:size-9" />
+                <span>{t('site.phone')}</span>
               </a>
               <p className="mt-5 max-w-xl text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
                 {t('home.finalText')}
               </p>
+              <Link
+                to="/kontakt"
+                className="focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:w-[316px] sm:px-10 sm:text-base"
+              >
+                <span>{t('nav.contact')}</span>
+                <ServiceIcon name="ArrowRight" className="size-5" />
+              </Link>
             </Reveal>
           </div>
         </div>
