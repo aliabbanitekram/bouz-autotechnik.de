@@ -48,7 +48,7 @@ function VehiclesSection() {
   const scrollingBrands = [...vehicleBrands, ...vehicleBrands]
 
   return (
-    <section className="relative overflow-hidden bg-brand-white px-4 pb-10 pt-16 text-brand-black sm:px-6 sm:pb-12 sm:pt-20 lg:px-8 lg:pb-14">
+    <section className="relative px-4 pt-16 pb-10 overflow-hidden bg-brand-white text-brand-black sm:px-6 sm:pb-12 sm:pt-20 lg:px-8 lg:pb-14">
       <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-steel/20" />
       <div className="pointer-events-none absolute -left-[72px] top-14 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
       <div className="mx-auto max-w-7xl">
@@ -143,18 +143,18 @@ export default function HomePage() {
               <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
               {t('home.heroEyebrow')}
             </p>
-            <h1 className="mt-5 font-heading text-4xl font-black uppercase leading-tight text-brand-black sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-black leading-tight uppercase font-heading text-brand-black sm:text-5xl lg:text-6xl">
               <span className="block">{t('home.heroTitle')}</span>
             </h1>
             <p className="max-w-xl mt-6 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:text-lg lg:leading-8">{t('home.heroText')}</p>
             <div className="flex max-w-xl mt-8">
-              <button
-                type="button"
+              <Link
+                to="/service"
                 className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('actions.viewServices')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
-              </button>
+              </Link>
             </div>
           </motion.div>
           <div className="hidden min-h-105 lg:block" aria-hidden="true" />
@@ -185,7 +185,7 @@ export default function HomePage() {
                 <img
                   src={meisterBadge}
                   alt="Meisterbetrieb der Kfz-Innung"
-                  className="h-32 w-auto sm:h-40 lg:h-44"
+                  className="w-auto h-32 sm:h-40 lg:h-44"
                   loading="lazy"
                 />
               </span>
@@ -223,7 +223,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-4 py-16 bg-brand-white text-brand-black sm:px-6 lg:px-8">
+      <section className="relative px-4 py-16 overflow-hidden bg-brand-white text-brand-black sm:px-6 lg:px-8">
         <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
@@ -266,7 +266,7 @@ export default function HomePage() {
                           name={service.icon}
                           className={`size-9 shrink-0 lg:size-7 xl:size-9 ${isActive ? 'text-brand-white' : 'text-brand-red'}`}
                         />
-                        <span className="min-w-0 font-heading text-xl font-black leading-tight text-current lg:text-lg xl:text-2xl">
+                        <span className="min-w-0 text-xl font-black leading-tight text-current font-heading lg:text-lg xl:text-2xl">
                           {service.title}
                         </span>
                       </button>
@@ -292,11 +292,11 @@ export default function HomePage() {
                     <h3 className="font-heading text-3xl font-black leading-tight text-brand-black sm:text-4xl lg:text-[2.45rem] xl:text-[2.75rem]">
                       {activeService.title}
                     </h3>
-                    <p className="mt-4 max-w-3xl text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:mt-3">
+                    <p className="max-w-3xl mt-4 text-sm leading-6 text-brand-steelDark sm:text-base sm:leading-7 lg:mt-3">
                       {activeService.description}
                     </p>
                     {serviceScope.length > 0 && (
-                      <ul className="mt-5 grid gap-3 text-sm font-semibold leading-6 text-brand-steelDark sm:grid-cols-3 sm:text-base lg:mt-4 lg:gap-4">
+                      <ul className="grid gap-3 mt-5 text-sm font-semibold leading-6 text-brand-steelDark sm:grid-cols-3 sm:text-base lg:mt-4 lg:gap-4">
                         {serviceScope.map((item) => (
                           <li key={item} className="flex gap-3">
                             <ServiceIcon name="Check" className="mt-1 size-5 shrink-0 text-brand-red" />
@@ -305,33 +305,33 @@ export default function HomePage() {
                         ))}
                       </ul>
                     )}
-                    <button
-                      type="button"
+                    <Link
+                      to={`/service/${activeService.id}`}
                       className="focus-ring mt-6 inline-flex w-fit items-center gap-3 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-red transition hover:text-brand-redDark sm:text-base lg:mt-5"
                     >
                       <span>{t('common.learnMore')}</span>
                       <ServiceIcon name="ArrowRight" className="size-5" />
-                    </button>
+                    </Link>
                   </div>
                 </motion.div>
               </div>
             </Reveal>
           )}
           <div className="mt-10">
-            <button
-              type="button"
+            <Link
+              to="/service"
               className="focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-black px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-red sm:w-[316px] sm:px-10 sm:text-base"
             >
               <span>{t('actions.viewServices')}</span>
               <ServiceIcon name="ArrowRight" className="size-5" />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
 
       <HomeFAQTeaser itemIndexes={homeFaqIndexes} disableNavigation />
 
-      <section className="relative overflow-hidden bg-brand-white pt-20 text-brand-white sm:pt-24 lg:pt-32">
+      <section className="relative pt-20 overflow-hidden bg-brand-white text-brand-white sm:pt-24 lg:pt-32">
         <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-black/8" />
         <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-black/8" />
@@ -343,7 +343,7 @@ export default function HomePage() {
             className="pointer-events-none absolute inset-y-0 right-0 h-full w-full object-cover object-[52%_center] opacity-25 mix-blend-luminosity sm:opacity-35 lg:w-[48%] lg:object-[45%_center] lg:opacity-75"
             loading="lazy"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/45 lg:to-brand-black/10" />
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/45 lg:to-brand-black/10" />
           <div className="pointer-events-none absolute bottom-0 right-0 hidden bg-brand-red lg:left-[48%] lg:block lg:h-24 lg:-skew-x-[22deg]" />
           <div className="relative mx-auto max-w-7xl">
             <Reveal className="relative z-10 max-w-2xl">
@@ -351,26 +351,26 @@ export default function HomePage() {
                 <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
                 {t('home.finalEyebrow')}
               </p>
-              <h2 className="mt-5 font-heading text-4xl font-black uppercase leading-tight text-brand-white sm:text-5xl lg:text-6xl">
+              <h2 className="mt-5 text-4xl font-black leading-tight uppercase font-heading text-brand-white sm:text-5xl lg:text-6xl">
                 {t('home.finalTitle')}
               </h2>
               <a
                 href={`tel:${t('site.phone').replaceAll(' ', '')}`}
-                className="focus-ring mt-7 inline-flex items-center gap-3 font-heading text-3xl font-black uppercase tracking-wide text-brand-white transition hover:text-brand-red sm:gap-4 sm:text-5xl lg:text-6xl"
+                className="inline-flex items-center gap-3 text-3xl font-black tracking-wide uppercase transition focus-ring mt-7 font-heading text-brand-white hover:text-brand-red sm:gap-4 sm:text-5xl lg:text-6xl"
               >
                 <ServiceIcon name="Phone" className="size-7 text-brand-red sm:size-9" />
                 <span>{t('site.phone')}</span>
               </a>
-              <p className="mt-5 max-w-xl text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
+              <p className="max-w-xl mt-5 text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
                 {t('home.finalText')}
               </p>
-              <button
-                type="button"
+              <Link
+                to="/kontakt"
                 className="focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:w-[316px] sm:px-10 sm:text-base"
               >
                 <span>{t('nav.contact')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
-              </button>
+              </Link>
             </Reveal>
           </div>
         </div>
