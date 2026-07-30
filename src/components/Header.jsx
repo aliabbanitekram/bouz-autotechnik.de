@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../assets/bouz-autotechnik-logo-clean.png'
+import logoDark from '../assets/bouz-autotechnik-logo-clean.png'
+import logoLight from '../assets/bouz-autotechnik-logo-light.png'
 import { useTheme } from '../context/useTheme'
 import { ServiceIcon } from '../data/icons'
 import { navItems } from '../data/navigation'
@@ -71,11 +72,11 @@ export default function Header() {
     >
       <div className="mx-auto flex h-28 w-full max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-[92px] lg:px-8">
         <Link to="/" className="flex items-center gap-3 rounded-md focus-ring" onClick={() => setOpen(false)}>
-          <span className="flex h-28 w-28 shrink-0 items-center justify-center sm:h-24 sm:w-24 lg:h-24 lg:w-24">
+          <span className="flex items-center justify-center overflow-hidden h-28 w-28 shrink-0 sm:h-24 sm:w-24 lg:h-24 lg:w-24">
             <img
-              src={logo}
+              src={isDark ? logoDark : logoLight}
               alt={t('site.name')}
-              className="h-full w-full object-contain"
+              className={`h-full w-full object-contain${!isDark ? ' scale-[0.7]' : ''}`}
               loading="eager"
             />
           </span>
