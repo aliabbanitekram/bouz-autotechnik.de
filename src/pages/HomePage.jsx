@@ -6,6 +6,7 @@ import heroBmw from '../assets/hero/carserv-bmw.png'
 import meisterBadge from '../assets/logo-kfz-meisterbetrieb-menden.png'
 import aboutWorkshop from '../assets/services/diagnostic-service-03.jpg'
 import HomeFAQTeaser from '../components/HomeFAQTeaser'
+import GoogleMapsEmbed from '../components/GoogleMapsEmbed'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
 import WhatsAppContact from '../components/WhatsAppContact'
@@ -346,8 +347,8 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/45 lg:to-brand-black/10" />
           <div className="pointer-events-none absolute bottom-0 right-0 hidden bg-brand-red lg:left-[48%] lg:block lg:h-24 lg:-skew-x-[22deg]" />
-          <div className="relative mx-auto max-w-7xl">
-            <Reveal className="relative z-10 max-w-2xl">
+          <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,0.85fr)]">
+            <Reveal className="max-w-2xl">
               <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
                 <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
                 {t('home.finalEyebrow')}
@@ -372,6 +373,12 @@ export default function HomePage() {
                 <span>{t('nav.contact')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
               </Link>
+            </Reveal>
+            <Reveal className="overflow-hidden border border-brand-white/12 bg-brand-black/75 shadow-[0_28px_70px_rgba(0,0,0,0.35)]" delay={0.08}>
+              <GoogleMapsEmbed
+                className="min-h-[300px] w-full lg:min-h-[330px]"
+                fallbackClassName="min-h-[300px] lg:min-h-[330px]"
+              />
             </Reveal>
           </div>
         </div>

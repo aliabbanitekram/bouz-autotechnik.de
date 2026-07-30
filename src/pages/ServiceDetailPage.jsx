@@ -33,11 +33,11 @@ function DarkButton({ children, href, icon = 'ArrowRight', className = '', exter
 
   return (
     <a
-      className={`${buttonClass} focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] transition sm:w-[316px] sm:px-10 sm:text-base ${className}`}
+      className={`${buttonClass} focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-3 px-6 py-4 font-heading text-sm font-black uppercase tracking-[0.08em] transition sm:w-[316px] sm:gap-4 sm:px-10 sm:text-base sm:tracking-[0.14em] ${className}`}
       href={href}
       {...props}
     >
-      <span>{children}</span>
+      <span className="whitespace-nowrap">{children}</span>
       {icon === 'WhatsApp' ? <WhatsAppIcon className="size-5" /> : <ServiceIcon name={icon} className="size-5" />}
     </a>
   )
@@ -56,7 +56,7 @@ export default function ServiceDetailPage() {
   const media = getServiceMedia(service.id)
   const narrative = getServiceNarrative(i18n.language, service.id)
   const detail = getServiceDetailContent(i18n.language, service.id)
-  const trust = t('serviceDetail.trust', { returnObjects: true })
+  // const trust = t('serviceDetail.trust', { returnObjects: true })
   const phone = t('site.phone')
   const telHref = `tel:${phone.replace(/\s/g, '')}`
   const whatsappNumber = phone.replace(/\D/g, '')
@@ -115,7 +115,7 @@ export default function ServiceDetailPage() {
 
       <section className="home-surface relative overflow-hidden px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <GridLines />
-        <div className="service-detail-content-grid relative mx-auto max-w-7xl gap-10 lg:items-start">
+        <div className="relative mx-auto max-w-7xl">
           <article>
             <SectionLabel>{t('serviceDetail.serviceScope')}</SectionLabel>
             <h2 className="home-heading mt-6 font-heading text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
@@ -140,7 +140,7 @@ export default function ServiceDetailPage() {
             </div>
           </article>
 
-          <aside className="bg-brand-black p-6 text-brand-white shadow-[0_28px_70px_rgba(11,13,16,0.18)] sm:p-8 lg:sticky lg:top-28">
+          {/* <aside className="bg-brand-black p-6 text-brand-white shadow-[0_28px_70px_rgba(11,13,16,0.18)] sm:p-8 lg:sticky lg:top-28">
             <SectionLabel>{t('serviceDetail.whyBouz')}</SectionLabel>
             <h2 className="mt-6 font-heading text-3xl font-black uppercase leading-tight text-brand-white sm:text-4xl">
               {detail.localTitle}
@@ -160,7 +160,7 @@ export default function ServiceDetailPage() {
                 </div>
               ))}
             </div>
-          </aside>
+          </aside> */}
         </div>
       </section>
 

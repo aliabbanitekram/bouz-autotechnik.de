@@ -44,20 +44,20 @@ function WhatsAppContent({ layout = 'row', disabled = false }) {
       {disabled ? (
         <button
           type="button"
-          className={`focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-whatsapp px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.18em] text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover sm:w-[316px] sm:px-10 sm:text-base ${isRow ? 'mx-auto md:mx-0' : 'mx-auto'}`}
+          className={`focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-3 bg-brand-whatsapp px-6 py-4 font-heading text-sm font-black uppercase tracking-[0.08em] text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover sm:w-[316px] sm:gap-4 sm:px-10 sm:text-base sm:tracking-[0.14em] ${isRow ? 'mx-auto md:mx-0' : 'mx-auto'}`}
         >
           <WhatsAppIcon className="size-5" />
-          <span>{t('home.whatsappCta')}</span>
+          <span className="whitespace-nowrap">{t('home.whatsappCta')}</span>
         </button>
       ) : (
         <a
-          className={`focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-whatsapp px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.18em] text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover sm:w-[316px] sm:px-10 sm:text-base ${isRow ? 'mx-auto md:mx-0' : 'mx-auto'}`}
+          className={`focus-ring inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-3 bg-brand-whatsapp px-6 py-4 font-heading text-sm font-black uppercase tracking-[0.08em] text-brand-black shadow-lg shadow-black/20 transition hover:bg-brand-whatsappHover sm:w-[316px] sm:gap-4 sm:px-10 sm:text-base sm:tracking-[0.14em] ${isRow ? 'mx-auto md:mx-0' : 'mx-auto'}`}
           href={whatsappUrl}
           target="_blank"
           rel="noreferrer"
         >
           <WhatsAppIcon className="size-5" />
-          <span>{t('home.whatsappCta')}</span>
+          <span className="whitespace-nowrap">{t('home.whatsappCta')}</span>
         </a>
       )}
     </>
