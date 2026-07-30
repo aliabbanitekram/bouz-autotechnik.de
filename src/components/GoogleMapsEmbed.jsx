@@ -11,17 +11,17 @@ export default function GoogleMapsEmbed() {
 
   if (!isServiceAllowed('google-maps')) {
     return (
-      <div className="flex min-h-96 flex-col items-center justify-center bg-brand-black p-6 text-center">
-        <span className="flex size-14 items-center justify-center rounded-md bg-brand-red/12 text-brand-red">
+      <div className="home-panel flex min-h-96 flex-col items-center justify-center p-6 text-center">
+        <span className="flex size-14 items-center justify-center bg-brand-red/12 text-brand-red">
           <ServiceIcon name="MapPin" className="size-7" />
         </span>
-        <h3 className="mt-5 font-heading text-2xl font-bold uppercase text-brand-white">
+        <h3 className="home-heading mt-5 font-heading text-2xl font-black uppercase">
           {t('cookie.disabledMapTitle')}
         </h3>
-        <p className="mt-3 max-w-md text-sm leading-6 text-brand-text">{t('cookie.disabledMapText')}</p>
+        <p className="home-muted mt-3 max-w-md text-sm leading-6">{t('cookie.disabledMapText')}</p>
         <button
           type="button"
-          className="focus-ring mt-6 rounded-md bg-brand-red px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-white hover:bg-brand-redDark"
+          className="focus-ring mt-6 bg-brand-red px-5 py-3 font-heading text-sm font-bold uppercase tracking-wider text-white transition hover:bg-brand-redDark"
           onClick={openSettings}
         >
           {t('actions.mapSettings')}
