@@ -366,19 +366,21 @@ export default function HomePage() {
               <p className="max-w-xl mt-5 text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
                 {t('home.finalText')}
               </p>
+            </Reveal>
+            <Reveal className="grid gap-5" delay={0.08}>
+              <div className="overflow-hidden border border-brand-white/12 bg-brand-black/75 shadow-[0_28px_70px_rgba(0,0,0,0.35)]">
+                <GoogleMapsEmbed
+                  className="min-h-[300px] w-full lg:min-h-[330px]"
+                  fallbackClassName="min-h-[300px] lg:min-h-[330px]"
+                />
+              </div>
               <Link
                 to="/kontakt"
-                className="focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:w-[316px] sm:px-10 sm:text-base"
+                className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:px-10 sm:text-base"
               >
                 <span>{t('nav.contact')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
               </Link>
-            </Reveal>
-            <Reveal className="overflow-hidden border border-brand-white/12 bg-brand-black/75 shadow-[0_28px_70px_rgba(0,0,0,0.35)]" delay={0.08}>
-              <GoogleMapsEmbed
-                className="min-h-[300px] w-full lg:min-h-[330px]"
-                fallbackClassName="min-h-[300px] lg:min-h-[330px]"
-              />
             </Reveal>
           </div>
         </div>
