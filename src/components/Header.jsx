@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../assets/bouz-autotechnik-logo-clean.png'
+import logoDark from '../assets/bouz-autotechnik-logo-clean.png'
+import logoLight from '../assets/bouz-autotechnik-logo-light.png'
 import { useTheme } from '../context/useTheme'
 import { ServiceIcon } from '../data/icons'
 import { navItems } from '../data/navigation'
@@ -71,11 +72,11 @@ export default function Header() {
     >
       <div className="mx-auto flex h-28 w-full max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-[92px] lg:px-8">
         <Link to="/" className="flex items-center gap-3 rounded-md focus-ring" onClick={() => setOpen(false)}>
-          <span className="flex h-28 w-28 shrink-0 items-center justify-center sm:h-24 sm:w-24 lg:h-24 lg:w-24">
+          <span className="flex items-center justify-center overflow-hidden h-28 w-28 shrink-0 sm:h-24 sm:w-24 lg:h-24 lg:w-24">
             <img
-              src={logo}
+              src={isDark ? logoDark : logoLight}
               alt={t('site.name')}
-              className="h-full w-full object-contain"
+              className={`h-full w-full object-contain${!isDark ? ' scale-[0.7]' : ''}`}
               loading="eager"
             />
           </span>
@@ -103,8 +104,6 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <ThemeToggle />
-          <LanguageToggle isDark={isDark} />
           <button
             type="button"
             className={`inline-flex items-center justify-center border transition focus-ring size-12 hover:border-brand-red hover:text-brand-red ${
@@ -140,6 +139,10 @@ export default function Header() {
               </NavLink>
             ))}
           </nav>
+          <div className={`mt-5 flex items-center gap-3 border-t pt-5 ${isDark ? 'border-brand-white/10' : 'border-brand-black/10'}`}>
+            <ThemeToggle />
+            <LanguageToggle isDark={isDark} />
+          </div>
         </div>
       )}
     </header>

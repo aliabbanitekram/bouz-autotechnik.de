@@ -5,13 +5,13 @@ import { useConsent } from './CookieConsent/useConsent'
 const mapSrc =
   'https://maps.google.com/maps?q=K%C3%B6lner%20Str.%2011%2C%2047805%20Krefeld%2C%20Germany&t=&z=15&ie=UTF8&iwloc=&output=embed'
 
-export default function GoogleMapsEmbed() {
+export default function GoogleMapsEmbed({ className = 'min-h-96 w-full', fallbackClassName = 'min-h-96' }) {
   const { t } = useTranslation()
   const { isServiceAllowed, openSettings } = useConsent()
 
   if (!isServiceAllowed('google-maps')) {
     return (
-      <div className="home-panel flex min-h-96 flex-col items-center justify-center p-6 text-center">
+      <div className={`home-panel flex ${fallbackClassName} flex-col items-center justify-center p-6 text-center`}>
         <span className="flex size-14 items-center justify-center bg-brand-red/12 text-brand-red">
           <ServiceIcon name="MapPin" className="size-7" />
         </span>
@@ -34,7 +34,7 @@ export default function GoogleMapsEmbed() {
     <iframe
       title={t('contactPage.mapTitle')}
       src={mapSrc}
-      className="min-h-96 w-full"
+      className={className}
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
       allowFullScreen

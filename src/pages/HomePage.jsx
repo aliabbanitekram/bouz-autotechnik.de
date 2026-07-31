@@ -6,6 +6,7 @@ import heroBmw from '../assets/hero/carserv-bmw.png'
 import meisterBadge from '../assets/logo-kfz-meisterbetrieb-menden.png'
 import aboutWorkshop from '../assets/services/diagnostic-service-03.jpg'
 import HomeFAQTeaser from '../components/HomeFAQTeaser'
+import GoogleMapsEmbed from '../components/GoogleMapsEmbed'
 import Reveal from '../components/Reveal'
 import SEO from '../components/SEO'
 import WhatsAppContact from '../components/WhatsAppContact'
@@ -217,7 +218,7 @@ export default function HomePage() {
             </div>
             <button
               type="button"
-              className="home-text-link focus-ring mt-9 inline-flex items-center gap-4 font-heading text-sm font-black uppercase tracking-[0.28em] transition hover:text-brand-red sm:text-base"
+              className="focus-ring mt-9 inline-flex items-center gap-4 font-heading text-sm font-black uppercase tracking-[0.28em] text-brand-red transition hover:text-brand-redDark sm:text-base"
             >
               <span>{t('home.aboutCta')}</span>
               <ServiceIcon name="ArrowRight" className="size-5" />
@@ -332,42 +333,52 @@ export default function HomePage() {
 
       <HomeFAQTeaser itemIndexes={homeFaqIndexes} disableNavigation />
 
-      <section className="home-surface relative pt-20 overflow-hidden text-brand-white sm:pt-24 lg:pt-32">
-        <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[22%] w-px" />
-        <div className="home-grid-line pointer-events-none absolute inset-y-0 left-[50%] w-px" />
-        <div className="home-grid-line pointer-events-none absolute inset-y-0 right-[22%] w-px" />
+      <section className="relative overflow-hidden bg-brand-black py-20 text-brand-white sm:py-24 lg:py-32">
+        <div className="pointer-events-none absolute inset-y-0 left-[22%] w-px bg-brand-white/10" />
+        <div className="pointer-events-none absolute inset-y-0 left-[50%] w-px bg-brand-white/10" />
+        <div className="pointer-events-none absolute inset-y-0 right-[22%] w-px bg-brand-white/10" />
+        <div className="home-red-accent pointer-events-none absolute -left-[72px] top-14 z-20 hidden h-28 w-[232px] skew-x-[-20deg] bg-brand-red xl:block" />
 
-        <div className="relative min-h-[360px] overflow-hidden bg-brand-black px-4 py-12 sm:min-h-[390px] sm:px-6 sm:py-14 lg:min-h-[355px] lg:px-8">
+        <div className="relative overflow-hidden px-4 sm:px-6 lg:px-8">
           <img
             src={aboutWorkshop}
             alt={t('home.finalImageAlt')}
-            className="pointer-events-none absolute inset-y-0 right-0 h-full w-full object-cover object-[52%_center] opacity-25 mix-blend-luminosity sm:opacity-35 lg:w-[48%] lg:object-[45%_center] lg:opacity-75"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-10 mix-blend-luminosity"
             loading="lazy"
           />
-          <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-brand-black via-brand-black/92 to-brand-black/45 lg:to-brand-black/10" />
-          <div className="pointer-events-none absolute bottom-0 right-0 hidden bg-brand-red lg:left-[48%] lg:block lg:h-24 lg:-skew-x-[22deg]" />
-          <div className="relative mx-auto max-w-7xl">
-            <Reveal className="relative z-10 max-w-2xl">
-              <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-brand-red sm:text-sm">
+          <div className="pointer-events-none absolute inset-0 bg-brand-black/82" />
+
+          <div className="relative z-10 mx-auto max-w-7xl">
+            <Reveal className="mx-auto max-w-5xl text-center">
+              <p className="font-heading text-xs font-bold uppercase tracking-[0.32em] text-brand-red sm:text-sm">
                 <span className="mr-5 inline-block h-4 w-2 skew-x-[-18deg] bg-brand-red align-middle" />
                 {t('home.finalEyebrow')}
               </p>
-              <h2 className="mt-5 text-4xl font-black leading-tight uppercase font-heading text-brand-white sm:text-5xl lg:text-6xl">
+              <h2 className="mt-6 text-4xl font-black leading-tight uppercase font-heading text-brand-white sm:text-5xl lg:text-7xl">
                 {t('home.finalTitle')}
               </h2>
               <a
                 href={`tel:${t('site.phone').replaceAll(' ', '')}`}
-                className="inline-flex items-center gap-3 text-3xl font-black tracking-wide uppercase transition focus-ring mt-7 font-heading text-brand-white hover:text-brand-red sm:gap-4 sm:text-5xl lg:text-6xl"
+                className="focus-ring mt-8 inline-flex items-center justify-center gap-3 font-heading text-3xl font-black uppercase tracking-wide text-brand-white transition hover:text-brand-red sm:gap-4 sm:text-5xl lg:text-6xl"
               >
                 <ServiceIcon name="Phone" className="size-7 text-brand-red sm:size-9" />
                 <span>{t('site.phone')}</span>
               </a>
-              <p className="max-w-xl mt-5 text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
+              <p className="mx-auto mt-6 max-w-2xl text-sm leading-6 text-brand-white/78 sm:text-base sm:leading-7">
                 {t('home.finalText')}
               </p>
+            </Reveal>
+
+            <Reveal className="mx-auto mt-10 grid max-w-5xl gap-5 sm:mt-12" delay={0.08}>
+              <div className="overflow-hidden border border-brand-white/12 bg-brand-black/75 shadow-[0_28px_70px_rgba(0,0,0,0.35)]">
+                <GoogleMapsEmbed
+                  className="min-h-[300px] w-full lg:min-h-[330px]"
+                  fallbackClassName="min-h-[300px] lg:min-h-[330px]"
+                />
+              </div>
               <Link
                 to="/kontakt"
-                className="focus-ring mt-8 inline-flex min-h-14 w-full max-w-[316px] items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:w-[316px] sm:px-10 sm:text-base"
+                className="focus-ring inline-flex min-h-14 w-full items-center justify-center gap-4 bg-brand-red px-8 py-4 font-heading text-sm font-black uppercase tracking-[0.24em] text-brand-white transition hover:bg-brand-redDark sm:px-10 sm:text-base"
               >
                 <span>{t('nav.contact')}</span>
                 <ServiceIcon name="ArrowRight" className="size-5" />
