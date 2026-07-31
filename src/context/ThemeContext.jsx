@@ -3,10 +3,12 @@ import { ThemeContext, themeStorageKey } from './themeStore'
 
 function getInitialTheme() {
   if (typeof window === 'undefined') {
-    return 'light'
+    return 'dark'
   }
 
-  return window.localStorage.getItem(themeStorageKey) === 'dark' ? 'dark' : 'light'
+  const storedTheme = window.localStorage.getItem(themeStorageKey)
+
+  return storedTheme === 'light' ? 'light' : 'dark'
 }
 
 export function ThemeProvider({ children }) {

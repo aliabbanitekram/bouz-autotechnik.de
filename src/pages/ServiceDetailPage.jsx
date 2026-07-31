@@ -189,26 +189,6 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      <section className="home-surface relative overflow-hidden px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
-        <GridLines />
-        <div className="service-detail-cta-grid relative mx-auto max-w-7xl gap-8 bg-brand-black p-7 text-brand-white sm:p-10 lg:items-center">
-          <div>
-            <SectionLabel>{t('actions.contact')}</SectionLabel>
-            <h2 className="mt-6 font-heading text-4xl font-black uppercase leading-tight text-brand-white sm:text-5xl lg:text-6xl">
-              {detail.readyTitle}
-            </h2>
-            <p className="mt-5 max-w-2xl text-sm leading-6 text-brand-text sm:text-base sm:leading-7">{detail.readyText}</p>
-          </div>
-          <div className="flex flex-col gap-3 lg:items-end">
-            <DarkButton href={whatsappUrl} icon="WhatsApp" external className="bg-brand-whatsapp text-brand-black hover:bg-brand-whatsappHover">
-              {t('home.whatsappCta')}
-            </DarkButton>
-            <DarkButton href={telHref} icon="Phone" className="border border-brand-white/20">
-              {t('actions.callNow')}
-            </DarkButton>
-          </div>
-        </div>
-      </section>
     </main>
   )
 }

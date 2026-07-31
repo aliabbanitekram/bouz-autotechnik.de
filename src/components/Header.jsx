@@ -104,8 +104,6 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <ThemeToggle />
-          <LanguageToggle isDark={isDark} />
           <button
             type="button"
             className={`inline-flex items-center justify-center border transition focus-ring size-12 hover:border-brand-red hover:text-brand-red ${
@@ -141,6 +139,10 @@ export default function Header() {
               </NavLink>
             ))}
           </nav>
+          <div className={`mt-5 flex items-center gap-3 border-t pt-5 ${isDark ? 'border-brand-white/10' : 'border-brand-black/10'}`}>
+            <ThemeToggle />
+            <LanguageToggle isDark={isDark} />
+          </div>
         </div>
       )}
     </header>
